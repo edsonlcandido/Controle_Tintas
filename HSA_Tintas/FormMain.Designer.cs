@@ -98,6 +98,7 @@
             button3.TabIndex = 2;
             button3.Text = "Gerenciar usuarios";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -120,6 +121,7 @@
             Name = "FormMain";
             Text = "{FormMainTitle}";
             Load += FormMain_Load;
+            Resize += FormMain_Resize;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
