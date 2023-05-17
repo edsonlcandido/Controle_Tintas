@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Controle_Tintas.Infrastructure.Data.Repositories;
+using Controle_Tintas.Data.Repositories;
 
 namespace Controle_Tintas.Domain.Queries
 {

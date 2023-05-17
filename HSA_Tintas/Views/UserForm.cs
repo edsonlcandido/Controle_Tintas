@@ -1,4 +1,6 @@
-﻿using Controle_Tintas.Domain.Models;
+﻿using Controle_Tintas.Data.Repositories;
+using Controle_Tintas.Domain.Commands;
+using Controle_Tintas.Domain.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,7 @@ namespace Controle_Tintas.Views
 {
     public partial class UserForm : Form
     {
-        private Domain.Models.UserModel user;
+        private UserModel user;
         internal List<UserForm> users = new List<UserForm>();
         public UserForm()
         {
@@ -26,13 +28,21 @@ namespace Controle_Tintas.Views
         private void User_Load(object sender, EventArgs e)
         {
             //get user from ServiceProvider
-            user = Program.ServiceProvider.GetRequiredService<Domain.Models.UserModel>();
+            user = Program.ServiceProvider.GetRequiredService<UserModel>();
             //use Model.User data anotation description to set labelUserName text
             labelUserName.Text = user.GetType().GetProperty("Name").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            PopulateDataGridViewUsers();
+        }
+
+        //populate dataGridViewUsers with users from database
+        private void PopulateDataGridViewUsers()
+        {
+            //clear dataGridViewUsers
+            dataGridViewUsers.Rows.Clear();
             //use GetAllUsersQuery to get all users from database
-            var users = Program.ServiceProvider.GetRequiredService<Domain.Queries.GetAllUsersQuery>();
+            var users = Program.ServiceProvider.GetRequiredService<Domain.Queries.GetAllUsersQuery>().Execute();
             //loop through users and add to dataGridViewUsers
-            foreach (UserModel user in users.Execute())
+            foreach (UserModel user in users)
             {
                 dataGridViewUsers.Rows.Add(user.Id, user.Name, user.IsAdmin);
             }
@@ -46,7 +56,7 @@ namespace Controle_Tintas.Views
         //clear form and set user to null
         private void ClearForm()
         {
-            user = Program.ServiceProvider.GetRequiredService<Domain.Models.UserModel>();
+            user = Program.ServiceProvider.GetRequiredService<UserModel>();
             user.Name = "";
             user.IsAdmin = false;
             textBoxUserName.Text = user.Name;
@@ -55,8 +65,7 @@ namespace Controle_Tintas.Views
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            user.Name = textBoxUserName.Text;
-            user.IsAdmin = checkBoxUserIsAdmin.Checked;
+
             try
             {
                 if (textBoxUserName.Text == string.Empty)
@@ -65,8 +74,13 @@ namespace Controle_Tintas.Views
                 }
                 else
                 {
-                    Infrastructure.Data.Repositories.UserRepository.Add(user);
+                    user.Name = textBoxUserName.Text;
+                    user.IsAdmin = checkBoxUserIsAdmin.Checked;
+                    //user CreateUserCommand to add user to database
+                    Program.ServiceProvider.GetRequiredService<CreateUserCommand>().Execute(user).Wait();
                     MessageBox.Show("Usuario adicionado com sucesso!");
+                    ClearForm();
+                    PopulateDataGridViewUsers();
                 }
             }
             catch (Exception ex)

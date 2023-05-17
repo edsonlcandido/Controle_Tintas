@@ -150,9 +150,11 @@
             // 
             // UserModelName
             // 
+            UserModelName.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             UserModelName.HeaderText = "{UserModel.name}";
             UserModelName.Name = "UserModelName";
             UserModelName.ReadOnly = true;
+            UserModelName.Width = 141;
             // 
             // UserModelIsAdmin
             // 
@@ -168,7 +170,7 @@
             UserModelEdit.HeaderText = "Editar";
             UserModelEdit.Name = "UserModelEdit";
             UserModelEdit.ReadOnly = true;
-            UserModelEdit.Width = 120;
+            UserModelEdit.Width = 60;
             // 
             // UserModelDelete
             // 
@@ -176,7 +178,7 @@
             UserModelDelete.HeaderText = "Deletar";
             UserModelDelete.Name = "UserModelDelete";
             UserModelDelete.ReadOnly = true;
-            UserModelDelete.Width = 120;
+            UserModelDelete.Width = 60;
             // 
             // UserForm
             // 

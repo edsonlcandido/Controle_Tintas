@@ -1,3 +1,4 @@
+using Controle_Tintas.Domain.Commands;
 using Controle_Tintas.Domain.Models;
 using Controle_Tintas.Domain.Queries;
 using Controle_Tintas.Views;
@@ -15,6 +16,8 @@ namespace Controle_Tintas
             services.AddTransient<UserForm>();
             services.AddTransient<UserModel>();
             services.AddTransient<GetAllUsersQuery>();
+            services.AddTransient<UserModel>();
+            services.AddTransient<CreateUserCommand>();
             ServiceProvider = services.BuildServiceProvider();
         }
 

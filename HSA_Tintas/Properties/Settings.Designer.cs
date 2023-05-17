@@ -34,7 +34,7 @@ namespace Controle_Tintas.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DataSource=database.db;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DataSource=Data\\controleTintas.db;")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Data.Sqlite;
 
-namespace Controle_Tintas.Infrastructure.Data.Repositories
+namespace Controle_Tintas.Data.Repositories
 {
     //class to access database using Dapper ORM and SQLite database
     //create a method to get all users from database
