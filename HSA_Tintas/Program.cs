@@ -1,4 +1,4 @@
-namespace HSA_Tintas
+namespace Controle_Tintas
 {
     internal static class Program
     {
