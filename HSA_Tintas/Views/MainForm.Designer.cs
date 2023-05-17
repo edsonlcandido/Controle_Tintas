@@ -1,6 +1,6 @@
-﻿namespace Controle_Tintas
+﻿namespace Controle_Tintas.Views
 {
-    partial class FormMain
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.

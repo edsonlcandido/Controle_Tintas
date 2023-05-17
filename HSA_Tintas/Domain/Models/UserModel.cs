@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Controle_Tintas.Model
+namespace Controle_Tintas.Domain.Models
 {
-    internal class User
+    internal class UserModel
     {
         //create data model for User with data annotations
         [Key]

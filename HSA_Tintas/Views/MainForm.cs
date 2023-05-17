@@ -1,8 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Controle_Tintas
+namespace Controle_Tintas.Views
 {
-    public partial class FormMain : Form
+    public partial class MainForm : Form
     {
         //get size of MdiContainer and set to prop MdiClient _mdiClient
         private MdiClient _mdiClient;
@@ -25,7 +25,7 @@ namespace Controle_Tintas
             }
         }
 
-        public FormMain()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -51,9 +51,9 @@ namespace Controle_Tintas
         private void button3_Click(object sender, EventArgs e)
         {
             //get formMain from ServiceProvider
-            FormMain formMain = Program.ServiceProvider.GetRequiredService<FormMain>();
+            Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
             //get formUser from ServiceProvider
-            View.User formUser = Program.ServiceProvider.GetRequiredService<View.User>();
+            Views.UserForm formUser = Program.ServiceProvider.GetRequiredService<Views.UserForm>();
 
             //show formUser in MdiContainer
             formMain.ShowInMdiContainer(formUser);

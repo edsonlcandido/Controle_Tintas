@@ -1,3 +1,6 @@
+using Controle_Tintas.Domain.Models;
+using Controle_Tintas.Domain.Queries;
+using Controle_Tintas.Views;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Controle_Tintas
@@ -8,8 +11,10 @@ namespace Controle_Tintas
         static void ConfigureServices()
         {
             var services = new ServiceCollection();
-            services.AddSingleton<FormMain>();
-            services.AddTransient<View.User>();
+            services.AddSingleton<MainForm>();
+            services.AddTransient<UserForm>();
+            services.AddTransient<UserModel>();
+            services.AddTransient<GetAllUsersQuery>();
             ServiceProvider = services.BuildServiceProvider();
         }
 
@@ -23,7 +28,7 @@ namespace Controle_Tintas
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             ConfigureServices();
-            FormMain formMain = ServiceProvider.GetRequiredService<FormMain>();
+            MainForm formMain = ServiceProvider.GetRequiredService<MainForm>();
             Application.Run(formMain);
         }
     }

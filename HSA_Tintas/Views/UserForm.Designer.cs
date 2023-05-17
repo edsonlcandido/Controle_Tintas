@@ -1,6 +1,6 @@
-﻿namespace Controle_Tintas.View
+﻿namespace Controle_Tintas.Views
 {
-    partial class User
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,11 @@
             buttonSave = new Button();
             buttonClear = new Button();
             dataGridViewUsers = new DataGridView();
+            UserModelId = new DataGridViewTextBoxColumn();
+            UserModelName = new DataGridViewTextBoxColumn();
+            UserModelIsAdmin = new DataGridViewTextBoxColumn();
+            UserModelEdit = new DataGridViewButtonColumn();
+            UserModelDelete = new DataGridViewButtonColumn();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
@@ -125,16 +130,55 @@
             // 
             dataGridViewUsers.AllowUserToAddRows = false;
             dataGridViewUsers.AllowUserToDeleteRows = false;
+            dataGridViewUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewUsers.Columns.AddRange(new DataGridViewColumn[] { UserModelId, UserModelName, UserModelIsAdmin, UserModelEdit, UserModelDelete });
             dataGridViewUsers.Location = new Point(249, 44);
             dataGridViewUsers.Margin = new Padding(4);
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.RowTemplate.Height = 25;
-            dataGridViewUsers.Size = new Size(322, 548);
+            dataGridViewUsers.Size = new Size(543, 548);
             dataGridViewUsers.TabIndex = 3;
             // 
-            // User
+            // UserModelId
+            // 
+            UserModelId.HeaderText = "#";
+            UserModelId.Name = "UserModelId";
+            UserModelId.ReadOnly = true;
+            UserModelId.Width = 41;
+            // 
+            // UserModelName
+            // 
+            UserModelName.HeaderText = "{UserModel.name}";
+            UserModelName.Name = "UserModelName";
+            UserModelName.ReadOnly = true;
+            // 
+            // UserModelIsAdmin
+            // 
+            UserModelIsAdmin.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            UserModelIsAdmin.HeaderText = "{UserModel.IsAdmin}";
+            UserModelIsAdmin.Name = "UserModelIsAdmin";
+            UserModelIsAdmin.ReadOnly = true;
+            UserModelIsAdmin.Width = 155;
+            // 
+            // UserModelEdit
+            // 
+            UserModelEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            UserModelEdit.HeaderText = "Editar";
+            UserModelEdit.Name = "UserModelEdit";
+            UserModelEdit.ReadOnly = true;
+            UserModelEdit.Width = 120;
+            // 
+            // UserModelDelete
+            // 
+            UserModelDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            UserModelDelete.HeaderText = "Deletar";
+            UserModelDelete.Name = "UserModelDelete";
+            UserModelDelete.ReadOnly = true;
+            UserModelDelete.Width = 120;
+            // 
+            // UserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -144,7 +188,7 @@
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "User";
+            Name = "UserForm";
             Padding = new Padding(4);
             Text = "Usuario";
             Load += User_Load;
@@ -167,5 +211,10 @@
         private Button buttonSave;
         private Button buttonClear;
         private DataGridView dataGridViewUsers;
+        private DataGridViewTextBoxColumn UserModelId;
+        private DataGridViewTextBoxColumn UserModelName;
+        private DataGridViewTextBoxColumn UserModelIsAdmin;
+        private DataGridViewButtonColumn UserModelEdit;
+        private DataGridViewButtonColumn UserModelDelete;
     }
 }
