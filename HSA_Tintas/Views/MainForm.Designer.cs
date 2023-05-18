@@ -1,6 +1,6 @@
-﻿namespace HSA_Tintas
+﻿namespace Controle_Tintas.Views
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -98,6 +98,7 @@
             button3.TabIndex = 2;
             button3.Text = "Gerenciar usuarios";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -108,7 +109,7 @@
             button4.Text = "Resumo Tintas";
             button4.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -117,8 +118,10 @@
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             IsMdiContainer = true;
-            Name = "Form1";
-            Text = "HSA tintas";
+            Name = "FormMain";
+            Text = "{FormMainTitle}";
+            Load += FormMain_Load;
+            Resize += FormMain_Resize;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
