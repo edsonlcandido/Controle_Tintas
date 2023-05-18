@@ -50,6 +50,17 @@ namespace Controle_Tintas.Data.Repositories
             }
         }
 
+        internal static Task Delete(int id)
+        {
+            //delete user from database using dapper ORM and SQLite database
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                //delete user from database
+                string sql = "DELETE FROM User WHERE Id = @Id";
+                return connection.ExecuteAsync(sql, new { Id = id });
+            }
+        }
+
         internal static async Task<UserModel> GetById(int id)
         {
            //get user by id from database using dapper ORM and SQLite database

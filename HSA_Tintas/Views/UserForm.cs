@@ -158,6 +158,23 @@ namespace Controle_Tintas.Views
                 //set checkBoxUserIsAdmin checked
                 checkBoxUserIsAdmin.Checked = user.IsAdmin;
             }
+            //verify if the button clicked is the delete button
+            else if (dataGridViewUsers.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                //set user to row clicked                
+                UserModel userModel = (UserModel)dataGridViewUsers.Rows[e.RowIndex].DataBoundItem;
+                int Id = userModel.Id;                
+                //create a confirmation messagebox to delete user
+                var result = MessageBox.Show("Deseja excluir o usuario?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    //use DeleteUserCommand to delete user from database
+                    Program.ServiceProvider.GetRequiredService<DeleteUserCommand>().Execute(Id);
+                    MessageBox.Show("Usuario excluido com sucesso!");
+                    ClearForm();
+                    PopulateDataGridViewUsers();
+                }                
+            }
         }
     }
 }

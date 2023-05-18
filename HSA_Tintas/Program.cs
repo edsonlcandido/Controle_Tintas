@@ -20,6 +20,7 @@ namespace Controle_Tintas
             services.AddTransient<GetUserByIdQuery>();
             services.AddTransient<CreateUserCommand>();
             services.AddTransient<UpdateUserCommand>();
+            services.AddTransient<DeleteUserCommand>();
 
             ServiceProvider = services.BuildServiceProvider();
         }
