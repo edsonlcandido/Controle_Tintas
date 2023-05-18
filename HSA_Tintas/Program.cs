@@ -14,10 +14,13 @@ namespace Controle_Tintas
             var services = new ServiceCollection();
             services.AddSingleton<MainForm>();
             services.AddTransient<UserForm>();
-            services.AddTransient<UserModel>();
-            services.AddTransient<GetAllUsersQuery>();
-            services.AddTransient<UserModel>();
+            services.AddTransient<UserModel>();            
+            //register all queries and commands here
+            services.AddTransient<GetAllUsersQuery>();            
+            services.AddTransient<GetUserByIdQuery>();
             services.AddTransient<CreateUserCommand>();
+            services.AddTransient<UpdateUserCommand>();
+
             ServiceProvider = services.BuildServiceProvider();
         }
 

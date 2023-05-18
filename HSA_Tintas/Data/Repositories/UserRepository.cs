@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Controle_Tintas.Domain.Models;
 using Dapper;
 using Microsoft.Data.Sqlite;
 
@@ -26,7 +27,7 @@ namespace Controle_Tintas.Data.Repositories
                 return connectionString;
             }
         }
-        //method to add user in database using dapper ORM and SQLite database in the same folder called database.db
+        //method to add user in database using dapper ORM and SQLite database
         public static async Task Add(Domain.Models.UserModel user)
         {
             using (var connection = new SqliteConnection(_connectionString))
@@ -37,7 +38,7 @@ namespace Controle_Tintas.Data.Repositories
             }
         }
 
-        //method to get all users from database using dapper ORM and SQLite database in the same folder called database.db
+        //method to get all users from database using dapper ORM and SQLite database
         public static async Task<IEnumerable<Domain.Models.UserModel>> GetAll()
         {
             using (var connection = new SqliteConnection(_connectionString))
@@ -46,6 +47,29 @@ namespace Controle_Tintas.Data.Repositories
                 string sql = "SELECT * FROM User";
                 var users = await connection.QueryAsync<Domain.Models.UserModel>(sql);
                 return users;
+            }
+        }
+
+        internal static async Task<UserModel> GetById(int id)
+        {
+           //get user by id from database using dapper ORM and SQLite database
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                //get user by id from database
+                string sql = "SELECT * FROM User WHERE Id = @Id";
+                var user = await connection.QueryFirstOrDefaultAsync<Domain.Models.UserModel>(sql, new { Id = id });
+                return user;
+            }
+        }
+
+        internal static async Task Update(UserModel user)
+        {
+            //update user in database using dapper ORM and SQLite database
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                //update user in database
+                string sql = "UPDATE User SET Name = @Name, IsAdmin = @IsAdmin WHERE Id = @Id";
+                await connection.ExecuteAsync(sql, user);
             }
         }
     }
