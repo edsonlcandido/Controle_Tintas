@@ -99,14 +99,14 @@
             flowLayoutPanel2.Location = new Point(3, 78);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
-            flowLayoutPanel2.Size = new Size(232, 44);
+            flowLayoutPanel2.Size = new Size(232, 48);
             flowLayoutPanel2.TabIndex = 3;
             // 
             // buttonSave
             // 
             buttonSave.Location = new Point(146, 7);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(75, 30);
+            buttonSave.Size = new Size(75, 34);
             buttonSave.TabIndex = 0;
             buttonSave.Text = "Salvar";
             buttonSave.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // 
             buttonClear.Location = new Point(65, 7);
             buttonClear.Name = "buttonClear";
-            buttonClear.Size = new Size(75, 30);
+            buttonClear.Size = new Size(75, 34);
             buttonClear.TabIndex = 1;
             buttonClear.Text = "Limpar";
             buttonClear.UseVisualStyleBackColor = true;
