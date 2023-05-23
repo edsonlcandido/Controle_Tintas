@@ -47,7 +47,7 @@
             comboBox1 = new ComboBox();
             groupBox1 = new GroupBox();
             button4 = new Button();
-            button5 = new Button();
+            buttonShowPaintAddToProjectForm = new Button();
             button6 = new Button();
             button7 = new Button();
             dataGridView1 = new DataGridView();
@@ -235,15 +235,15 @@
             button4.Text = "Limpar filtros";
             button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonShowPaintAddToProjectForm
             // 
-            button5.Location = new Point(287, 63);
-            button5.Name = "button5";
-            button5.Size = new Size(187, 34);
-            button5.TabIndex = 5;
-            button5.Text = "Adiciona tinta para projeto";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            buttonShowPaintAddToProjectForm.Location = new Point(287, 63);
+            buttonShowPaintAddToProjectForm.Name = "buttonShowPaintAddToProjectForm";
+            buttonShowPaintAddToProjectForm.Size = new Size(187, 34);
+            buttonShowPaintAddToProjectForm.TabIndex = 5;
+            buttonShowPaintAddToProjectForm.Text = "Adiciona tinta para projeto";
+            buttonShowPaintAddToProjectForm.UseVisualStyleBackColor = true;
+            buttonShowPaintAddToProjectForm.Click += buttonShowPaintAddToProjectForm_Click;
             // 
             // button6
             // 
@@ -284,7 +284,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(button7);
             Controls.Add(button6);
-            Controls.Add(button5);
+            Controls.Add(buttonShowPaintAddToProjectForm);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -327,7 +327,7 @@
         private ComboBox comboBox1;
         private GroupBox groupBox1;
         private Button button4;
-        private Button button5;
+        private Button buttonShowPaintAddToProjectForm;
         private Button button6;
         private Button button7;
         private DataGridView dataGridView1;

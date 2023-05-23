@@ -74,7 +74,7 @@ namespace Controle_Tintas.Views
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonShowPaintToProjectForm_Click(object sender, EventArgs e)
         {
             //get form main from ServiceProvider
             Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();

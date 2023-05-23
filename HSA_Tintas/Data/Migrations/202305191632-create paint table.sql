@@ -1,4 +1,4 @@
-﻿CREATE TABLE Pain (
+﻿CREATE TABLE Paint (
     Id             INTEGER PRIMARY KEY AUTOINCREMENT
                            UNIQUE,
     Code           TEXT,

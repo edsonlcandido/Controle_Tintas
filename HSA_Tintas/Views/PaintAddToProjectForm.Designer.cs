@@ -30,23 +30,25 @@
         {
             label1 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            labelUserName = new Label();
+            labelCodeDisplayName = new Label();
             textBox1 = new TextBox();
-            label2 = new Label();
+            labelProjectDisplayName = new Label();
             textBox2 = new TextBox();
-            label3 = new Label();
+            labelDescriptionDisplayName = new Label();
             textBox3 = new TextBox();
-            label4 = new Label();
+            labelCanQtyDisplayName = new Label();
             textBox4 = new TextBox();
-            label5 = new Label();
+            labelLitersDisplayName = new Label();
             textBox5 = new TextBox();
-            label6 = new Label();
+            labelExpirationDateDisplayName = new Label();
             dateTimePicker1 = new DateTimePicker();
-            label7 = new Label();
+            labelObsDisplayName = new Label();
             textBox6 = new TextBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             button1 = new Button();
             button2 = new Button();
+            labelStatusDisplayName = new Label();
+            comboBox1 = new ComboBox();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
@@ -63,35 +65,37 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(labelUserName);
+            flowLayoutPanel1.Controls.Add(labelCodeDisplayName);
             flowLayoutPanel1.Controls.Add(textBox1);
-            flowLayoutPanel1.Controls.Add(label2);
+            flowLayoutPanel1.Controls.Add(labelProjectDisplayName);
             flowLayoutPanel1.Controls.Add(textBox2);
-            flowLayoutPanel1.Controls.Add(label3);
+            flowLayoutPanel1.Controls.Add(labelDescriptionDisplayName);
             flowLayoutPanel1.Controls.Add(textBox3);
-            flowLayoutPanel1.Controls.Add(label4);
+            flowLayoutPanel1.Controls.Add(labelCanQtyDisplayName);
             flowLayoutPanel1.Controls.Add(textBox4);
-            flowLayoutPanel1.Controls.Add(label5);
+            flowLayoutPanel1.Controls.Add(labelLitersDisplayName);
             flowLayoutPanel1.Controls.Add(textBox5);
-            flowLayoutPanel1.Controls.Add(label6);
+            flowLayoutPanel1.Controls.Add(labelExpirationDateDisplayName);
             flowLayoutPanel1.Controls.Add(dateTimePicker1);
-            flowLayoutPanel1.Controls.Add(label7);
+            flowLayoutPanel1.Controls.Add(labelStatusDisplayName);
+            flowLayoutPanel1.Controls.Add(comboBox1);
+            flowLayoutPanel1.Controls.Add(labelObsDisplayName);
             flowLayoutPanel1.Controls.Add(textBox6);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(479, 474);
+            flowLayoutPanel1.Size = new Size(479, 515);
             flowLayoutPanel1.TabIndex = 4;
             // 
-            // labelUserName
+            // labelCodeDisplayName
             // 
-            labelUserName.AutoSize = true;
-            labelUserName.Location = new Point(3, 0);
-            labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(199, 17);
-            labelUserName.TabIndex = 0;
-            labelUserName.Text = "{Model.Paint.Code.DisplayName}";
+            labelCodeDisplayName.AutoSize = true;
+            labelCodeDisplayName.Location = new Point(3, 0);
+            labelCodeDisplayName.Name = "labelCodeDisplayName";
+            labelCodeDisplayName.Size = new Size(199, 17);
+            labelCodeDisplayName.TabIndex = 0;
+            labelCodeDisplayName.Text = "{Model.Paint.Code.DisplayName}";
             // 
             // textBox1
             // 
@@ -100,14 +104,14 @@
             textBox1.Size = new Size(156, 25);
             textBox1.TabIndex = 1;
             // 
-            // label2
+            // labelProjectDisplayName
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(3, 48);
-            label2.Name = "label2";
-            label2.Size = new Size(208, 17);
-            label2.TabIndex = 2;
-            label2.Text = "{Model.Paint.Project.DisplayName}";
+            labelProjectDisplayName.AutoSize = true;
+            labelProjectDisplayName.Location = new Point(3, 48);
+            labelProjectDisplayName.Name = "labelProjectDisplayName";
+            labelProjectDisplayName.Size = new Size(208, 17);
+            labelProjectDisplayName.TabIndex = 2;
+            labelProjectDisplayName.Text = "{Model.Paint.Project.DisplayName}";
             // 
             // textBox2
             // 
@@ -116,14 +120,14 @@
             textBox2.Size = new Size(156, 25);
             textBox2.TabIndex = 3;
             // 
-            // label3
+            // labelDescriptionDisplayName
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(3, 96);
-            label3.Name = "label3";
-            label3.Size = new Size(234, 17);
-            label3.TabIndex = 4;
-            label3.Text = "{Model.Paint.Description.DisplayName}";
+            labelDescriptionDisplayName.AutoSize = true;
+            labelDescriptionDisplayName.Location = new Point(3, 96);
+            labelDescriptionDisplayName.Name = "labelDescriptionDisplayName";
+            labelDescriptionDisplayName.Size = new Size(234, 17);
+            labelDescriptionDisplayName.TabIndex = 4;
+            labelDescriptionDisplayName.Text = "{Model.Paint.Description.DisplayName}";
             // 
             // textBox3
             // 
@@ -132,14 +136,14 @@
             textBox3.Size = new Size(468, 25);
             textBox3.TabIndex = 5;
             // 
-            // label4
+            // labelCanQtyDisplayName
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(3, 144);
-            label4.Name = "label4";
-            label4.Size = new Size(210, 17);
-            label4.TabIndex = 6;
-            label4.Text = "{Model.Paint.CanQty.DisplayName}";
+            labelCanQtyDisplayName.AutoSize = true;
+            labelCanQtyDisplayName.Location = new Point(3, 144);
+            labelCanQtyDisplayName.Name = "labelCanQtyDisplayName";
+            labelCanQtyDisplayName.Size = new Size(210, 17);
+            labelCanQtyDisplayName.TabIndex = 6;
+            labelCanQtyDisplayName.Text = "{Model.Paint.CanQty.DisplayName}";
             // 
             // textBox4
             // 
@@ -148,14 +152,14 @@
             textBox4.Size = new Size(78, 25);
             textBox4.TabIndex = 7;
             // 
-            // label5
+            // labelLitersDisplayName
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(3, 192);
-            label5.Name = "label5";
-            label5.Size = new Size(199, 17);
-            label5.TabIndex = 8;
-            label5.Text = "{Model.Paint.Liters.DisplayName}";
+            labelLitersDisplayName.AutoSize = true;
+            labelLitersDisplayName.Location = new Point(3, 192);
+            labelLitersDisplayName.Name = "labelLitersDisplayName";
+            labelLitersDisplayName.Size = new Size(199, 17);
+            labelLitersDisplayName.TabIndex = 8;
+            labelLitersDisplayName.Text = "{Model.Paint.Liters.DisplayName}";
             // 
             // textBox5
             // 
@@ -164,14 +168,14 @@
             textBox5.Size = new Size(78, 25);
             textBox5.TabIndex = 9;
             // 
-            // label6
+            // labelExpirationDateDisplayName
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(3, 240);
-            label6.Name = "label6";
-            label6.Size = new Size(253, 17);
-            label6.TabIndex = 10;
-            label6.Text = "{Model.Paint.ExpirationDate.DisplayName}";
+            labelExpirationDateDisplayName.AutoSize = true;
+            labelExpirationDateDisplayName.Location = new Point(3, 240);
+            labelExpirationDateDisplayName.Name = "labelExpirationDateDisplayName";
+            labelExpirationDateDisplayName.Size = new Size(253, 17);
+            labelExpirationDateDisplayName.TabIndex = 10;
+            labelExpirationDateDisplayName.Text = "{Model.Paint.ExpirationDate.DisplayName}";
             // 
             // dateTimePicker1
             // 
@@ -182,18 +186,18 @@
             dateTimePicker1.Size = new Size(156, 25);
             dateTimePicker1.TabIndex = 12;
             // 
-            // label7
+            // labelObsDisplayName
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(3, 288);
-            label7.Name = "label7";
-            label7.Size = new Size(192, 17);
-            label7.TabIndex = 13;
-            label7.Text = "{Model.Paint.Obs.DisplayName}";
+            labelObsDisplayName.AutoSize = true;
+            labelObsDisplayName.Location = new Point(3, 334);
+            labelObsDisplayName.Name = "labelObsDisplayName";
+            labelObsDisplayName.Size = new Size(192, 17);
+            labelObsDisplayName.TabIndex = 13;
+            labelObsDisplayName.Text = "{Model.Paint.Obs.DisplayName}";
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(3, 308);
+            textBox6.Location = new Point(3, 354);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
             textBox6.ScrollBars = ScrollBars.Vertical;
@@ -205,7 +209,7 @@
             flowLayoutPanel2.Controls.Add(button1);
             flowLayoutPanel2.Controls.Add(button2);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 412);
+            flowLayoutPanel2.Location = new Point(3, 458);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
             flowLayoutPanel2.Size = new Size(468, 49);
@@ -229,6 +233,23 @@
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = true;
             // 
+            // labelStatusDisplayName
+            // 
+            labelStatusDisplayName.AutoSize = true;
+            labelStatusDisplayName.Location = new Point(3, 288);
+            labelStatusDisplayName.Name = "labelStatusDisplayName";
+            labelStatusDisplayName.Size = new Size(203, 17);
+            labelStatusDisplayName.TabIndex = 5;
+            labelStatusDisplayName.Text = "{Model.Paint.Status.DisplayName}";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(3, 308);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(156, 25);
+            comboBox1.TabIndex = 16;
+            // 
             // PaintAddToProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -240,6 +261,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "PaintAddToProjectForm";
             Text = "PaintAddToProjectForm";
+            Load += PaintAddToProjectForm_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
@@ -251,22 +273,24 @@
 
         private Label label1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Label labelUserName;
+        private Label labelCodeDisplayName;
         private TextBox textBox1;
-        private Label label2;
+        private Label labelProjectDisplayName;
         private TextBox textBox2;
-        private Label label3;
+        private Label labelDescriptionDisplayName;
         private TextBox textBox3;
-        private Label label4;
+        private Label labelCanQtyDisplayName;
         private TextBox textBox4;
-        private Label label5;
+        private Label labelLitersDisplayName;
         private TextBox textBox5;
-        private Label label6;
+        private Label labelExpirationDateDisplayName;
         private DateTimePicker dateTimePicker1;
-        private Label label7;
+        private Label labelObsDisplayName;
         private TextBox textBox6;
         private FlowLayoutPanel flowLayoutPanel2;
         private Button button1;
         private Button button2;
+        private Label labelStatusDisplayName;
+        private ComboBox comboBox1;
     }
 }

@@ -31,7 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            button1 = new Button();
+            buttonShowPaintToProjectForm = new Button();
             button2 = new Button();
             buttonShowUserForm = new Button();
             button4 = new Button();
@@ -60,7 +60,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(buttonShowPaintToProjectForm);
             flowLayoutPanel1.Controls.Add(button2);
             flowLayoutPanel1.Controls.Add(buttonShowUserForm);
             flowLayoutPanel1.Controls.Add(button4);
@@ -72,15 +72,15 @@
             flowLayoutPanel1.Size = new Size(199, 674);
             flowLayoutPanel1.TabIndex = 2;
             // 
-            // button1
+            // buttonShowPaintToProjectForm
             // 
-            button1.Location = new Point(9, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(176, 35);
-            button1.TabIndex = 0;
-            button1.Text = "Tintas para projetos";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            buttonShowPaintToProjectForm.Location = new Point(9, 9);
+            buttonShowPaintToProjectForm.Name = "buttonShowPaintToProjectForm";
+            buttonShowPaintToProjectForm.Size = new Size(176, 35);
+            buttonShowPaintToProjectForm.TabIndex = 0;
+            buttonShowPaintToProjectForm.Text = "Tintas para projetos";
+            buttonShowPaintToProjectForm.UseVisualStyleBackColor = false;
+            buttonShowPaintToProjectForm.Click += buttonShowPaintToProjectForm_Click;
             // 
             // button2
             // 
@@ -134,7 +134,7 @@
         private Panel panel1;
         private Label label1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button1;
+        private Button buttonShowPaintToProjectForm;
         private Button button2;
         private Button buttonShowUserForm;
         private Button button4;
