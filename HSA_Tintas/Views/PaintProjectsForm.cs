@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace Controle_Tintas.Views
         public PaintProjectsForm()
         {
             InitializeComponent();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //get formMain from ServiceProvider
+            Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
+            //het PaintAddToProjectForm from ServiceProvider
+            Views.PaintAddToProjectForm formPaintAddToProject = Program.ServiceProvider.GetRequiredService<Views.PaintAddToProjectForm>();
+            formMain.ShowInMdiContainer(formPaintAddToProject);
         }
     }
 }

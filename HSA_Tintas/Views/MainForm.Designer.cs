@@ -33,7 +33,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
+            buttonShowUserForm = new Button();
             button4 = new Button();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.Controls.Add(button2);
-            flowLayoutPanel1.Controls.Add(button3);
+            flowLayoutPanel1.Controls.Add(buttonShowUserForm);
             flowLayoutPanel1.Controls.Add(button4);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
@@ -80,6 +80,7 @@
             button1.TabIndex = 0;
             button1.Text = "Tintas para projetos";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -90,15 +91,15 @@
             button2.Text = "Sobras de tintas";
             button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonShowUserForm
             // 
-            button3.Location = new Point(9, 91);
-            button3.Name = "button3";
-            button3.Size = new Size(176, 35);
-            button3.TabIndex = 2;
-            button3.Text = "Gerenciar usuarios";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            buttonShowUserForm.Location = new Point(9, 91);
+            buttonShowUserForm.Name = "buttonShowUserForm";
+            buttonShowUserForm.Size = new Size(176, 35);
+            buttonShowUserForm.TabIndex = 2;
+            buttonShowUserForm.Text = "Gerenciar usuarios";
+            buttonShowUserForm.UseVisualStyleBackColor = false;
+            buttonShowUserForm.Click += buttonShowUserForm_Click;
             // 
             // button4
             // 
@@ -109,7 +110,7 @@
             button4.Text = "Resumo Tintas";
             button4.UseVisualStyleBackColor = false;
             // 
-            // FormMain
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -118,7 +119,7 @@
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             IsMdiContainer = true;
-            Name = "FormMain";
+            Name = "MainForm";
             Text = "{FormMainTitle}";
             Load += FormMain_Load;
             Resize += FormMain_Resize;
@@ -135,7 +136,7 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button buttonShowUserForm;
         private Button button4;
     }
 }

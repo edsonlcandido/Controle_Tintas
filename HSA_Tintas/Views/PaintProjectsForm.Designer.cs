@@ -239,25 +239,26 @@
             // 
             button5.Location = new Point(287, 63);
             button5.Name = "button5";
-            button5.Size = new Size(174, 34);
+            button5.Size = new Size(187, 34);
             button5.TabIndex = 5;
             button5.Text = "Adiciona tinta para projeto";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
-            button6.Location = new Point(467, 63);
+            button6.Location = new Point(480, 63);
             button6.Name = "button6";
-            button6.Size = new Size(174, 34);
+            button6.Size = new Size(187, 34);
             button6.TabIndex = 6;
             button6.Text = "Utilizar tinta";
             button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            button7.Location = new Point(647, 63);
+            button7.Location = new Point(673, 63);
             button7.Name = "button7";
-            button7.Size = new Size(174, 34);
+            button7.Size = new Size(187, 34);
             button7.TabIndex = 7;
             button7.Text = "Enviar tinta para sobra";
             button7.UseVisualStyleBackColor = true;
@@ -272,14 +273,14 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(551, 603);
+            dataGridView1.Size = new Size(581, 540);
             dataGridView1.TabIndex = 8;
             // 
             // PaintProjectsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 723);
+            ClientSize = new Size(880, 660);
             Controls.Add(dataGridView1);
             Controls.Add(button7);
             Controls.Add(button6);
