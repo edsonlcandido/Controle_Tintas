@@ -51,7 +51,7 @@ namespace Controle_Tintas.Views
             //add column UserMode.Name to dataGridViewUsers
             dataGridViewUsers.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                DataPropertyName = "Name",
+                DataPropertyName = "Name",  
                 HeaderText = user.GetType().GetProperty("Name").GetCustomAttribute<DisplayNameAttribute>().DisplayName,
                 Name = "UserModelName",
                 SortMode = DataGridViewColumnSortMode.Automatic

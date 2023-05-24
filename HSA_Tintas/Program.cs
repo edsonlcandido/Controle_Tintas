@@ -25,6 +25,8 @@ namespace Controle_Tintas
             services.AddTransient<DeleteUserCommand>();
             services.AddTransient<GetAllPaintStatusQuery>();
             services.AddTransient<CreatePaintCommand>();
+            services.AddTransient<GetAllPaintsQuery>();
+            services.AddTransient<GetPaintsAvailableAndInUseQuery>();
 
             ServiceProvider = services.BuildServiceProvider();
         }
