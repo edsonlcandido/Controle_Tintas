@@ -50,14 +50,14 @@
             buttonShowPaintAddToProjectForm = new Button();
             button6 = new Button();
             button7 = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewPaintsAvailableAndInUse = new DataGridView();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel5.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPaintsAvailableAndInUse).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -263,25 +263,26 @@
             button7.Text = "Enviar tinta para sobra";
             button7.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewPaintsAvailableAndInUse
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(287, 107);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(581, 540);
-            dataGridView1.TabIndex = 8;
+            dataGridViewPaintsAvailableAndInUse.AllowUserToAddRows = false;
+            dataGridViewPaintsAvailableAndInUse.AllowUserToDeleteRows = false;
+            dataGridViewPaintsAvailableAndInUse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewPaintsAvailableAndInUse.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPaintsAvailableAndInUse.Location = new Point(287, 107);
+            dataGridViewPaintsAvailableAndInUse.Name = "dataGridViewPaintsAvailableAndInUse";
+            dataGridViewPaintsAvailableAndInUse.ReadOnly = true;
+            dataGridViewPaintsAvailableAndInUse.RowTemplate.Height = 25;
+            dataGridViewPaintsAvailableAndInUse.Size = new Size(581, 540);
+            dataGridViewPaintsAvailableAndInUse.TabIndex = 8;
+            dataGridViewPaintsAvailableAndInUse.DataBindingComplete += dataGridViewPaintsAvailableAndInUse_DataBindingComplete;
             // 
             // PaintProjectsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(880, 660);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewPaintsAvailableAndInUse);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(buttonShowPaintAddToProjectForm);
@@ -291,6 +292,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "PaintProjectsForm";
             Text = "PaintProjectsForm";
+            Load += PaintProjectsForm_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
@@ -301,7 +303,7 @@
             flowLayoutPanel4.PerformLayout();
             flowLayoutPanel5.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPaintsAvailableAndInUse).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -330,6 +332,6 @@
         private Button buttonShowPaintAddToProjectForm;
         private Button button6;
         private Button button7;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewPaintsAvailableAndInUse;
     }
 }

@@ -16,7 +16,7 @@ namespace Controle_Tintas.Domain.Models
         //          Code           TEXT,
         //          Project TEXT,
         //          Description    TEXT,
-        //          CanQty DOUBLE,
+        //          CanQty         DOUBLE,
         //          Liters         DOUBLE,
         //          ExpirationDate DATE,
         //          Status         TEXT,
