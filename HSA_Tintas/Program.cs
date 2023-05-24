@@ -23,6 +23,8 @@ namespace Controle_Tintas
             services.AddTransient<CreateUserCommand>();
             services.AddTransient<UpdateUserCommand>();
             services.AddTransient<DeleteUserCommand>();
+            services.AddTransient<GetAllPaintStatusQuery>();
+            services.AddTransient<CreatePaintCommand>();
 
             ServiceProvider = services.BuildServiceProvider();
         }

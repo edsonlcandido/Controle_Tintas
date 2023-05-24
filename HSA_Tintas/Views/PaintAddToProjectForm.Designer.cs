@@ -31,24 +31,24 @@
             label1 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             labelCodeDisplayName = new Label();
-            textBox1 = new TextBox();
+            textBoxPaintCode = new TextBox();
             labelProjectDisplayName = new Label();
-            textBox2 = new TextBox();
+            textBoxPaintProject = new TextBox();
             labelDescriptionDisplayName = new Label();
-            textBox3 = new TextBox();
+            textBoxPaintDescription = new TextBox();
             labelCanQtyDisplayName = new Label();
-            textBox4 = new TextBox();
+            textBoxPaintCanQty = new TextBox();
             labelLitersDisplayName = new Label();
-            textBox5 = new TextBox();
+            textBoxPaintLiters = new TextBox();
             labelExpirationDateDisplayName = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            labelObsDisplayName = new Label();
-            textBox6 = new TextBox();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
+            dateTimePickerPaintExpirationDate = new DateTimePicker();
             labelStatusDisplayName = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxPaintStatus = new ComboBox();
+            labelObsDisplayName = new Label();
+            textBoxPaintObs = new TextBox();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            buttonSave = new Button();
+            buttonCancel = new Button();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
@@ -66,21 +66,21 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(labelCodeDisplayName);
-            flowLayoutPanel1.Controls.Add(textBox1);
+            flowLayoutPanel1.Controls.Add(textBoxPaintCode);
             flowLayoutPanel1.Controls.Add(labelProjectDisplayName);
-            flowLayoutPanel1.Controls.Add(textBox2);
+            flowLayoutPanel1.Controls.Add(textBoxPaintProject);
             flowLayoutPanel1.Controls.Add(labelDescriptionDisplayName);
-            flowLayoutPanel1.Controls.Add(textBox3);
+            flowLayoutPanel1.Controls.Add(textBoxPaintDescription);
             flowLayoutPanel1.Controls.Add(labelCanQtyDisplayName);
-            flowLayoutPanel1.Controls.Add(textBox4);
+            flowLayoutPanel1.Controls.Add(textBoxPaintCanQty);
             flowLayoutPanel1.Controls.Add(labelLitersDisplayName);
-            flowLayoutPanel1.Controls.Add(textBox5);
+            flowLayoutPanel1.Controls.Add(textBoxPaintLiters);
             flowLayoutPanel1.Controls.Add(labelExpirationDateDisplayName);
-            flowLayoutPanel1.Controls.Add(dateTimePicker1);
+            flowLayoutPanel1.Controls.Add(dateTimePickerPaintExpirationDate);
             flowLayoutPanel1.Controls.Add(labelStatusDisplayName);
-            flowLayoutPanel1.Controls.Add(comboBox1);
+            flowLayoutPanel1.Controls.Add(comboBoxPaintStatus);
             flowLayoutPanel1.Controls.Add(labelObsDisplayName);
-            flowLayoutPanel1.Controls.Add(textBox6);
+            flowLayoutPanel1.Controls.Add(textBoxPaintObs);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
@@ -97,12 +97,13 @@
             labelCodeDisplayName.TabIndex = 0;
             labelCodeDisplayName.Text = "{Model.Paint.Code.DisplayName}";
             // 
-            // textBox1
+            // textBoxPaintCode
             // 
-            textBox1.Location = new Point(3, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 25);
-            textBox1.TabIndex = 1;
+            textBoxPaintCode.CharacterCasing = CharacterCasing.Upper;
+            textBoxPaintCode.Location = new Point(3, 20);
+            textBoxPaintCode.Name = "textBoxPaintCode";
+            textBoxPaintCode.Size = new Size(156, 25);
+            textBoxPaintCode.TabIndex = 1;
             // 
             // labelProjectDisplayName
             // 
@@ -113,12 +114,13 @@
             labelProjectDisplayName.TabIndex = 2;
             labelProjectDisplayName.Text = "{Model.Paint.Project.DisplayName}";
             // 
-            // textBox2
+            // textBoxPaintProject
             // 
-            textBox2.Location = new Point(3, 68);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(156, 25);
-            textBox2.TabIndex = 3;
+            textBoxPaintProject.CharacterCasing = CharacterCasing.Upper;
+            textBoxPaintProject.Location = new Point(3, 68);
+            textBoxPaintProject.Name = "textBoxPaintProject";
+            textBoxPaintProject.Size = new Size(156, 25);
+            textBoxPaintProject.TabIndex = 3;
             // 
             // labelDescriptionDisplayName
             // 
@@ -129,12 +131,13 @@
             labelDescriptionDisplayName.TabIndex = 4;
             labelDescriptionDisplayName.Text = "{Model.Paint.Description.DisplayName}";
             // 
-            // textBox3
+            // textBoxPaintDescription
             // 
-            textBox3.Location = new Point(3, 116);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(468, 25);
-            textBox3.TabIndex = 5;
+            textBoxPaintDescription.CharacterCasing = CharacterCasing.Upper;
+            textBoxPaintDescription.Location = new Point(3, 116);
+            textBoxPaintDescription.Name = "textBoxPaintDescription";
+            textBoxPaintDescription.Size = new Size(468, 25);
+            textBoxPaintDescription.TabIndex = 5;
             // 
             // labelCanQtyDisplayName
             // 
@@ -145,12 +148,12 @@
             labelCanQtyDisplayName.TabIndex = 6;
             labelCanQtyDisplayName.Text = "{Model.Paint.CanQty.DisplayName}";
             // 
-            // textBox4
+            // textBoxPaintCanQty
             // 
-            textBox4.Location = new Point(3, 164);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(78, 25);
-            textBox4.TabIndex = 7;
+            textBoxPaintCanQty.Location = new Point(3, 164);
+            textBoxPaintCanQty.Name = "textBoxPaintCanQty";
+            textBoxPaintCanQty.Size = new Size(78, 25);
+            textBoxPaintCanQty.TabIndex = 7;
             // 
             // labelLitersDisplayName
             // 
@@ -161,12 +164,12 @@
             labelLitersDisplayName.TabIndex = 8;
             labelLitersDisplayName.Text = "{Model.Paint.Liters.DisplayName}";
             // 
-            // textBox5
+            // textBoxPaintLiters
             // 
-            textBox5.Location = new Point(3, 212);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(78, 25);
-            textBox5.TabIndex = 9;
+            textBoxPaintLiters.Location = new Point(3, 212);
+            textBoxPaintLiters.Name = "textBoxPaintLiters";
+            textBoxPaintLiters.Size = new Size(78, 25);
+            textBoxPaintLiters.TabIndex = 9;
             // 
             // labelExpirationDateDisplayName
             // 
@@ -177,61 +180,14 @@
             labelExpirationDateDisplayName.TabIndex = 10;
             labelExpirationDateDisplayName.Text = "{Model.Paint.ExpirationDate.DisplayName}";
             // 
-            // dateTimePicker1
+            // dateTimePickerPaintExpirationDate
             // 
-            dateTimePicker1.Checked = false;
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(3, 260);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(156, 25);
-            dateTimePicker1.TabIndex = 12;
-            // 
-            // labelObsDisplayName
-            // 
-            labelObsDisplayName.AutoSize = true;
-            labelObsDisplayName.Location = new Point(3, 334);
-            labelObsDisplayName.Name = "labelObsDisplayName";
-            labelObsDisplayName.Size = new Size(192, 17);
-            labelObsDisplayName.TabIndex = 13;
-            labelObsDisplayName.Text = "{Model.Paint.Obs.DisplayName}";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(3, 354);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.ScrollBars = ScrollBars.Vertical;
-            textBox6.Size = new Size(468, 98);
-            textBox6.TabIndex = 14;
-            // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Controls.Add(button1);
-            flowLayoutPanel2.Controls.Add(button2);
-            flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 458);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Padding = new Padding(4);
-            flowLayoutPanel2.Size = new Size(468, 49);
-            flowLayoutPanel2.TabIndex = 15;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(382, 7);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Adiciona";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(301, 7);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 34);
-            button2.TabIndex = 1;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            dateTimePickerPaintExpirationDate.Checked = false;
+            dateTimePickerPaintExpirationDate.Format = DateTimePickerFormat.Custom;
+            dateTimePickerPaintExpirationDate.Location = new Point(3, 260);
+            dateTimePickerPaintExpirationDate.Name = "dateTimePickerPaintExpirationDate";
+            dateTimePickerPaintExpirationDate.Size = new Size(156, 25);
+            dateTimePickerPaintExpirationDate.TabIndex = 12;
             // 
             // labelStatusDisplayName
             // 
@@ -242,13 +198,63 @@
             labelStatusDisplayName.TabIndex = 5;
             labelStatusDisplayName.Text = "{Model.Paint.Status.DisplayName}";
             // 
-            // comboBox1
+            // comboBoxPaintStatus
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(3, 308);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(156, 25);
-            comboBox1.TabIndex = 16;
+            comboBoxPaintStatus.FormattingEnabled = true;
+            comboBoxPaintStatus.Location = new Point(3, 308);
+            comboBoxPaintStatus.Name = "comboBoxPaintStatus";
+            comboBoxPaintStatus.Size = new Size(156, 25);
+            comboBoxPaintStatus.TabIndex = 16;
+            // 
+            // labelObsDisplayName
+            // 
+            labelObsDisplayName.AutoSize = true;
+            labelObsDisplayName.Location = new Point(3, 336);
+            labelObsDisplayName.Name = "labelObsDisplayName";
+            labelObsDisplayName.Size = new Size(192, 17);
+            labelObsDisplayName.TabIndex = 13;
+            labelObsDisplayName.Text = "{Model.Paint.Obs.DisplayName}";
+            // 
+            // textBoxPaintObs
+            // 
+            textBoxPaintObs.CharacterCasing = CharacterCasing.Upper;
+            textBoxPaintObs.Location = new Point(3, 356);
+            textBoxPaintObs.Multiline = true;
+            textBoxPaintObs.Name = "textBoxPaintObs";
+            textBoxPaintObs.ScrollBars = ScrollBars.Vertical;
+            textBoxPaintObs.Size = new Size(468, 98);
+            textBoxPaintObs.TabIndex = 14;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Controls.Add(buttonSave);
+            flowLayoutPanel2.Controls.Add(buttonCancel);
+            flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
+            flowLayoutPanel2.Location = new Point(3, 460);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Padding = new Padding(4);
+            flowLayoutPanel2.Size = new Size(468, 49);
+            flowLayoutPanel2.TabIndex = 15;
+            // 
+            // buttonSave
+            // 
+            buttonSave.Location = new Point(382, 7);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(75, 34);
+            buttonSave.TabIndex = 0;
+            buttonSave.Text = "Salvar";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
+            // 
+            // buttonCancel
+            // 
+            buttonCancel.Location = new Point(301, 7);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new Size(75, 34);
+            buttonCancel.TabIndex = 1;
+            buttonCancel.Text = "Cancelar";
+            buttonCancel.UseVisualStyleBackColor = true;
+            buttonCancel.Click += buttonCancel_Click;
             // 
             // PaintAddToProjectForm
             // 
@@ -261,6 +267,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "PaintAddToProjectForm";
             Text = "PaintAddToProjectForm";
+            FormClosing += PaintAddToProjectForm_FormClosing;
+            FormClosed += PaintAddToProjectForm_FormClosed;
             Load += PaintAddToProjectForm_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
@@ -274,23 +282,23 @@
         private Label label1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label labelCodeDisplayName;
-        private TextBox textBox1;
+        private TextBox textBoxPaintCode;
         private Label labelProjectDisplayName;
-        private TextBox textBox2;
+        private TextBox textBoxPaintProject;
         private Label labelDescriptionDisplayName;
-        private TextBox textBox3;
+        private TextBox textBoxPaintDescription;
         private Label labelCanQtyDisplayName;
-        private TextBox textBox4;
+        private TextBox textBoxPaintCanQty;
         private Label labelLitersDisplayName;
-        private TextBox textBox5;
+        private TextBox textBoxPaintLiters;
         private Label labelExpirationDateDisplayName;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerPaintExpirationDate;
         private Label labelObsDisplayName;
-        private TextBox textBox6;
+        private TextBox textBoxPaintObs;
         private FlowLayoutPanel flowLayoutPanel2;
-        private Button button1;
-        private Button button2;
+        private Button buttonSave;
+        private Button buttonCancel;
         private Label labelStatusDisplayName;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxPaintStatus;
     }
 }
