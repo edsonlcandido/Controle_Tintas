@@ -163,7 +163,7 @@ namespace Controle_Tintas.Views
             {
                 //set user to row clicked                
                 UserModel userModel = (UserModel)dataGridViewUsers.Rows[e.RowIndex].DataBoundItem;
-                int Id = userModel.Id;                
+                int Id = userModel.Id;
                 //create a confirmation messagebox to delete user
                 var result = MessageBox.Show("Deseja excluir o usuario?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -173,7 +173,7 @@ namespace Controle_Tintas.Views
                     MessageBox.Show("Usuario excluido com sucesso!");
                     ClearForm();
                     PopulateDataGridViewUsers();
-                }                
+                }
             }
         }
     }

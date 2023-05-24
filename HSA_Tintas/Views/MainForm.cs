@@ -48,7 +48,7 @@ namespace Controle_Tintas.Views
             form.Location = new Point(0, 0);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonShowUserForm_Click(object sender, EventArgs e)
         {
             //get formMain from ServiceProvider
             Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
@@ -72,6 +72,16 @@ namespace Controle_Tintas.Views
                     mdiChild.Location = new Point(0, 0);
                 }
             }
+        }
+
+        private void buttonShowPaintToProjectForm_Click(object sender, EventArgs e)
+        {
+            //get form main from ServiceProvider
+            Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
+
+            //get form PaintProjectsForm from ServiceProvider
+            Views.PaintProjectsForm formPaintProjects = Program.ServiceProvider.GetRequiredService<Views.PaintProjectsForm>();
+            formMain.ShowInMdiContainer(formPaintProjects);
         }
     }
 }
