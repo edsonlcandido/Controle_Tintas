@@ -14,6 +14,8 @@ namespace Controle_Tintas
             var services = new ServiceCollection();
             services.AddSingleton<MainForm>();
             services.AddTransient<UserForm>();
+            services.AddTransient<PaintProjectsForm>();
+            services.AddTransient<PaintAddToProjectForm>();
             services.AddTransient<UserModel>();            
             //register all queries and commands here
             services.AddTransient<GetAllUsersQuery>();            
@@ -21,6 +23,8 @@ namespace Controle_Tintas
             services.AddTransient<CreateUserCommand>();
             services.AddTransient<UpdateUserCommand>();
             services.AddTransient<DeleteUserCommand>();
+            services.AddTransient<GetAllPaintStatusQuery>();
+            services.AddTransient<CreatePaintCommand>();
 
             ServiceProvider = services.BuildServiceProvider();
         }
