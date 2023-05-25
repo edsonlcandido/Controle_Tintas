@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Controle_Tintas.Domain.Models;
 using Dapper;
-using Microsoft.Data.Sqlite;
+using System.Data.SQLite;   
 
 namespace Controle_Tintas.Data.Repositories
 {
@@ -30,7 +30,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to add user in database using dapper ORM and SQLite database
         public static async Task Add(Domain.Models.UserModel user)
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //insert user in database
                 string sql = "INSERT INTO User (Name, IsAdmin) VALUES (@Name, @IsAdmin)";
@@ -41,7 +41,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to get all users from database using dapper ORM and SQLite database
         public static async Task<IEnumerable<Domain.Models.UserModel>> GetAll()
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //get all users from database
                 string sql = "SELECT * FROM User";
@@ -53,7 +53,7 @@ namespace Controle_Tintas.Data.Repositories
         internal static Task Delete(int id)
         {
             //delete user from database using dapper ORM and SQLite database
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //delete user from database
                 string sql = "DELETE FROM User WHERE Id = @Id";
@@ -64,7 +64,7 @@ namespace Controle_Tintas.Data.Repositories
         internal static async Task<UserModel> GetById(int id)
         {
            //get user by id from database using dapper ORM and SQLite database
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //get user by id from database
                 string sql = "SELECT * FROM User WHERE Id = @Id";
@@ -76,7 +76,7 @@ namespace Controle_Tintas.Data.Repositories
         internal static async Task Update(UserModel user)
         {
             //update user in database using dapper ORM and SQLite database
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //update user in database
                 string sql = "UPDATE User SET Name = @Name, IsAdmin = @IsAdmin WHERE Id = @Id";
