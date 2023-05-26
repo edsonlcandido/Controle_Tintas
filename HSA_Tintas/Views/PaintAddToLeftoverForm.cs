@@ -23,7 +23,6 @@ namespace Controle_Tintas.Views
         {
             InitializeComponent();
             paintModel = Program.ServiceProvider.GetRequiredService<GetPaintByIdQuery>().Execute(paintId);
-            paintModel.Status = "SOBRA";
             //paintModel.Obs append text "TINTA DE SOBRA DO PROJETO " + paintModel.Project
             paintModel.Obs = paintModel.Obs + " | TINTA DE SOBRA DO PROJETO " + paintModel.Project;
             paintModel.Project = "";
@@ -62,8 +61,8 @@ namespace Controle_Tintas.Views
             if (paint != null)
             {
                 //if paint is valid, add paint to project
-                Program.ServiceProvider.GetRequiredService<CreatePaintCommand>().Execute(paint).Wait();
-                MessageBox.Show("Tinta adicionada ao projeto com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Program.ServiceProvider.GetRequiredService<UpdatePaintToLeftoverCommand>().Execute(paint);
+                MessageBox.Show("Tinta enviada para o esqtoque de sobras", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //invoke cancel button click event
                 buttonCancel.PerformClick();
             }
@@ -76,7 +75,6 @@ namespace Controle_Tintas.Views
 
         private PaintModel formToPaintModel()
         {
-            PaintModel paintModel = new PaintModel();
             paintModel.CanQty = Convert.ToInt32(textBoxPaintCanQty.Text);
 
             //verify if paintModel is valid

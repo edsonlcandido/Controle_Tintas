@@ -249,7 +249,7 @@
             buttonShowPaintAddToProjectForm.Name = "buttonShowPaintAddToProjectForm";
             buttonShowPaintAddToProjectForm.Size = new Size(187, 34);
             buttonShowPaintAddToProjectForm.TabIndex = 5;
-            buttonShowPaintAddToProjectForm.Text = "Adiciona tinta para projeto";
+            buttonShowPaintAddToProjectForm.Text = "Adicionar tinta para projeto";
             buttonShowPaintAddToProjectForm.UseVisualStyleBackColor = true;
             buttonShowPaintAddToProjectForm.Click += buttonShowPaintAddToProjectForm_Click;
             // 
