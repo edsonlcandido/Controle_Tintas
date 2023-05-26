@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using Controle_Tintas.Domain.Commands;
 
 namespace Controle_Tintas.Views
 {
@@ -54,8 +55,7 @@ namespace Controle_Tintas.Views
             dataGridViewPaintsAvailableAndInUse.Rows.Clear();
             //clear columns from dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Columns.Clear();
-            //sort paints by ExpirationDate
-            paintsToDataGridView = paints.OrderBy(p => p.ExpirationDate);
+            paintsToDataGridView = paints;
             BindingList<PaintModel> bindingPaints = new BindingList<PaintModel>(paintsToDataGridView.ToList());
             dataGridViewPaintsAvailableAndInUse.AutoGenerateColumns = false;
             dataGridViewPaintsAvailableAndInUse.DataSource = bindingPaints;
@@ -159,7 +159,7 @@ namespace Controle_Tintas.Views
             PopulateDataGridViewPaintsAvailableAndInUse(paints);
         }
 
-        private void buttonProjectFIlter_Click(object sender, EventArgs e)
+        private void buttonProjectFilter_Click(object sender, EventArgs e)
         {
             //filter paints by Project to a new paints and update dataGridViewPaintsAvailableAndInUse
             var paints = this.paints.Where(p => p.Project.Contains(textBoxProjectFilter.Text));
@@ -178,6 +178,32 @@ namespace Controle_Tintas.Views
             //filter paints by Status to a new paints and update dataGridViewPaintsAvailableAndInUse
             var paints = this.paints.Where(p => p.Status == comboBoxStatusFilter.Text);
             PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void buttonUsePaint_Click(object sender, EventArgs e)
+        {
+            PaintModel paintModelCurrentBiding = new PaintModel();
+            PaintModel paintModel = new PaintModel();
+            //get selected paint from dataGridViewPaintsAvailableAndInUse
+            paintModelCurrentBiding = (PaintModel)dataGridViewPaintsAvailableAndInUse.CurrentRow.DataBoundItem;
+
+            //execute GetPaintByIdQuery.execute fom service provider
+            paintModel = Program.ServiceProvider.GetRequiredService<GetPaintByIdQuery>().Execute(paintModelCurrentBiding.Id);
+
+            //show a message box to confirm if user wants to use the paint
+            DialogResult dialogResult = MessageBox.Show("Deseja usar a tinta selecionada?\n" +
+                "A tinta mudará o status para \"EM USO\"", "Confirmar", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }else if (dialogResult == DialogResult.Yes)
+            {
+                //execute UpdatePaintCommand.execute from service provider
+                Program.ServiceProvider.GetRequiredService<UpdatePaintToInUseCommand>().Execute(paintModel);
+                //invoke formload event
+                PaintProjectsForm_Load(sender, e);
+            }           
+
         }
     }
 }
