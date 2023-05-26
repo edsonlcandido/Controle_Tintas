@@ -6,7 +6,7 @@
     Description    TEXT,
     CanQty         DOUBLE,
     Liters         DOUBLE,
-    ExpirationDate DATETIME,
+    ExpirationDate DATE,
     Status         TEXT,
     Obs            TEXT
 );

@@ -95,6 +95,8 @@ namespace Controle_Tintas.Views
             paintModel.Liters = Convert.ToDouble(textBoxPaintLiters.Text);
             //convert dateTimePickerPaintExpirationDate.Value to DateOnly with format YYYY-MM-DD
             paintModel.ExpirationDate = dateTimePickerPaintExpirationDate.Value;
+            //set expiration date to 00:00:00
+            paintModel.ExpirationDate = paintModel.ExpirationDate.Date;
             paintModel.Status = comboBoxPaintStatus.SelectedItem.ToString();
             paintModel.Obs = textBoxPaintObs.Text;
 

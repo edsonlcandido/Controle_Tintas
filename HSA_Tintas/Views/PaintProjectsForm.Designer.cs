@@ -48,7 +48,7 @@
             groupBox1 = new GroupBox();
             buttonClearFilters = new Button();
             buttonShowPaintAddToProjectForm = new Button();
-            button6 = new Button();
+            buttonUsePaint = new Button();
             button7 = new Button();
             dataGridViewPaintsAvailableAndInUse = new DataGridView();
             flowLayoutPanel1.SuspendLayout();
@@ -156,7 +156,7 @@
             buttonProjectFIlter.TabIndex = 1;
             buttonProjectFIlter.Text = "Pesquisar";
             buttonProjectFIlter.UseVisualStyleBackColor = true;
-            buttonProjectFIlter.Click += buttonProjectFIlter_Click;
+            buttonProjectFIlter.Click += buttonProjectFilter_Click;
             // 
             // label3
             // 
@@ -253,14 +253,15 @@
             buttonShowPaintAddToProjectForm.UseVisualStyleBackColor = true;
             buttonShowPaintAddToProjectForm.Click += buttonShowPaintAddToProjectForm_Click;
             // 
-            // button6
+            // buttonUsePaint
             // 
-            button6.Location = new Point(480, 63);
-            button6.Name = "button6";
-            button6.Size = new Size(187, 34);
-            button6.TabIndex = 6;
-            button6.Text = "Utilizar tinta";
-            button6.UseVisualStyleBackColor = true;
+            buttonUsePaint.Location = new Point(480, 63);
+            buttonUsePaint.Name = "buttonUsePaint";
+            buttonUsePaint.Size = new Size(187, 34);
+            buttonUsePaint.TabIndex = 6;
+            buttonUsePaint.Text = "Utilizar tinta";
+            buttonUsePaint.UseVisualStyleBackColor = true;
+            buttonUsePaint.Click += buttonUsePaint_Click;
             // 
             // button7
             // 
@@ -294,7 +295,7 @@
             ClientSize = new Size(880, 660);
             Controls.Add(dataGridViewPaintsAvailableAndInUse);
             Controls.Add(button7);
-            Controls.Add(button6);
+            Controls.Add(buttonUsePaint);
             Controls.Add(buttonShowPaintAddToProjectForm);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -340,7 +341,7 @@
         private GroupBox groupBox1;
         private Button buttonClearFilters;
         private Button buttonShowPaintAddToProjectForm;
-        private Button button6;
+        private Button buttonUsePaint;
         private Button button7;
         private DataGridView dataGridViewPaintsAvailableAndInUse;
     }
