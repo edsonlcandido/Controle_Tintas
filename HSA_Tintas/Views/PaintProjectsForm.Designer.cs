@@ -110,16 +110,17 @@
             textBoxCodeFilter.Location = new Point(3, 3);
             textBoxCodeFilter.Name = "textBoxCodeFilter";
             textBoxCodeFilter.Size = new Size(156, 25);
-            textBoxCodeFilter.TabIndex = 1;
+            textBoxCodeFilter.TabIndex = 0;
             // 
             // buttonCodeFilter
             // 
             buttonCodeFilter.Location = new Point(165, 3);
             buttonCodeFilter.Name = "buttonCodeFilter";
             buttonCodeFilter.Size = new Size(75, 34);
-            buttonCodeFilter.TabIndex = 0;
+            buttonCodeFilter.TabIndex = 1;
             buttonCodeFilter.Text = "Pesquisar";
             buttonCodeFilter.UseVisualStyleBackColor = true;
+            buttonCodeFilter.Click += buttonCodeFilter_Click;
             // 
             // label2
             // 
@@ -145,16 +146,17 @@
             textBoxProjectFilter.Location = new Point(3, 3);
             textBoxProjectFilter.Name = "textBoxProjectFilter";
             textBoxProjectFilter.Size = new Size(156, 25);
-            textBoxProjectFilter.TabIndex = 1;
+            textBoxProjectFilter.TabIndex = 0;
             // 
             // buttonProjectFIlter
             // 
             buttonProjectFIlter.Location = new Point(165, 3);
             buttonProjectFIlter.Name = "buttonProjectFIlter";
             buttonProjectFIlter.Size = new Size(75, 34);
-            buttonProjectFIlter.TabIndex = 0;
+            buttonProjectFIlter.TabIndex = 1;
             buttonProjectFIlter.Text = "Pesquisar";
             buttonProjectFIlter.UseVisualStyleBackColor = true;
+            buttonProjectFIlter.Click += buttonProjectFIlter_Click;
             // 
             // label3
             // 
@@ -180,16 +182,17 @@
             textBoxDescriptionFilter.Location = new Point(3, 3);
             textBoxDescriptionFilter.Name = "textBoxDescriptionFilter";
             textBoxDescriptionFilter.Size = new Size(156, 25);
-            textBoxDescriptionFilter.TabIndex = 1;
+            textBoxDescriptionFilter.TabIndex = 0;
             // 
             // buttonDescriptionFilter
             // 
             buttonDescriptionFilter.Location = new Point(165, 3);
             buttonDescriptionFilter.Name = "buttonDescriptionFilter";
             buttonDescriptionFilter.Size = new Size(75, 34);
-            buttonDescriptionFilter.TabIndex = 0;
+            buttonDescriptionFilter.TabIndex = 1;
             buttonDescriptionFilter.Text = "Pesquisar";
             buttonDescriptionFilter.UseVisualStyleBackColor = true;
+            buttonDescriptionFilter.Click += buttonDescriptionFilter_Click;
             // 
             // label4
             // 
@@ -217,6 +220,7 @@
             comboBoxStatusFilter.Size = new Size(156, 25);
             comboBoxStatusFilter.TabIndex = 0;
             comboBoxStatusFilter.Text = "DISPONIVEL";
+            comboBoxStatusFilter.SelectedIndexChanged += comboBoxStatusFilter_SelectedIndexChanged;
             // 
             // groupBox1
             // 
@@ -234,7 +238,7 @@
             buttonClearFilters.Location = new Point(75, 320);
             buttonClearFilters.Name = "buttonClearFilters";
             buttonClearFilters.Size = new Size(93, 34);
-            buttonClearFilters.TabIndex = 4;
+            buttonClearFilters.TabIndex = 0;
             buttonClearFilters.Text = "Limpar filtros";
             buttonClearFilters.UseVisualStyleBackColor = true;
             buttonClearFilters.Click += buttonClearFilters_Click;
@@ -274,9 +278,11 @@
             dataGridViewPaintsAvailableAndInUse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewPaintsAvailableAndInUse.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewPaintsAvailableAndInUse.Location = new Point(287, 107);
+            dataGridViewPaintsAvailableAndInUse.MultiSelect = false;
             dataGridViewPaintsAvailableAndInUse.Name = "dataGridViewPaintsAvailableAndInUse";
             dataGridViewPaintsAvailableAndInUse.ReadOnly = true;
             dataGridViewPaintsAvailableAndInUse.RowTemplate.Height = 25;
+            dataGridViewPaintsAvailableAndInUse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPaintsAvailableAndInUse.Size = new Size(581, 540);
             dataGridViewPaintsAvailableAndInUse.TabIndex = 8;
             dataGridViewPaintsAvailableAndInUse.DataBindingComplete += dataGridViewPaintsAvailableAndInUse_DataBindingComplete;

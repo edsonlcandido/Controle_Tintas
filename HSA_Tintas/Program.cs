@@ -8,7 +8,7 @@ namespace Controle_Tintas
 {
     internal static class Program
     {
-        public static IServiceProvider ServiceProvider { get; private set; }
+        public static IServiceProvider? ServiceProvider { get; private set; }
         static void ConfigureServices()
         {
             var services = new ServiceCollection();
@@ -41,8 +41,11 @@ namespace Controle_Tintas
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             ConfigureServices();
-            MainForm formMain = ServiceProvider.GetRequiredService<MainForm>();
-            Application.Run(formMain);
+            using (IServiceScope scope = ServiceProvider.CreateScope()) // Throwaway scope to avoid potential NULL parameter
+            {
+                MainForm formMain = scope.ServiceProvider.GetRequiredService<MainForm>();
+                Application.Run(formMain);
+            }
         }
     }
 }

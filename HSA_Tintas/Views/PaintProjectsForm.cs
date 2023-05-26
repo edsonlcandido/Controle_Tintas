@@ -124,6 +124,8 @@ namespace Controle_Tintas.Views
                 Name = "PaintModelStatus",
                 SortMode = DataGridViewColumnSortMode.Automatic
             });
+            //invoke dataGridViewPaintsAvailableAndInUse_DataBindingComplete event
+            dataGridViewPaintsAvailableAndInUse_DataBindingComplete(this, new DataGridViewBindingCompleteEventArgs(ListChangedType.Reset));
 
         }
 
@@ -148,6 +150,34 @@ namespace Controle_Tintas.Views
         {
             //invoke formload event
             PaintProjectsForm_Load(sender, e);
+        }
+
+        private void buttonCodeFilter_Click(object sender, EventArgs e)
+        {
+            //filter paints by Code to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Code.Contains(textBoxCodeFilter.Text));
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void buttonProjectFIlter_Click(object sender, EventArgs e)
+        {
+            //filter paints by Project to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Project.Contains(textBoxProjectFilter.Text));
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void buttonDescriptionFilter_Click(object sender, EventArgs e)
+        {
+            //filter paints by Description to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Description.Contains(textBoxDescriptionFilter.Text));
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void comboBoxStatusFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //filter paints by Status to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Status == comboBoxStatusFilter.Text);
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
         }
     }
 }
