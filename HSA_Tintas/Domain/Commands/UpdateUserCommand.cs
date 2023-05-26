@@ -9,10 +9,10 @@ namespace Controle_Tintas.Domain.Commands
     internal class UpdateUserCommand
     {
         public UpdateUserCommand() { }
-        public void Execute(Models.UserModel user)
+        public async Task Execute(Models.UserModel user)
         {
             //update user in database using UserRepository
-            Data.Repositories.UserRepository.Update(user);
+            await Data.Repositories.UserRepository.Update(user);
         }
     }
 }

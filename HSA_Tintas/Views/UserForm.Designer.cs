@@ -130,9 +130,11 @@
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewUsers.Location = new Point(249, 44);
             dataGridViewUsers.Margin = new Padding(4);
+            dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.RowTemplate.Height = 25;
+            dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsers.Size = new Size(543, 548);
             dataGridViewUsers.TabIndex = 3;
             dataGridViewUsers.CellContentClick += dataGridViewUsers_CellContentClick;
