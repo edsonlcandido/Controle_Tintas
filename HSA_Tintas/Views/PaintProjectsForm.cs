@@ -196,13 +196,32 @@ namespace Controle_Tintas.Views
             if (dialogResult == DialogResult.No)
             {
                 return;
-            }else if (dialogResult == DialogResult.Yes)
+            }
+            else if (dialogResult == DialogResult.Yes)
             {
                 //execute UpdatePaintCommand.execute from service provider
                 Program.ServiceProvider.GetRequiredService<UpdatePaintToInUseCommand>().Execute(paintModel);
                 //invoke formload event
                 PaintProjectsForm_Load(sender, e);
-            }           
+            }
+
+        }
+
+        private void buttonPaintToLeftover_Click(object sender, EventArgs e)
+        {
+            PaintModel paintModelCurrentBiding = new PaintModel();
+            PaintModel paintModel = new PaintModel();
+            //get selected paint from dataGridViewPaintsAvailableAndInUse
+            paintModelCurrentBiding = (PaintModel)dataGridViewPaintsAvailableAndInUse.CurrentRow.DataBoundItem;
+
+            //execute GetPaintByIdQuery.execute fom service provider
+            paintModel = Program.ServiceProvider.GetRequiredService<GetPaintByIdQuery>().Execute(paintModelCurrentBiding.Id);
+
+            //get mainForm from service provider
+            MainForm mainForm = Program.ServiceProvider.GetRequiredService<MainForm>();
+            //set PaintAddToProjectForm from ServiceProvider
+            Views.PaintAddToLeftoverForm paintAddToLeftoverForm = new PaintAddToLeftoverForm(paintModel.Id);
+            mainForm.ShowInMdiContainer(paintAddToLeftoverForm);
 
         }
     }

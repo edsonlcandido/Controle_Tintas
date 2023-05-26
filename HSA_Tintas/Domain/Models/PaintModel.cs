@@ -28,8 +28,7 @@ namespace Controle_Tintas.Domain.Models
         [Required(ErrorMessage = "O campo Código é obrigatório")]
         public string Code { get; set; }
         [DisplayName("Projeto")]
-        [DataType(DataType.Text)]
-        [Required(ErrorMessage = "O campo Projeto é obrigatório")]
+        [DataType(DataType.Text)]        
         public string Project { get; set; }
         [DisplayName("Descrição")]
         [DataType(DataType.Text)]
@@ -54,6 +53,9 @@ namespace Controle_Tintas.Domain.Models
 
         internal bool IsValid(out ICollection<ValidationResult> validationResults)
         {
+
+
+
             //validate data annotations
             validationResults = new List<ValidationResult>();
 
@@ -61,6 +63,12 @@ namespace Controle_Tintas.Domain.Models
             if (ExpirationDate <= DateTime.Now.AddDays(1))  // validade the date is greater than today + 1
             {
                 validationResults.Add(new ValidationResult("A Data de validade deve ser maior que o dia de hoje mais 1.", new List<string> { "ExpirationDate" }));
+            }
+
+            //add custom validation to project is not empty when código is 0
+            if (Id == 0 && string.IsNullOrEmpty(Project))
+            {
+                validationResults.Add(new ValidationResult("O campo Projeto é obrigatório ao adicionar uma nova tinta", new List<string> { "Project" }));
             }
 
             return Validator.TryValidateObject(this, new ValidationContext(this), validationResults, true);
