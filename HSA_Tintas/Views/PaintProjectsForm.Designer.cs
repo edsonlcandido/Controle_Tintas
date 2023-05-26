@@ -49,7 +49,7 @@
             buttonClearFilters = new Button();
             buttonShowPaintAddToProjectForm = new Button();
             buttonUsePaint = new Button();
-            button7 = new Button();
+            buttonPaintToLeftover = new Button();
             dataGridViewPaintsAvailableAndInUse = new DataGridView();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
@@ -263,14 +263,15 @@
             buttonUsePaint.UseVisualStyleBackColor = true;
             buttonUsePaint.Click += buttonUsePaint_Click;
             // 
-            // button7
+            // buttonPaintToLeftover
             // 
-            button7.Location = new Point(673, 63);
-            button7.Name = "button7";
-            button7.Size = new Size(187, 34);
-            button7.TabIndex = 7;
-            button7.Text = "Enviar tinta para sobra";
-            button7.UseVisualStyleBackColor = true;
+            buttonPaintToLeftover.Location = new Point(673, 63);
+            buttonPaintToLeftover.Name = "buttonPaintToLeftover";
+            buttonPaintToLeftover.Size = new Size(187, 34);
+            buttonPaintToLeftover.TabIndex = 7;
+            buttonPaintToLeftover.Text = "Enviar tinta para sobra";
+            buttonPaintToLeftover.UseVisualStyleBackColor = true;
+            buttonPaintToLeftover.Click += buttonPaintToLeftover_Click;
             // 
             // dataGridViewPaintsAvailableAndInUse
             // 
@@ -294,7 +295,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(880, 660);
             Controls.Add(dataGridViewPaintsAvailableAndInUse);
-            Controls.Add(button7);
+            Controls.Add(buttonPaintToLeftover);
             Controls.Add(buttonUsePaint);
             Controls.Add(buttonShowPaintAddToProjectForm);
             Controls.Add(groupBox1);
@@ -342,7 +343,7 @@
         private Button buttonClearFilters;
         private Button buttonShowPaintAddToProjectForm;
         private Button buttonUsePaint;
-        private Button button7;
+        private Button buttonPaintToLeftover;
         private DataGridView dataGridViewPaintsAvailableAndInUse;
     }
 }
