@@ -32,21 +32,21 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             labelUserName = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            textBox1 = new TextBox();
-            button1 = new Button();
+            textBoxCodeFilter = new TextBox();
+            buttonCodeFilter = new Button();
             label2 = new Label();
             flowLayoutPanel3 = new FlowLayoutPanel();
-            textBox2 = new TextBox();
-            button2 = new Button();
+            textBoxProjectFilter = new TextBox();
+            buttonProjectFIlter = new Button();
             label3 = new Label();
             flowLayoutPanel4 = new FlowLayoutPanel();
-            textBox3 = new TextBox();
-            button3 = new Button();
+            textBoxDescriptionFilter = new TextBox();
+            buttonDescriptionFilter = new Button();
             label4 = new Label();
             flowLayoutPanel5 = new FlowLayoutPanel();
-            comboBox1 = new ComboBox();
+            comboBoxStatusFilter = new ComboBox();
             groupBox1 = new GroupBox();
-            button4 = new Button();
+            buttonClearFilters = new Button();
             buttonShowPaintAddToProjectForm = new Button();
             button6 = new Button();
             button7 = new Button();
@@ -97,28 +97,30 @@
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.Controls.Add(textBox1);
-            flowLayoutPanel2.Controls.Add(button1);
+            flowLayoutPanel2.Controls.Add(textBoxCodeFilter);
+            flowLayoutPanel2.Controls.Add(buttonCodeFilter);
             flowLayoutPanel2.Location = new Point(3, 20);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(249, 45);
             flowLayoutPanel2.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxCodeFilter
             // 
-            textBox1.Location = new Point(3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 25);
-            textBox1.TabIndex = 1;
+            textBoxCodeFilter.CharacterCasing = CharacterCasing.Upper;
+            textBoxCodeFilter.Location = new Point(3, 3);
+            textBoxCodeFilter.Name = "textBoxCodeFilter";
+            textBoxCodeFilter.Size = new Size(156, 25);
+            textBoxCodeFilter.TabIndex = 0;
             // 
-            // button1
+            // buttonCodeFilter
             // 
-            button1.Location = new Point(165, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Pesquisar";
-            button1.UseVisualStyleBackColor = true;
+            buttonCodeFilter.Location = new Point(165, 3);
+            buttonCodeFilter.Name = "buttonCodeFilter";
+            buttonCodeFilter.Size = new Size(75, 34);
+            buttonCodeFilter.TabIndex = 1;
+            buttonCodeFilter.Text = "Pesquisar";
+            buttonCodeFilter.UseVisualStyleBackColor = true;
+            buttonCodeFilter.Click += buttonCodeFilter_Click;
             // 
             // label2
             // 
@@ -131,28 +133,30 @@
             // 
             // flowLayoutPanel3
             // 
-            flowLayoutPanel3.Controls.Add(textBox2);
-            flowLayoutPanel3.Controls.Add(button2);
+            flowLayoutPanel3.Controls.Add(textBoxProjectFilter);
+            flowLayoutPanel3.Controls.Add(buttonProjectFIlter);
             flowLayoutPanel3.Location = new Point(3, 88);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Size = new Size(249, 45);
             flowLayoutPanel3.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxProjectFilter
             // 
-            textBox2.Location = new Point(3, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(156, 25);
-            textBox2.TabIndex = 1;
+            textBoxProjectFilter.CharacterCasing = CharacterCasing.Upper;
+            textBoxProjectFilter.Location = new Point(3, 3);
+            textBoxProjectFilter.Name = "textBoxProjectFilter";
+            textBoxProjectFilter.Size = new Size(156, 25);
+            textBoxProjectFilter.TabIndex = 0;
             // 
-            // button2
+            // buttonProjectFIlter
             // 
-            button2.Location = new Point(165, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 34);
-            button2.TabIndex = 0;
-            button2.Text = "Pesquisar";
-            button2.UseVisualStyleBackColor = true;
+            buttonProjectFIlter.Location = new Point(165, 3);
+            buttonProjectFIlter.Name = "buttonProjectFIlter";
+            buttonProjectFIlter.Size = new Size(75, 34);
+            buttonProjectFIlter.TabIndex = 1;
+            buttonProjectFIlter.Text = "Pesquisar";
+            buttonProjectFIlter.UseVisualStyleBackColor = true;
+            buttonProjectFIlter.Click += buttonProjectFIlter_Click;
             // 
             // label3
             // 
@@ -165,28 +169,30 @@
             // 
             // flowLayoutPanel4
             // 
-            flowLayoutPanel4.Controls.Add(textBox3);
-            flowLayoutPanel4.Controls.Add(button3);
+            flowLayoutPanel4.Controls.Add(textBoxDescriptionFilter);
+            flowLayoutPanel4.Controls.Add(buttonDescriptionFilter);
             flowLayoutPanel4.Location = new Point(3, 156);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Size = new Size(249, 45);
             flowLayoutPanel4.TabIndex = 5;
             // 
-            // textBox3
+            // textBoxDescriptionFilter
             // 
-            textBox3.Location = new Point(3, 3);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(156, 25);
-            textBox3.TabIndex = 1;
+            textBoxDescriptionFilter.CharacterCasing = CharacterCasing.Upper;
+            textBoxDescriptionFilter.Location = new Point(3, 3);
+            textBoxDescriptionFilter.Name = "textBoxDescriptionFilter";
+            textBoxDescriptionFilter.Size = new Size(156, 25);
+            textBoxDescriptionFilter.TabIndex = 0;
             // 
-            // button3
+            // buttonDescriptionFilter
             // 
-            button3.Location = new Point(165, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 34);
-            button3.TabIndex = 0;
-            button3.Text = "Pesquisar";
-            button3.UseVisualStyleBackColor = true;
+            buttonDescriptionFilter.Location = new Point(165, 3);
+            buttonDescriptionFilter.Name = "buttonDescriptionFilter";
+            buttonDescriptionFilter.Size = new Size(75, 34);
+            buttonDescriptionFilter.TabIndex = 1;
+            buttonDescriptionFilter.Text = "Pesquisar";
+            buttonDescriptionFilter.UseVisualStyleBackColor = true;
+            buttonDescriptionFilter.Click += buttonDescriptionFilter_Click;
             // 
             // label4
             // 
@@ -199,25 +205,26 @@
             // 
             // flowLayoutPanel5
             // 
-            flowLayoutPanel5.Controls.Add(comboBox1);
+            flowLayoutPanel5.Controls.Add(comboBoxStatusFilter);
             flowLayoutPanel5.Location = new Point(3, 224);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Size = new Size(249, 45);
             flowLayoutPanel5.TabIndex = 7;
             // 
-            // comboBox1
+            // comboBoxStatusFilter
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "DISPONIVEL", "EM USO" });
-            comboBox1.Location = new Point(3, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(156, 25);
-            comboBox1.TabIndex = 0;
-            comboBox1.Text = "DISPONIVEL";
+            comboBoxStatusFilter.FormattingEnabled = true;
+            comboBoxStatusFilter.Items.AddRange(new object[] { "DISPONIVEL", "EM USO" });
+            comboBoxStatusFilter.Location = new Point(3, 3);
+            comboBoxStatusFilter.Name = "comboBoxStatusFilter";
+            comboBoxStatusFilter.Size = new Size(156, 25);
+            comboBoxStatusFilter.TabIndex = 0;
+            comboBoxStatusFilter.Text = "DISPONIVEL";
+            comboBoxStatusFilter.SelectedIndexChanged += comboBoxStatusFilter_SelectedIndexChanged;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(buttonClearFilters);
             groupBox1.Controls.Add(flowLayoutPanel1);
             groupBox1.Location = new Point(12, 56);
             groupBox1.Name = "groupBox1";
@@ -226,14 +233,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
             // 
-            // button4
+            // buttonClearFilters
             // 
-            button4.Location = new Point(75, 320);
-            button4.Name = "button4";
-            button4.Size = new Size(93, 34);
-            button4.TabIndex = 4;
-            button4.Text = "Limpar filtros";
-            button4.UseVisualStyleBackColor = true;
+            buttonClearFilters.Location = new Point(75, 320);
+            buttonClearFilters.Name = "buttonClearFilters";
+            buttonClearFilters.Size = new Size(93, 34);
+            buttonClearFilters.TabIndex = 0;
+            buttonClearFilters.Text = "Limpar filtros";
+            buttonClearFilters.UseVisualStyleBackColor = true;
+            buttonClearFilters.Click += buttonClearFilters_Click;
             // 
             // buttonShowPaintAddToProjectForm
             // 
@@ -270,9 +278,11 @@
             dataGridViewPaintsAvailableAndInUse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewPaintsAvailableAndInUse.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewPaintsAvailableAndInUse.Location = new Point(287, 107);
+            dataGridViewPaintsAvailableAndInUse.MultiSelect = false;
             dataGridViewPaintsAvailableAndInUse.Name = "dataGridViewPaintsAvailableAndInUse";
             dataGridViewPaintsAvailableAndInUse.ReadOnly = true;
             dataGridViewPaintsAvailableAndInUse.RowTemplate.Height = 25;
+            dataGridViewPaintsAvailableAndInUse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPaintsAvailableAndInUse.Size = new Size(581, 540);
             dataGridViewPaintsAvailableAndInUse.TabIndex = 8;
             dataGridViewPaintsAvailableAndInUse.DataBindingComplete += dataGridViewPaintsAvailableAndInUse_DataBindingComplete;
@@ -314,21 +324,21 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Label labelUserName;
         private FlowLayoutPanel flowLayoutPanel2;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox textBoxCodeFilter;
+        private Button buttonCodeFilter;
         private Label label2;
         private FlowLayoutPanel flowLayoutPanel3;
-        private TextBox textBox2;
-        private Button button2;
+        private TextBox textBoxProjectFilter;
+        private Button buttonProjectFIlter;
         private Label label3;
         private FlowLayoutPanel flowLayoutPanel4;
-        private TextBox textBox3;
-        private Button button3;
+        private TextBox textBoxDescriptionFilter;
+        private Button buttonDescriptionFilter;
         private Label label4;
         private FlowLayoutPanel flowLayoutPanel5;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxStatusFilter;
         private GroupBox groupBox1;
-        private Button button4;
+        private Button buttonClearFilters;
         private Button buttonShowPaintAddToProjectForm;
         private Button button6;
         private Button button7;

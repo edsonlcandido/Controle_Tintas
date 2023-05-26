@@ -17,6 +17,7 @@ namespace Controle_Tintas.Views
     public partial class PaintProjectsForm : Form
     {
         PaintModel paintModel;
+        IEnumerable<PaintModel> paints;
         public PaintProjectsForm()
         {
             InitializeComponent();
@@ -33,22 +34,29 @@ namespace Controle_Tintas.Views
 
         private void PaintProjectsForm_Load(object sender, EventArgs e)
         {
+            //start and reseted form status
+            comboBoxStatusFilter.Text = "DISPONIVEL";
+            textBoxCodeFilter.Text = "";
+            textBoxProjectFilter.Text = "";
+            textBoxDescriptionFilter.Text = "";
+
             paintModel = new PaintModel();
-            PopulateDataGridViewPaintsAvailableAndInUse();
+            //paint GetAllPaintsAvailableAndInUseQuery to get all paints available and in use from database
+            paints = Program.ServiceProvider.GetRequiredService<GetPaintsAvailableAndInUseQuery>().Execute();
+
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
         }
 
-        private void PopulateDataGridViewPaintsAvailableAndInUse()
+        private void PopulateDataGridViewPaintsAvailableAndInUse(IEnumerable<PaintModel> paints)
         {
-
+            IEnumerable<PaintModel> paintsToDataGridView;
             //clear dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Rows.Clear();
             //clear columns from dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Columns.Clear();
-            //user GetAllPaintsAvailableAndInUseQuery to get all paints available and in use from database
-            IEnumerable<PaintModel> paints = Program.ServiceProvider.GetRequiredService<GetPaintsAvailableAndInUseQuery>().Execute();
             //sort paints by ExpirationDate
-            paints = paints.OrderBy(p => p.ExpirationDate);
-            BindingList<PaintModel> bindingPaints = new BindingList<PaintModel>(paints.ToList());
+            paintsToDataGridView = paints.OrderBy(p => p.ExpirationDate);
+            BindingList<PaintModel> bindingPaints = new BindingList<PaintModel>(paintsToDataGridView.ToList());
             dataGridViewPaintsAvailableAndInUse.AutoGenerateColumns = false;
             dataGridViewPaintsAvailableAndInUse.DataSource = bindingPaints;
             //add column PaintModel.Code to dataGridViewPaintsAvailableAndInUse
@@ -116,6 +124,8 @@ namespace Controle_Tintas.Views
                 Name = "PaintModelStatus",
                 SortMode = DataGridViewColumnSortMode.Automatic
             });
+            //invoke dataGridViewPaintsAvailableAndInUse_DataBindingComplete event
+            dataGridViewPaintsAvailableAndInUse_DataBindingComplete(this, new DataGridViewBindingCompleteEventArgs(ListChangedType.Reset));
 
         }
 
@@ -134,6 +144,40 @@ namespace Controle_Tintas.Views
             dataGridViewPaintsAvailableAndInUse.Update();
             //refresh dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Refresh();
+        }
+
+        private void buttonClearFilters_Click(object sender, EventArgs e)
+        {
+            //invoke formload event
+            PaintProjectsForm_Load(sender, e);
+        }
+
+        private void buttonCodeFilter_Click(object sender, EventArgs e)
+        {
+            //filter paints by Code to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Code.Contains(textBoxCodeFilter.Text));
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void buttonProjectFIlter_Click(object sender, EventArgs e)
+        {
+            //filter paints by Project to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Project.Contains(textBoxProjectFilter.Text));
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void buttonDescriptionFilter_Click(object sender, EventArgs e)
+        {
+            //filter paints by Description to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Description.Contains(textBoxDescriptionFilter.Text));
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+        }
+
+        private void comboBoxStatusFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //filter paints by Status to a new paints and update dataGridViewPaintsAvailableAndInUse
+            var paints = this.paints.Where(p => p.Status == comboBoxStatusFilter.Text);
+            PopulateDataGridViewPaintsAvailableAndInUse(paints);
         }
     }
 }

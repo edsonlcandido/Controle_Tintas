@@ -1,6 +1,6 @@
 ﻿using Controle_Tintas.Domain.Models;
 using Dapper;
-using Microsoft.Data.Sqlite;
+using System.Data.SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +42,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to get all paints from database using dapper ORM and SQLite database
         public static async Task<IEnumerable<PaintModel>> GetAll()
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //get all paints from database
                 string sql = "SELECT * FROM Paint";
@@ -53,7 +53,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to get paint by id from database using dapper ORM and SQLite database
         public static async Task<Domain.Models.PaintModel> GetById(int id)
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //get paint by id from database
                 string sql = "SELECT * FROM Paint WHERE Id = @Id";
@@ -64,7 +64,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to add paint in database using dapper ORM and SQLite database 
         public static async Task Add(PaintModel paint)
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //insert paint in database
                 //convert ExpirationDate to string format YYYY-MM-DD before insert in database
@@ -76,7 +76,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to update paint in database using dapper ORM and SQLite database
         public static async Task Update(PaintModel paint)
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //update paint in database
                 string sql = "UPDATE Paint SET Code = @Code, Project = @Project, Description = @Description, CanQty = @CanQty, Liters = @Liters, ExpirationDate = @ExpirationDate, Status = @Status, Obs = @Obs WHERE Id = @Id";
@@ -86,7 +86,7 @@ namespace Controle_Tintas.Data.Repositories
         //method to delete paint in database using dapper ORM and SQLite database
         public static async Task Delete(int id)
         {
-            using (var connection = new SqliteConnection(_connectionString))
+            using (var connection = new SQLiteConnection(_connectionString))
             {
                 //delete paint from database
                 string sql = "DELETE FROM Paint WHERE Id = @Id";
