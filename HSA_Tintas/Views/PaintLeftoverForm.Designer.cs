@@ -224,7 +224,7 @@
             buttonDicardPaint.Name = "buttonDicardPaint";
             buttonDicardPaint.Size = new Size(187, 34);
             buttonDicardPaint.TabIndex = 6;
-            buttonDicardPaint.Text = "Descatar tinta";
+            buttonDicardPaint.Text = "Descartar tinta";
             buttonDicardPaint.UseVisualStyleBackColor = true;
             buttonDicardPaint.Click += buttonDicardPaint_Click;
             // 

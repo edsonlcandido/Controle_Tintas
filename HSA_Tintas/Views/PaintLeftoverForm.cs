@@ -198,8 +198,7 @@ namespace Controle_Tintas.Views
             paintModel = Program.ServiceProvider.GetRequiredService<GetPaintByIdQuery>().Execute(paintModelCurrentBiding.Id);
 
             //show a message box to confirm if user wants to use the paint
-            DialogResult dialogResult = MessageBox.Show("Deseja usar a tinta selecionada?\n" +
-                "A tinta mudará o status para \"EM USO\"", "Confirmar", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Deseja descartar a tinta selecionada?", "Confirmar", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
                 return;
@@ -207,7 +206,7 @@ namespace Controle_Tintas.Views
             else if (dialogResult == DialogResult.Yes)
             {
                 //execute UpdatePaintCommand.execute from service provider
-                Program.ServiceProvider.GetRequiredService<UpdatePaintToInUseCommand>().Execute(paintModel);
+                Program.ServiceProvider.GetRequiredService<UpdatePaintToDiscardCommand>().Execute(paintModel);
                 //invoke formload event
                 PaintProjectsForm_Load(sender, e);
             }
