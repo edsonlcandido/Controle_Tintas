@@ -124,6 +124,15 @@ namespace Controle_Tintas.Views
                 Name = "PaintModelStatus",
                 SortMode = DataGridViewColumnSortMode.Automatic
             });
+
+            //add column PaintModel.Obs to dataGridViewPaintsAvailableAndInUse
+            dataGridViewPaintsAvailableAndInUse.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Obs",
+                HeaderText = paintModel.GetType().GetProperty("Obs").GetCustomAttribute<DisplayNameAttribute>().DisplayName,
+                Name = "PaintModelObs",
+                SortMode = DataGridViewColumnSortMode.Automatic
+            });
             //invoke dataGridViewPaintsAvailableAndInUse_DataBindingComplete event
             dataGridViewPaintsAvailableAndInUse_DataBindingComplete(this, new DataGridViewBindingCompleteEventArgs(ListChangedType.Reset));
 
