@@ -34,6 +34,7 @@ namespace Controle_Tintas
             services.AddTransient<UpdatePaintToInUseCommand>();
             services.AddTransient<UpdatePaintToLeftoverCommand>();
             services.AddTransient<GetPaintsByStatusQuery>();
+            services.AddTransient<UpdatePaintToDiscardCommand>();
 
             ServiceProvider = services.BuildServiceProvider();
         }
