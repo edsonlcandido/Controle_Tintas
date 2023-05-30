@@ -83,5 +83,15 @@ namespace Controle_Tintas.Views
             Views.PaintProjectsForm formPaintProjects = Program.ServiceProvider.GetRequiredService<Views.PaintProjectsForm>();
             formMain.ShowInMdiContainer(formPaintProjects);
         }
+
+        private void buttonShowPaintLeftoverForm_Click(object sender, EventArgs e)
+        {
+            //get form main from ServiceProvider
+            Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
+
+            //get form PaintProjectsForm from ServiceProvider
+            Views.PaintLeftoverForm paintLeftoverForm = Program.ServiceProvider.GetRequiredService<Views.PaintLeftoverForm>();
+            formMain.ShowInMdiContainer(paintLeftoverForm);
+        }
     }
 }

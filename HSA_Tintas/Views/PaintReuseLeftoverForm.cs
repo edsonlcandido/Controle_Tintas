@@ -16,22 +16,21 @@ using System.Windows.Forms;
 
 namespace Controle_Tintas.Views
 {
-    public partial class PaintAddToLeftoverForm : Form
+    public partial class PaintReuseLeftoverForm : Form
     {
         PaintModel paintModel;
-        public PaintAddToLeftoverForm(int paintId)
+        public PaintReuseLeftoverForm(int paintId)
         {
             InitializeComponent();
             paintModel = Program.ServiceProvider.GetRequiredService<GetPaintByIdQuery>().Execute(paintId);
-            //paintModel.Obs append text "TINTA DE SOBRA DO PROJETO " + paintModel.Project
-            paintModel.Obs = paintModel.Obs + " | TINTA DE SOBRA DO PROJETO " + paintModel.Project;
-            paintModel.Project = "";
         }
 
         private void PaintAddToProjectForm_Load(object sender, EventArgs e)
         {
             //get data anotation from PaintModel.Code to labelCodeDisplayName text
             labelCodeDisplayName.Text = paintModel.GetType().GetProperty("Code").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotation from PaintModel.Project to labelProjectDisplayName text
+            labelProjectDisplayName.Text = paintModel.GetType().GetProperty("Project").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Description to labelDescriptionDisplayName text
             labelDescriptionDisplayName.Text = paintModel.GetType().GetProperty("Description").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.CanQty to labelCanQtyDisplayName text
@@ -46,6 +45,8 @@ namespace Controle_Tintas.Views
         {
             //set paintModel.Code to textBoxPaintCode text
             this.textBoxPaintCode.Text = paintModel.Code;
+            //set paintModel.Project to textBoxPaintProject text
+            this.textBoxPaintProject.Text = paintModel.Project;
             //set paintModel.Description to textBoxPaintDescription text
             this.textBoxPaintDescription.Text = paintModel.Description;
             //set paintModel.CanQty to textBoxPaintCanQty text
@@ -61,21 +62,22 @@ namespace Controle_Tintas.Views
             if (paint != null)
             {
                 //if paint is valid, add paint to project
-                Program.ServiceProvider.GetRequiredService<UpdatePaintToLeftoverCommand>().Execute(paint);
-                MessageBox.Show("Tinta enviada para o estoque de sobras", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Program.ServiceProvider.GetRequiredService<UpdatePaintToInUseCommand>().Execute(paint);
+                MessageBox.Show("Tinta adicionada ao projeto com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //invoke cancel button click event
                 buttonCancel.PerformClick();
             }
             else
             {
                 //if paint is not valid, show error message
-                MessageBox.Show("Erro ao adicionar tinta para o estoque de sobras!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao adicionar tinta ao projeto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private PaintModel formToPaintModel()
         {
             paintModel.CanQty = Convert.ToInt32(textBoxPaintCanQty.Text);
+            paintModel.Project = textBoxPaintProject.Text;
 
             //verify if paintModel is valid
             ICollection<ValidationResult> validationResults;
@@ -107,8 +109,8 @@ namespace Controle_Tintas.Views
             Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
 
             //get form PaintProjectsForm from ServiceProvider
-            Views.PaintProjectsForm formPaintProjects = Program.ServiceProvider.GetRequiredService<Views.PaintProjectsForm>();
-            formMain.ShowInMdiContainer(formPaintProjects);
+            Views.PaintLeftoverForm paintLeftoverForm = Program.ServiceProvider.GetRequiredService<Views.PaintLeftoverForm>();
+            formMain.ShowInMdiContainer(paintLeftoverForm);
         }
     }
 }

@@ -17,6 +17,8 @@ namespace Controle_Tintas
             services.AddTransient<PaintProjectsForm>();
             services.AddTransient<PaintAddToProjectForm>();
             services.AddTransient<PaintAddToLeftoverForm>();
+            services.AddTransient<PaintLeftoverForm>();
+            services.AddTransient<PaintReuseLeftoverForm>();
             services.AddTransient<UserModel>();            
             //register all queries and commands here
             services.AddTransient<GetAllUsersQuery>();            
@@ -31,6 +33,7 @@ namespace Controle_Tintas
             services.AddTransient<GetPaintByIdQuery>();
             services.AddTransient<UpdatePaintToInUseCommand>();
             services.AddTransient<UpdatePaintToLeftoverCommand>();
+            services.AddTransient<GetPaintsByStatusQuery>();
 
             ServiceProvider = services.BuildServiceProvider();
         }

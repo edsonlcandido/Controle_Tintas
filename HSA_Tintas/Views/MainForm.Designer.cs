@@ -32,7 +32,7 @@
             label1 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             buttonShowPaintToProjectForm = new Button();
-            button2 = new Button();
+            buttonShowPaintLeftoverForm = new Button();
             buttonShowUserForm = new Button();
             button4 = new Button();
             panel1.SuspendLayout();
@@ -61,7 +61,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(buttonShowPaintToProjectForm);
-            flowLayoutPanel1.Controls.Add(button2);
+            flowLayoutPanel1.Controls.Add(buttonShowPaintLeftoverForm);
             flowLayoutPanel1.Controls.Add(buttonShowUserForm);
             flowLayoutPanel1.Controls.Add(button4);
             flowLayoutPanel1.Dock = DockStyle.Left;
@@ -82,14 +82,15 @@
             buttonShowPaintToProjectForm.UseVisualStyleBackColor = false;
             buttonShowPaintToProjectForm.Click += buttonShowPaintToProjectForm_Click;
             // 
-            // button2
+            // buttonShowPaintLeftoverForm
             // 
-            button2.Location = new Point(9, 50);
-            button2.Name = "button2";
-            button2.Size = new Size(176, 35);
-            button2.TabIndex = 1;
-            button2.Text = "Sobras de tintas";
-            button2.UseVisualStyleBackColor = false;
+            buttonShowPaintLeftoverForm.Location = new Point(9, 50);
+            buttonShowPaintLeftoverForm.Name = "buttonShowPaintLeftoverForm";
+            buttonShowPaintLeftoverForm.Size = new Size(176, 35);
+            buttonShowPaintLeftoverForm.TabIndex = 1;
+            buttonShowPaintLeftoverForm.Text = "Sobras de tintas";
+            buttonShowPaintLeftoverForm.UseVisualStyleBackColor = false;
+            buttonShowPaintLeftoverForm.Click += buttonShowPaintLeftoverForm_Click;
             // 
             // buttonShowUserForm
             // 
@@ -135,7 +136,7 @@
         private Label label1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button buttonShowPaintToProjectForm;
-        private Button button2;
+        private Button buttonShowPaintLeftoverForm;
         private Button buttonShowUserForm;
         private Button button4;
     }
