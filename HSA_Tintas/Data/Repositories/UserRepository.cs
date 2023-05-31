@@ -73,6 +73,18 @@ namespace Controle_Tintas.Data.Repositories
             }
         }
 
+        internal static async Task<UserModel> GetByName(string name)
+        {
+           //get user by name from database using dapper ORM and SQLite database
+            using (var connection = new SQLiteConnection(_connectionString))
+            {
+                //get user by name from database
+                string sql = "SELECT * FROM User WHERE Name = @Name";
+                var user = await connection.QueryFirstOrDefaultAsync<Domain.Models.UserModel>(sql, new { Name = name });
+                return user;
+            }
+        }
+
         internal static async Task Update(UserModel user)
         {
             //update user in database using dapper ORM and SQLite database
