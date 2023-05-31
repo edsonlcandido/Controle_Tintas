@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Controle_Tintas.Views
 {
@@ -39,8 +40,9 @@ namespace Controle_Tintas.Views
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            this.Text = Controle_Tintas.Properties.Settings.Default.MainFormTitle;
-
+            //get Project version from Assembly
+            string version = "1.0.1-alpha";
+            this.Text = Controle_Tintas.Properties.Settings.Default.MainFormTitle +" - " +version;
         }
 
         //Create a method to show form in MdiContainer
