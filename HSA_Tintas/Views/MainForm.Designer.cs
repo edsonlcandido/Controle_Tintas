@@ -30,13 +30,13 @@
         {
             panel1 = new Panel();
             label1 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanelMain = new FlowLayoutPanel();
             buttonShowPaintToProjectForm = new Button();
             buttonShowPaintLeftoverForm = new Button();
             buttonShowUserForm = new Button();
             buttonReportForm = new Button();
             panel1.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            flowLayoutPanelMain.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -58,19 +58,19 @@
             label1.TabIndex = 0;
             label1.Text = "Controle de tintas";
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanelMain
             // 
-            flowLayoutPanel1.Controls.Add(buttonShowPaintToProjectForm);
-            flowLayoutPanel1.Controls.Add(buttonShowPaintLeftoverForm);
-            flowLayoutPanel1.Controls.Add(buttonShowUserForm);
-            flowLayoutPanel1.Controls.Add(buttonReportForm);
-            flowLayoutPanel1.Dock = DockStyle.Left;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 55);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new Padding(6);
-            flowLayoutPanel1.Size = new Size(199, 674);
-            flowLayoutPanel1.TabIndex = 2;
+            flowLayoutPanelMain.Controls.Add(buttonShowPaintToProjectForm);
+            flowLayoutPanelMain.Controls.Add(buttonShowPaintLeftoverForm);
+            flowLayoutPanelMain.Controls.Add(buttonShowUserForm);
+            flowLayoutPanelMain.Controls.Add(buttonReportForm);
+            flowLayoutPanelMain.Dock = DockStyle.Left;
+            flowLayoutPanelMain.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanelMain.Location = new Point(0, 55);
+            flowLayoutPanelMain.Name = "flowLayoutPanelMain";
+            flowLayoutPanelMain.Padding = new Padding(6);
+            flowLayoutPanelMain.Size = new Size(199, 674);
+            flowLayoutPanelMain.TabIndex = 2;
             // 
             // buttonShowPaintToProjectForm
             // 
@@ -117,7 +117,7 @@
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1008, 729);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(flowLayoutPanelMain);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             IsMdiContainer = true;
@@ -127,7 +127,7 @@
             Resize += FormMain_Resize;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanelMain.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -135,10 +135,10 @@
 
         private Panel panel1;
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Button buttonShowPaintToProjectForm;
         private Button buttonShowPaintLeftoverForm;
         private Button buttonShowUserForm;
         private Button buttonReportForm;
+        internal FlowLayoutPanel flowLayoutPanelMain;
     }
 }

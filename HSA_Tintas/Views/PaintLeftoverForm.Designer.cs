@@ -291,8 +291,8 @@
         private Button buttonDescriptionFilter;
         private GroupBox groupBox1;
         private Button buttonClearFilters;
-        private Button buttonShowPaintReuseLeftoverForm;
-        private Button buttonDicardPaint;
         private DataGridView dataGridViewPaintsLeftover;
+        internal Button buttonShowPaintReuseLeftoverForm;
+        internal Button buttonDicardPaint;
     }
 }

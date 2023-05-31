@@ -37,6 +37,7 @@ namespace Controle_Tintas
             services.AddTransient<UpdatePaintToLeftoverCommand>();
             services.AddTransient<GetPaintsByStatusQuery>();
             services.AddTransient<UpdatePaintToDiscardCommand>();
+            services.AddTransient<GetUserByNameQuery>();
 
             ServiceProvider = services.BuildServiceProvider();
         }
@@ -53,8 +54,36 @@ namespace Controle_Tintas
             ConfigureServices();
             using (IServiceScope scope = ServiceProvider.CreateScope()) // Throwaway scope to avoid potential NULL parameter
             {
-                MainForm formMain = scope.ServiceProvider.GetRequiredService<MainForm>();
-                Application.Run(formMain);
+                //get windows user name to upper
+                string userName = Environment.UserName.ToUpper();
+                //verify if username to upper is in GetUserBynameQuery
+                UserModel? user = scope.ServiceProvider.GetRequiredService<GetUserByNameQuery>().Execute(userName);
+                if (user != null)
+                {
+                    if (!user.IsAdmin)
+                    {
+                        MainForm formMain = scope.ServiceProvider.GetRequiredService<MainForm>();
+                        //hide control flowLayoutPanel flowLayoutPanelMain from formMain
+                        formMain.flowLayoutPanelMain.Hide();
+                        //show PaintleftoverForm in MdiContainer
+                        PaintLeftoverForm paintLeftoverForm = scope.ServiceProvider.GetRequiredService<PaintLeftoverForm>();
+                        paintLeftoverForm.buttonDicardPaint.Hide();
+                        paintLeftoverForm.buttonShowPaintReuseLeftoverForm.Hide();
+                        formMain.ShowInMdiContainer(paintLeftoverForm);
+                        formMain.Width = formMain.Width + 1;
+                        Application.Run(formMain);
+                    }
+                    else
+                    {
+                        MainForm formMain = scope.ServiceProvider.GetRequiredService<MainForm>();
+                        Application.Run(formMain);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuário não cadastrado no sistema. Contate o administrador do sistema.\n" +
+                        "Nome de usuario: " + userName, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
