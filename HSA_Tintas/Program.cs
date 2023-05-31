@@ -19,7 +19,9 @@ namespace Controle_Tintas
             services.AddTransient<PaintAddToLeftoverForm>();
             services.AddTransient<PaintLeftoverForm>();
             services.AddTransient<PaintReuseLeftoverForm>();
-            services.AddTransient<UserModel>();            
+            services.AddTransient<ReportForm>();
+            services.AddTransient<UserModel>();  
+            services.AddTransient<PaintModel>();
             //register all queries and commands here
             services.AddTransient<GetAllUsersQuery>();            
             services.AddTransient<GetUserByIdQuery>();

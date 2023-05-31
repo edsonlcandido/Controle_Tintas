@@ -21,6 +21,13 @@ namespace Controle_Tintas.Views
                         }
                     }
                 }
+
+                if (_mdiClient == null)
+                {
+                    _mdiClient = new MdiClient();
+                    this.Controls.Add(_mdiClient);
+                }
+
                 return _mdiClient;
             }
         }
@@ -33,6 +40,7 @@ namespace Controle_Tintas.Views
         private void FormMain_Load(object sender, EventArgs e)
         {
             this.Text = Controle_Tintas.Properties.Settings.Default.MainFormTitle;
+
         }
 
         //Create a method to show form in MdiContainer
@@ -92,6 +100,26 @@ namespace Controle_Tintas.Views
             //get form PaintProjectsForm from ServiceProvider
             Views.PaintLeftoverForm paintLeftoverForm = Program.ServiceProvider.GetRequiredService<Views.PaintLeftoverForm>();
             formMain.ShowInMdiContainer(paintLeftoverForm);
+        }
+
+        private void buttonReportForm_Click(object sender, EventArgs e)
+        {
+            ShowReportForm();
+        }
+
+        //method to show report form in MdiContainer
+        public void ShowReportForm()
+        {
+            //get form main from ServiceProvider
+            Views.MainForm formMain = Program.ServiceProvider.GetRequiredService<Views.MainForm>();
+            //get report form from ServiceProvider
+            Views.ReportForm reportForm = Program.ServiceProvider.GetRequiredService<Views.ReportForm>();
+            formMain.ShowInMdiContainer(reportForm);
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            ShowReportForm();
         }
     }
 }

@@ -34,7 +34,7 @@
             buttonShowPaintToProjectForm = new Button();
             buttonShowPaintLeftoverForm = new Button();
             buttonShowUserForm = new Button();
-            button4 = new Button();
+            buttonReportForm = new Button();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -63,7 +63,7 @@
             flowLayoutPanel1.Controls.Add(buttonShowPaintToProjectForm);
             flowLayoutPanel1.Controls.Add(buttonShowPaintLeftoverForm);
             flowLayoutPanel1.Controls.Add(buttonShowUserForm);
-            flowLayoutPanel1.Controls.Add(button4);
+            flowLayoutPanel1.Controls.Add(buttonReportForm);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 55);
@@ -102,14 +102,15 @@
             buttonShowUserForm.UseVisualStyleBackColor = false;
             buttonShowUserForm.Click += buttonShowUserForm_Click;
             // 
-            // button4
+            // buttonReportForm
             // 
-            button4.Location = new Point(9, 132);
-            button4.Name = "button4";
-            button4.Size = new Size(176, 35);
-            button4.TabIndex = 3;
-            button4.Text = "Resumo Tintas";
-            button4.UseVisualStyleBackColor = false;
+            buttonReportForm.Location = new Point(9, 132);
+            buttonReportForm.Name = "buttonReportForm";
+            buttonReportForm.Size = new Size(176, 35);
+            buttonReportForm.TabIndex = 3;
+            buttonReportForm.Text = "Resumo Tintas";
+            buttonReportForm.UseVisualStyleBackColor = false;
+            buttonReportForm.Click += buttonReportForm_Click;
             // 
             // MainForm
             // 
@@ -138,6 +139,6 @@
         private Button buttonShowPaintToProjectForm;
         private Button buttonShowPaintLeftoverForm;
         private Button buttonShowUserForm;
-        private Button button4;
+        private Button buttonReportForm;
     }
 }
