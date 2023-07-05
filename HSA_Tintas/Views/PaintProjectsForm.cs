@@ -133,6 +133,15 @@ namespace Controle_Tintas.Views
                 Name = "PaintModelObs",
                 SortMode = DataGridViewColumnSortMode.Automatic
             });
+
+            //add collumn to dataGridViewPaintsAvailableAndInUse to show button to edit paint
+            dataGridViewPaintsAvailableAndInUse.Columns.Add(new DataGridViewButtonColumn()
+            {
+                HeaderText = "",
+                Name = "EditPaint",
+                Text = "Editar",
+                UseColumnTextForButtonValue = true
+            });
             //invoke dataGridViewPaintsAvailableAndInUse_DataBindingComplete event
             dataGridViewPaintsAvailableAndInUse_DataBindingComplete(this, new DataGridViewBindingCompleteEventArgs(ListChangedType.Reset));
 
@@ -232,6 +241,23 @@ namespace Controle_Tintas.Views
             Views.PaintAddToLeftoverForm paintAddToLeftoverForm = new PaintAddToLeftoverForm(paintModel.Id);
             mainForm.ShowInMdiContainer(paintAddToLeftoverForm);
 
+        }
+
+        private void dataGridViewPaintsAvailableAndInUse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //verify if column EditPaint was clicked
+            if (dataGridViewPaintsAvailableAndInUse.Columns[e.ColumnIndex].Name == "EditPaint")
+            {
+                //get selected paint from dataGridViewPaintsAvailableAndInUse
+                PaintModel paintModelCurrentBiding = (PaintModel)dataGridViewPaintsAvailableAndInUse.CurrentRow.DataBoundItem;
+                int id = paintModelCurrentBiding.Id;
+
+                //get mainForm from service provider
+                MainForm mainForm = Program.ServiceProvider.GetRequiredService<MainForm>();
+                //set PaintAddToProjectForm from ServiceProvider
+                Views.PaintEditForm paintAddToProjectForm = new PaintEditForm(id);
+                mainForm.ShowInMdiContainer(paintAddToProjectForm);
+            }
         }
     }
 }

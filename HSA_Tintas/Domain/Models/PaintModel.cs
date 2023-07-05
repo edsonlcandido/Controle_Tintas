@@ -37,7 +37,7 @@ namespace Controle_Tintas.Domain.Models
         [DisplayName("Quant. de latas")]
         [Range(0, double.MaxValue, ErrorMessage = "A quantidade de latas deve ser maior ou igual a zero.")]
         public double CanQty { get; set; }
-        [DisplayName("Litros")]
+        [DisplayName("Litros p/lt")]
         [Range(0, double.MaxValue, ErrorMessage = "O volume em litros deve ser maior ou igual a zero.")]
 
         public double Liters { get; set; }

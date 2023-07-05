@@ -8,6 +8,13 @@ namespace Controle_Tintas
 {
     internal static class Program
     {
+        public static string version
+        {
+            get
+            {
+                return "1.1.0-alpha";
+            }
+        }
         public static IServiceProvider? ServiceProvider { get; private set; }
         static void ConfigureServices()
         {
@@ -18,6 +25,7 @@ namespace Controle_Tintas
             services.AddTransient<PaintAddToProjectForm>();
             services.AddTransient<PaintAddToLeftoverForm>();
             services.AddTransient<PaintLeftoverForm>();
+            services.AddTransient<PaintEditForm>();
             services.AddTransient<PaintReuseLeftoverForm>();
             services.AddTransient<ReportForm>();
             services.AddTransient<UserModel>();  
@@ -38,6 +46,7 @@ namespace Controle_Tintas
             services.AddTransient<GetPaintsByStatusQuery>();
             services.AddTransient<UpdatePaintToDiscardCommand>();
             services.AddTransient<GetUserByNameQuery>();
+            services.AddTransient<UpdatePaintCommand>();
 
             ServiceProvider = services.BuildServiceProvider();
         }

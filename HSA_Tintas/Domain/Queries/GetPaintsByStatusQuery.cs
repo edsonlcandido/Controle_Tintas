@@ -11,7 +11,7 @@ namespace Controle_Tintas.Domain.Queries
             //get all paints from database using PaintRepository
             var paints = PaintRepository.GetAll().Result;
             //filter paints by status
-            paints = paints.Where(p => p.Status == status);
+            paints = paints.Where(p => p.Status == status).OrderBy(p => p.ExpirationDate);
             return paints;
         }
     }

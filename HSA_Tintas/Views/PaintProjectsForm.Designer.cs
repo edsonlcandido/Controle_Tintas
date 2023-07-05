@@ -287,6 +287,7 @@
             dataGridViewPaintsAvailableAndInUse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPaintsAvailableAndInUse.Size = new Size(581, 540);
             dataGridViewPaintsAvailableAndInUse.TabIndex = 8;
+            dataGridViewPaintsAvailableAndInUse.CellContentClick += dataGridViewPaintsAvailableAndInUse_CellContentClick;
             dataGridViewPaintsAvailableAndInUse.DataBindingComplete += dataGridViewPaintsAvailableAndInUse_DataBindingComplete;
             // 
             // PaintProjectsForm
