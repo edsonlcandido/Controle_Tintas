@@ -16,28 +16,40 @@ using System.Windows.Forms;
 
 namespace Controle_Tintas.Views
 {
-    public partial class PaintAddToLeftoverForm : Form
+    public partial class PaintEditForm : Form
     {
         PaintModel paintModel;
-        public PaintAddToLeftoverForm(int paintId)
+        public PaintEditForm(int paintId)
         {
             InitializeComponent();
+            paintModel = new PaintModel();
+            //get paint from GetPaintByIdQuery
             paintModel = Program.ServiceProvider.GetRequiredService<GetPaintByIdQuery>().Execute(paintId);
-            //paintModel.Obs append text "TINTA DE SOBRA DO PROJETO " + paintModel.Project
-            paintModel.Obs = paintModel.Obs + " | TINTA DE SOBRA DO PROJETO " + paintModel.Project;
-            paintModel.Project = "";
+
         }
 
         private void PaintAddToProjectForm_Load(object sender, EventArgs e)
         {
             //get data anotation from PaintModel.Code to labelCodeDisplayName text
             labelCodeDisplayName.Text = paintModel.GetType().GetProperty("Code").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotation from PaintModel.Project to labelProjectDisplayName text
+            labelProjectDisplayName.Text = paintModel.GetType().GetProperty("Project").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Description to labelDescriptionDisplayName text
             labelDescriptionDisplayName.Text = paintModel.GetType().GetProperty("Description").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.CanQty to labelCanQtyDisplayName text
             labelCanQtyDisplayName.Text = paintModel.GetType().GetProperty("CanQty").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotation from PaintModel.Liters to labelLitersDisplayName text
+            labelLitersDisplayName.Text = paintModel.GetType().GetProperty("Liters").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotation from PaintModel.ExpirationDate to labelExpirationDateDisplayName text
+            labelExpirationDateDisplayName.Text = paintModel.GetType().GetProperty("ExpirationDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotation from PaintModel.Status to labelStatusDisplayName text
+            labelStatusDisplayName.Text = paintModel.GetType().GetProperty("Status").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Obs to labelObsDisplayName text
             labelObsDisplayName.Text = paintModel.GetType().GetProperty("Obs").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+
+            GetAllPaintStatusQuery GetAllPaintStatusQuery = Program.ServiceProvider.GetRequiredService<GetAllPaintStatusQuery>();
+            //set comboBoxPaintStatus DataSource from GetAllPaintStatusQuery
+            comboBoxPaintStatus.DataSource = GetAllPaintStatusQuery.Execute();
 
             paintModelToForm();
         }
@@ -45,37 +57,66 @@ namespace Controle_Tintas.Views
         private void paintModelToForm()
         {
             //set paintModel.Code to textBoxPaintCode text
-            this.textBoxPaintCode.Text = paintModel.Code;
+            textBoxPaintCode.Text = paintModel.Code;
+            //set paintModel.Project to textBoxPaintProject text
+            textBoxPaintProject.Text = paintModel.Project;
             //set paintModel.Description to textBoxPaintDescription text
-            this.textBoxPaintDescription.Text = paintModel.Description;
+            textBoxPaintDescription.Text = paintModel.Description;
             //set paintModel.CanQty to textBoxPaintCanQty text
-            this.textBoxPaintCanQty.Text = paintModel.CanQty.ToString();
+            textBoxPaintCanQty.Text = paintModel.CanQty.ToString();
+            //set paintModel.Liters to textBoxPaintLiters text
+            textBoxPaintLiters.Text = paintModel.Liters.ToString();
+            //set paintModel.ExpirationDate to dateTimePickerPaintExpirationDate.Value
+            dateTimePickerPaintExpirationDate.Value = paintModel.ExpirationDate;
+            //set comboBoxPaintStatus from paintModel.Status
+            comboBoxPaintStatus.SelectedItem = paintModel.Status;
             //set paintModel.Obs to textBoxPaintObs text
-            this.textBoxPaintObs.Text = paintModel.Obs;
+            textBoxPaintObs.Text = paintModel.Obs;
         }
 
         private async void buttonSave_Click(object sender, EventArgs e)
         {
 
             PaintModel paint = formToPaintModel();
+            //paintModel.Obs = textBoxPaintObs.Text;
             if (paint != null)
             {
-                //if paint is valid, add paint to project
-                Program.ServiceProvider.GetRequiredService<UpdatePaintToLeftoverCommand>().Execute(paint).Wait();
-                MessageBox.Show("Tinta enviada para o estoque de sobras", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //invoke cancel button click event
-                buttonCancel.PerformClick();
+                try
+                {
+                    //if paint is valid, update paint
+                    Program.ServiceProvider.GetRequiredService<UpdatePaintCommand>().Execute(paint).Wait();
+
+                    MessageBox.Show("Tinta editada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //invoke cancel button click event
+                    buttonCancel.PerformClick();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                
             }
             else
             {
                 //if paint is not valid, show error message
-                MessageBox.Show("Erro ao adicionar tinta para o estoque de sobras!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao editar tinta!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private PaintModel formToPaintModel()
         {
+            paintModel.Code = textBoxPaintCode.Text;
+            paintModel.Project = textBoxPaintProject.Text;
+            paintModel.Description = textBoxPaintDescription.Text;
             paintModel.CanQty = Convert.ToInt32(textBoxPaintCanQty.Text);
+            paintModel.Liters = Convert.ToDouble(textBoxPaintLiters.Text);
+            //convert dateTimePickerPaintExpirationDate.Value to DateOnly with format YYYY-MM-DD
+            paintModel.ExpirationDate = dateTimePickerPaintExpirationDate.Value;
+            //set expiration date to 00:00:00
+            paintModel.ExpirationDate = paintModel.ExpirationDate.Date;
+            paintModel.Status = comboBoxPaintStatus.SelectedItem.ToString();
+            paintModel.Obs = textBoxPaintObs.Text;
 
             //verify if paintModel is valid
             ICollection<ValidationResult> validationResults;

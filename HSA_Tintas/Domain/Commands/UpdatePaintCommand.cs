@@ -3,15 +3,15 @@ using Controle_Tintas.Data.Repositories;
 
 namespace Controle_Tintas.Domain.Commands
 {
-    internal class UpdatePaintToLeftoverCommand
+    //UpdatePaint class similar to update paint to use
+    internal class UpdatePaintCommand
     {
-        public UpdatePaintToLeftoverCommand()
+        public UpdatePaintCommand()
         {
         }
         //exectute method to update paint
         public async Task Execute(PaintModel paintModel)
         {
-            paintModel.Status = "SOBRA";
             //use PaintRepository to update paint
             await PaintRepository.Update(paintModel);
         }
