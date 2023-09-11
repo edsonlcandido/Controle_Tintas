@@ -37,6 +37,8 @@ namespace Controle_Tintas.Views
             labelCanQtyDisplayName.Text = paintModel.GetType().GetProperty("CanQty").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Liters to labelLitersDisplayName text
             labelLitersDisplayName.Text = paintModel.GetType().GetProperty("Liters").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotatio from PaintModel.InsertionDate to labelInsertionDateDisplayName
+            labelInsertionDateDisplayName.Text = paintModel.GetType().GetProperty("InsertionDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.ExpirationDate to labelExpirationDateDisplayName text
             labelExpirationDateDisplayName.Text = paintModel.GetType().GetProperty("ExpirationDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Status to labelStatusDisplayName text
@@ -93,6 +95,10 @@ namespace Controle_Tintas.Views
             paintModel.Description = textBoxPaintDescription.Text;
             paintModel.CanQty = Convert.ToInt32(textBoxPaintCanQty.Text);
             paintModel.Liters = Convert.ToDouble(textBoxPaintLiters.Text);
+            //convert dateTimePickerPaintInsertionDate.Value to DateOnly with format YYYY-MM-DD
+            paintModel.InsertionDate = dateTimePickerPaintInsertionDate.Value;
+            //set insertion date to 00:00:00
+            paintModel.InsertionDate = paintModel.InsertionDate.Date;
             //convert dateTimePickerPaintExpirationDate.Value to DateOnly with format YYYY-MM-DD
             paintModel.ExpirationDate = dateTimePickerPaintExpirationDate.Value;
             //set expiration date to 00:00:00

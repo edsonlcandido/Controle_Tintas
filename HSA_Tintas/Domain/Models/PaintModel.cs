@@ -18,6 +18,7 @@ namespace Controle_Tintas.Domain.Models
         //          Description    TEXT,
         //          CanQty         DOUBLE,
         //          Liters         DOUBLE,
+        //          InsertionDate  DATE,
         //          ExpirationDate DATE,
         //          Status         TEXT,
         //          Obs TEXT
@@ -41,6 +42,9 @@ namespace Controle_Tintas.Domain.Models
         [Range(0, double.MaxValue, ErrorMessage = "O volume em litros deve ser maior ou igual a zero.")]
 
         public double Liters { get; set; }
+        [DisplayName("Data de inserção")]
+        [DataType(DataType.Date)]
+        public DateTime InsertionDate { get; set; }
         [DisplayName("Data de validade")]
         [DataType(DataType.Date)]
         public DateTime ExpirationDate { get; set; }
@@ -58,6 +62,12 @@ namespace Controle_Tintas.Domain.Models
 
             //validate data annotations
             validationResults = new List<ValidationResult>();
+
+            //add custom validation to InsertDate
+            if (InsertionDate >= DateTime.Now)  // validade the date is less than today
+            {
+                validationResults.Add(new ValidationResult("A Data de inserção deve ser menor ou igual ao dia de hoje.", new List<string> { "InsertDate" }));
+            }
 
             //add custom validation to ExpirationDate
             if (ExpirationDate <= DateTime.Now.AddDays(1))  // validade the date is greater than today + 1

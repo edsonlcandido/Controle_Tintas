@@ -107,7 +107,14 @@ namespace Controle_Tintas.Views
                 Name = "CalculatedTotalLiters",
                 SortMode = DataGridViewColumnSortMode.Automatic
             });
-
+            //add column PaintModel.InsertionDate to dataGridViewPaintsAvailableAndInUse
+            dataGridViewPaintsAvailableAndInUse.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "InsertionDate",
+                HeaderText = paintModel.GetType().GetProperty("InsertionDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName,
+                Name = "PaintModelInsertionDate",
+                SortMode = DataGridViewColumnSortMode.Automatic
+            });
             //add column PaintModel.ExpirationDate to dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Columns.Add(new DataGridViewTextBoxColumn()
             {
