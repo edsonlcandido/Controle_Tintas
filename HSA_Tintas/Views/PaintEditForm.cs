@@ -28,7 +28,7 @@ namespace Controle_Tintas.Views
 
         }
 
-        private void PaintAddToProjectForm_Load(object sender, EventArgs e)
+        private void PaintEditForm_Load(object sender, EventArgs e)
         {
             //get data anotation from PaintModel.Code to labelCodeDisplayName text
             labelCodeDisplayName.Text = paintModel.GetType().GetProperty("Code").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
@@ -40,6 +40,8 @@ namespace Controle_Tintas.Views
             labelCanQtyDisplayName.Text = paintModel.GetType().GetProperty("CanQty").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Liters to labelLitersDisplayName text
             labelLitersDisplayName.Text = paintModel.GetType().GetProperty("Liters").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+            //get data anotation from Paintmodel.InsertionDate to labelInsetionDateDisplayName text
+            labelInsertionDateDisplayName.Text = paintModel.GetType().GetProperty("InsertionDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.ExpirationDate to labelExpirationDateDisplayName text
             labelExpirationDateDisplayName.Text = paintModel.GetType().GetProperty("ExpirationDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName;
             //get data anotation from PaintModel.Status to labelStatusDisplayName text
@@ -66,6 +68,8 @@ namespace Controle_Tintas.Views
             textBoxPaintCanQty.Text = paintModel.CanQty.ToString();
             //set paintModel.Liters to textBoxPaintLiters text
             textBoxPaintLiters.Text = paintModel.Liters.ToString();
+            //set paintModel.InsertionDate to dateTimePickerPaintInsertionDate.Value
+            dateTimePickerPaintInsertionDate.Value = paintModel.InsertionDate;
             //set paintModel.ExpirationDate to dateTimePickerPaintExpirationDate.Value
             dateTimePickerPaintExpirationDate.Value = paintModel.ExpirationDate;
             //set comboBoxPaintStatus from paintModel.Status
@@ -95,7 +99,7 @@ namespace Controle_Tintas.Views
 
                     throw;
                 }
-                
+
             }
             else
             {
@@ -111,6 +115,10 @@ namespace Controle_Tintas.Views
             paintModel.Description = textBoxPaintDescription.Text;
             paintModel.CanQty = Convert.ToInt32(textBoxPaintCanQty.Text);
             paintModel.Liters = Convert.ToDouble(textBoxPaintLiters.Text);
+            //convert dateTimePickerPaintInsertionDate.Value to DateOnly with format YYYY-MM-DD
+            paintModel.InsertionDate = dateTimePickerPaintInsertionDate.Value;
+            //set insertion date to 00:00:00
+            paintModel.InsertionDate = paintModel.InsertionDate.Date;
             //convert dateTimePickerPaintExpirationDate.Value to DateOnly with format YYYY-MM-DD
             paintModel.ExpirationDate = dateTimePickerPaintExpirationDate.Value;
             //set expiration date to 00:00:00
