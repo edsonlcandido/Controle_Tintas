@@ -40,6 +40,8 @@
             textBoxPaintCanQty = new TextBox();
             labelLitersDisplayName = new Label();
             textBoxPaintLiters = new TextBox();
+            labelInsertionDateDisplayName = new Label();
+            dateTimePickerPaintInsertionDate = new DateTimePicker();
             labelExpirationDateDisplayName = new Label();
             dateTimePickerPaintExpirationDate = new DateTimePicker();
             labelStatusDisplayName = new Label();
@@ -75,6 +77,8 @@
             flowLayoutPanel1.Controls.Add(textBoxPaintCanQty);
             flowLayoutPanel1.Controls.Add(labelLitersDisplayName);
             flowLayoutPanel1.Controls.Add(textBoxPaintLiters);
+            flowLayoutPanel1.Controls.Add(labelInsertionDateDisplayName);
+            flowLayoutPanel1.Controls.Add(dateTimePickerPaintInsertionDate);
             flowLayoutPanel1.Controls.Add(labelExpirationDateDisplayName);
             flowLayoutPanel1.Controls.Add(dateTimePickerPaintExpirationDate);
             flowLayoutPanel1.Controls.Add(labelStatusDisplayName);
@@ -85,7 +89,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(479, 515);
+            flowLayoutPanel1.Size = new Size(479, 565);
             flowLayoutPanel1.TabIndex = 4;
             // 
             // labelCodeDisplayName
@@ -100,7 +104,6 @@
             // textBoxPaintCode
             // 
             textBoxPaintCode.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintCode.Enabled = false;
             textBoxPaintCode.Location = new Point(3, 20);
             textBoxPaintCode.Name = "textBoxPaintCode";
             textBoxPaintCode.Size = new Size(156, 25);
@@ -118,7 +121,6 @@
             // textBoxPaintProject
             // 
             textBoxPaintProject.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintProject.Enabled = false;
             textBoxPaintProject.Location = new Point(3, 68);
             textBoxPaintProject.Name = "textBoxPaintProject";
             textBoxPaintProject.Size = new Size(156, 25);
@@ -136,7 +138,6 @@
             // textBoxPaintDescription
             // 
             textBoxPaintDescription.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintDescription.Enabled = false;
             textBoxPaintDescription.Location = new Point(3, 116);
             textBoxPaintDescription.Name = "textBoxPaintDescription";
             textBoxPaintDescription.Size = new Size(468, 25);
@@ -176,10 +177,28 @@
             textBoxPaintLiters.Size = new Size(78, 25);
             textBoxPaintLiters.TabIndex = 9;
             // 
+            // labelInsertionDateDisplayName
+            // 
+            labelInsertionDateDisplayName.AutoSize = true;
+            labelInsertionDateDisplayName.Location = new Point(3, 240);
+            labelInsertionDateDisplayName.Name = "labelInsertionDateDisplayName";
+            labelInsertionDateDisplayName.Size = new Size(245, 17);
+            labelInsertionDateDisplayName.TabIndex = 15;
+            labelInsertionDateDisplayName.Text = "{Model.Paint.InsertionDate.DisplayName}";
+            // 
+            // dateTimePickerPaintInsertionDate
+            // 
+            dateTimePickerPaintInsertionDate.Checked = false;
+            dateTimePickerPaintInsertionDate.Format = DateTimePickerFormat.Custom;
+            dateTimePickerPaintInsertionDate.Location = new Point(3, 260);
+            dateTimePickerPaintInsertionDate.Name = "dateTimePickerPaintInsertionDate";
+            dateTimePickerPaintInsertionDate.Size = new Size(156, 25);
+            dateTimePickerPaintInsertionDate.TabIndex = 14;
+            // 
             // labelExpirationDateDisplayName
             // 
             labelExpirationDateDisplayName.AutoSize = true;
-            labelExpirationDateDisplayName.Location = new Point(3, 240);
+            labelExpirationDateDisplayName.Location = new Point(3, 288);
             labelExpirationDateDisplayName.Name = "labelExpirationDateDisplayName";
             labelExpirationDateDisplayName.Size = new Size(253, 17);
             labelExpirationDateDisplayName.TabIndex = 10;
@@ -188,9 +207,8 @@
             // dateTimePickerPaintExpirationDate
             // 
             dateTimePickerPaintExpirationDate.Checked = false;
-            dateTimePickerPaintExpirationDate.Enabled = false;
             dateTimePickerPaintExpirationDate.Format = DateTimePickerFormat.Custom;
-            dateTimePickerPaintExpirationDate.Location = new Point(3, 260);
+            dateTimePickerPaintExpirationDate.Location = new Point(3, 308);
             dateTimePickerPaintExpirationDate.Name = "dateTimePickerPaintExpirationDate";
             dateTimePickerPaintExpirationDate.Size = new Size(156, 25);
             dateTimePickerPaintExpirationDate.TabIndex = 12;
@@ -198,7 +216,7 @@
             // labelStatusDisplayName
             // 
             labelStatusDisplayName.AutoSize = true;
-            labelStatusDisplayName.Location = new Point(3, 288);
+            labelStatusDisplayName.Location = new Point(3, 336);
             labelStatusDisplayName.Name = "labelStatusDisplayName";
             labelStatusDisplayName.Size = new Size(203, 17);
             labelStatusDisplayName.TabIndex = 5;
@@ -206,9 +224,8 @@
             // 
             // comboBoxPaintStatus
             // 
-            comboBoxPaintStatus.Enabled = false;
             comboBoxPaintStatus.FormattingEnabled = true;
-            comboBoxPaintStatus.Location = new Point(3, 308);
+            comboBoxPaintStatus.Location = new Point(3, 356);
             comboBoxPaintStatus.Name = "comboBoxPaintStatus";
             comboBoxPaintStatus.Size = new Size(156, 25);
             comboBoxPaintStatus.TabIndex = 16;
@@ -216,7 +233,7 @@
             // labelObsDisplayName
             // 
             labelObsDisplayName.AutoSize = true;
-            labelObsDisplayName.Location = new Point(3, 336);
+            labelObsDisplayName.Location = new Point(3, 384);
             labelObsDisplayName.Name = "labelObsDisplayName";
             labelObsDisplayName.Size = new Size(192, 17);
             labelObsDisplayName.TabIndex = 13;
@@ -225,7 +242,7 @@
             // textBoxPaintObs
             // 
             textBoxPaintObs.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintObs.Location = new Point(3, 356);
+            textBoxPaintObs.Location = new Point(3, 404);
             textBoxPaintObs.Multiline = true;
             textBoxPaintObs.Name = "textBoxPaintObs";
             textBoxPaintObs.ScrollBars = ScrollBars.Vertical;
@@ -237,7 +254,7 @@
             flowLayoutPanel2.Controls.Add(buttonSave);
             flowLayoutPanel2.Controls.Add(buttonCancel);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 460);
+            flowLayoutPanel2.Location = new Point(3, 508);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
             flowLayoutPanel2.Size = new Size(468, 49);
@@ -267,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 600);
+            ClientSize = new Size(800, 612);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -276,7 +293,7 @@
             Text = "PaintAddToProjectForm";
             FormClosing += PaintAddToProjectForm_FormClosing;
             FormClosed += PaintAddToProjectForm_FormClosed;
-            Load += PaintAddToProjectForm_Load;
+            Load += PaintEditForm_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
@@ -307,5 +324,7 @@
         private Button buttonCancel;
         private Label labelStatusDisplayName;
         private ComboBox comboBoxPaintStatus;
+        private Label labelInsertionDateDisplayName;
+        private DateTimePicker dateTimePickerPaintInsertionDate;
     }
 }
