@@ -61,11 +61,20 @@ namespace Controle_Tintas.Views
             PaintModel paint = formToPaintModel();
             if (paint != null)
             {
-                //if paint is valid, add paint to project
-                Program.ServiceProvider.GetRequiredService<UpdatePaintToInUseCommand>().Execute(paint);
-                MessageBox.Show("Tinta adicionada ao projeto com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //invoke cancel button click event
-                buttonCancel.PerformClick();
+                try
+                {
+                    //if paint is valid, add paint to project
+                    Program.ServiceProvider.GetRequiredService<UpdatePaintToInUseCommand>().Execute(paint);
+                    MessageBox.Show("Tinta adicionada ao projeto com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //invoke cancel button click event
+                    buttonCancel.PerformClick();
+                }
+                catch (Exception ex)
+                {
+                    //if paint is not valid, show error message
+                    MessageBox.Show(ex.InnerException.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             else
             {

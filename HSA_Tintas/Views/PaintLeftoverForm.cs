@@ -151,7 +151,8 @@ namespace Controle_Tintas.Views
                 double CanQty = Convert.ToDouble(row.Cells["PaintModelCanQty"].Value);
                 double Liters = Convert.ToDouble(row.Cells["PaintModelLiters"].Value);
                 double TotalLiters = CanQty * Liters;
-                row.Cells["CalculatedTotalLiters"].Value = TotalLiters;
+                //format TotalLiters to 1 decimal places
+                row.Cells["CalculatedTotalLiters"].Value = TotalLiters.ToString("F1");
             }
 
             //update dataGridViewPaintsAvailableAndInUse

@@ -56,7 +56,9 @@ namespace Controle_Tintas.Views
             //clear columns from dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Columns.Clear();
             paintsToDataGridView = paints;
+            //add support to sort bindingsPaints            
             BindingList<PaintModel> bindingPaints = new BindingList<PaintModel>(paintsToDataGridView.ToList());
+            //set bindingPaints to dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.AutoGenerateColumns = false;
             dataGridViewPaintsAvailableAndInUse.DataSource = bindingPaints;
             //add column PaintModel.Code to dataGridViewPaintsAvailableAndInUse
@@ -107,7 +109,14 @@ namespace Controle_Tintas.Views
                 Name = "CalculatedTotalLiters",
                 SortMode = DataGridViewColumnSortMode.Automatic
             });
-
+            //add column PaintModel.InsertionDate to dataGridViewPaintsAvailableAndInUse
+            dataGridViewPaintsAvailableAndInUse.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "InsertionDate",
+                HeaderText = paintModel.GetType().GetProperty("InsertionDate").GetCustomAttribute<DisplayNameAttribute>().DisplayName,
+                Name = "PaintModelInsertionDate",
+                SortMode = DataGridViewColumnSortMode.Automatic
+            });
             //add column PaintModel.ExpirationDate to dataGridViewPaintsAvailableAndInUse
             dataGridViewPaintsAvailableAndInUse.Columns.Add(new DataGridViewTextBoxColumn()
             {
@@ -155,7 +164,9 @@ namespace Controle_Tintas.Views
                 double CanQty = Convert.ToDouble(row.Cells["PaintModelCanQty"].Value);
                 double Liters = Convert.ToDouble(row.Cells["PaintModelLiters"].Value);
                 double TotalLiters = CanQty * Liters;
-                row.Cells["CalculatedTotalLiters"].Value = TotalLiters;
+                //format TotalLiters to 2 decimal places
+
+                row.Cells["CalculatedTotalLiters"].Value = TotalLiters.ToString("F1");
             }
 
             //update dataGridViewPaintsAvailableAndInUse

@@ -140,7 +140,6 @@
             // 
             // textBoxPaintCanQty
             // 
-            textBoxPaintCanQty.Enabled = false;
             textBoxPaintCanQty.Location = new Point(3, 164);
             textBoxPaintCanQty.Name = "textBoxPaintCanQty";
             textBoxPaintCanQty.Size = new Size(78, 25);

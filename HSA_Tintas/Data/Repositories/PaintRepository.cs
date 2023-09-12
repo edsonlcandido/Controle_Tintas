@@ -25,6 +25,7 @@ namespace Controle_Tintas.Data.Repositories
         //          Description    TEXT,
         //          CanQty DOUBLE,
         //          Liters         DOUBLE,
+        //          InsertDate     DATE,
         //          ExpirationDate DATE,
         //          Status         TEXT,
         //          Obs TEXT
@@ -69,7 +70,7 @@ namespace Controle_Tintas.Data.Repositories
                 //insert paint in database
                 //convert ExpirationDate to string format YYYY-MM-DD before insert in database
                 //string formatedDate = paint.ExpirationDate.ToString("yyyy-MM-dd");
-                string sql = $"INSERT INTO Paint (Code, Project, Description, CanQty, Liters, ExpirationDate, Status, Obs) VALUES (@Code, @Project, @Description, @CanQty, @Liters, @ExpirationDate, @Status, @Obs)";
+                string sql = $"INSERT INTO Paint (Code, Project, Description, CanQty, Liters, InsertionDate, ExpirationDate, Status, Obs) VALUES (@Code, @Project, @Description, @CanQty, @Liters, @InsertionDate, @ExpirationDate, @Status, @Obs)";
                 await connection.ExecuteAsync(sql, paint);
             }
         }
