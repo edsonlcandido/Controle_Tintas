@@ -224,6 +224,7 @@
             // 
             // comboBoxPaintStatus
             // 
+            comboBoxPaintStatus.Enabled = false;
             comboBoxPaintStatus.FormattingEnabled = true;
             comboBoxPaintStatus.Location = new Point(3, 356);
             comboBoxPaintStatus.Name = "comboBoxPaintStatus";

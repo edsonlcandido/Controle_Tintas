@@ -42,7 +42,7 @@ namespace Controle_Tintas.Domain.Models
         [Range(0, double.MaxValue, ErrorMessage = "O volume em litros deve ser maior ou igual a zero.")]
 
         public double Liters { get; set; }
-        [DisplayName("Data de inserção")]
+        [DisplayName("Data de inclusão")]
         [DataType(DataType.Date)]
         public DateTime InsertionDate { get; set; }
         [DisplayName("Data de validade")]
