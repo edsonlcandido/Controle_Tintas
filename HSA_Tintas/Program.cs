@@ -12,7 +12,7 @@ namespace Controle_Tintas
         {
             get
             {
-                return "1.1.0-alpha";
+                return "1.2.0-alpha";
             }
         }
         public static IServiceProvider? ServiceProvider { get; private set; }
@@ -90,7 +90,7 @@ namespace Controle_Tintas
                 }
                 else
                 {
-                    MessageBox.Show("Usu·rio n„o cadastrado no sistema. Contate o administrador do sistema.\n" +
+                    MessageBox.Show("Usu√°rio n√£o cadastrado no sistema. Contate o administrador do sistema.\n" +
                         "Nome de usuario: " + userName, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
