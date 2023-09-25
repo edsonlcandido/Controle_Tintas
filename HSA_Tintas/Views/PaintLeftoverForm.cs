@@ -50,10 +50,10 @@ namespace Controle_Tintas.Views
             //paint GetAllPaintsAvailableAndInUseQuery to get all paints available and in use from database
             paints = Program.ServiceProvider.GetRequiredService<GetPaintsByStatusQuery>().Execute("SOBRA");
 
-            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+            PopulateDataGridViewPaintsLeftover(paints);
         }
 
-        private void PopulateDataGridViewPaintsAvailableAndInUse(IEnumerable<PaintModel> paints)
+        private void PopulateDataGridViewPaintsLeftover(IEnumerable<PaintModel> paints)
         {
             IEnumerable<PaintModel> paintsToDataGridView;
             //clear dataGridViewPaintsAvailableAndInUse
@@ -171,21 +171,21 @@ namespace Controle_Tintas.Views
         {
             //filter paints by Code to a new paints and update dataGridViewPaintsAvailableAndInUse
             var paints = this.paints.Where(p => p.Code.Contains(textBoxCodeFilter.Text));
-            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+            PopulateDataGridViewPaintsLeftover(paints);
         }
 
         private void buttonProjectFilter_Click(object sender, EventArgs e)
         {
-            //filter paints by Project to a new paints and update dataGridViewPaintsAvailableAndInUse
-            var paints = this.paints.Where(p => p.Obs.Contains(textBoxProjectFilter.Text));
-            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+            //filter paints by Obs and Project and uppdate by PopulateDataGridViewPaintsLeftover
+            var paints = this.paints.Where(p => p.Obs.Contains(textBoxProjectFilter.Text) || p.Project.Contains(textBoxProjectFilter.Text));
+            PopulateDataGridViewPaintsLeftover(paints);
         }
 
         private void buttonDescriptionFilter_Click(object sender, EventArgs e)
         {
             //filter paints by Description to a new paints and update dataGridViewPaintsAvailableAndInUse
             var paints = this.paints.Where(p => p.Description.Contains(textBoxDescriptionFilter.Text));
-            PopulateDataGridViewPaintsAvailableAndInUse(paints);
+            PopulateDataGridViewPaintsLeftover(paints);
         }
 
         private void buttonDicardPaint_Click(object sender, EventArgs e)
