@@ -171,7 +171,6 @@
             // 
             // textBoxPaintLiters
             // 
-            textBoxPaintLiters.Enabled = false;
             textBoxPaintLiters.Location = new Point(3, 212);
             textBoxPaintLiters.Name = "textBoxPaintLiters";
             textBoxPaintLiters.Size = new Size(78, 25);
