@@ -12,7 +12,7 @@ namespace Controle_Tintas
         {
             get
             {
-                return "1.2.0-alpha";
+                return "1.2.1-alpha";
             }
         }
         public static IServiceProvider? ServiceProvider { get; private set; }
