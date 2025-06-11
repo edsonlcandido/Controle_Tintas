@@ -66,7 +66,7 @@
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 10);
             label1.Name = "label1";
-            label1.Size = new Size(241, 37);
+            label1.Size = new Size(302, 46);
             label1.TabIndex = 2;
             label1.Text = "Tintas para projeto";
             // 
@@ -91,7 +91,7 @@
             labelUserName.AutoSize = true;
             labelUserName.Location = new Point(3, 0);
             labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(118, 17);
+            labelUserName.Size = new Size(149, 23);
             labelUserName.TabIndex = 0;
             labelUserName.Text = "Pesquisar por cód.";
             // 
@@ -99,7 +99,7 @@
             // 
             flowLayoutPanel2.Controls.Add(textBoxCodeFilter);
             flowLayoutPanel2.Controls.Add(buttonCodeFilter);
-            flowLayoutPanel2.Location = new Point(3, 20);
+            flowLayoutPanel2.Location = new Point(3, 26);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(249, 45);
             flowLayoutPanel2.TabIndex = 1;
@@ -109,7 +109,7 @@
             textBoxCodeFilter.CharacterCasing = CharacterCasing.Upper;
             textBoxCodeFilter.Location = new Point(3, 3);
             textBoxCodeFilter.Name = "textBoxCodeFilter";
-            textBoxCodeFilter.Size = new Size(156, 25);
+            textBoxCodeFilter.Size = new Size(156, 29);
             textBoxCodeFilter.TabIndex = 0;
             // 
             // buttonCodeFilter
@@ -125,9 +125,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 68);
+            label2.Location = new Point(3, 74);
             label2.Name = "label2";
-            label2.Size = new Size(136, 17);
+            label2.Size = new Size(172, 23);
             label2.TabIndex = 2;
             label2.Text = "Pesquisar por projeto";
             // 
@@ -135,7 +135,7 @@
             // 
             flowLayoutPanel3.Controls.Add(textBoxProjectFilter);
             flowLayoutPanel3.Controls.Add(buttonProjectFIlter);
-            flowLayoutPanel3.Location = new Point(3, 88);
+            flowLayoutPanel3.Location = new Point(3, 100);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Size = new Size(249, 45);
             flowLayoutPanel3.TabIndex = 3;
@@ -145,7 +145,7 @@
             textBoxProjectFilter.CharacterCasing = CharacterCasing.Upper;
             textBoxProjectFilter.Location = new Point(3, 3);
             textBoxProjectFilter.Name = "textBoxProjectFilter";
-            textBoxProjectFilter.Size = new Size(156, 25);
+            textBoxProjectFilter.Size = new Size(156, 29);
             textBoxProjectFilter.TabIndex = 0;
             // 
             // buttonProjectFIlter
@@ -161,9 +161,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 136);
+            label3.Location = new Point(3, 148);
             label3.Name = "label3";
-            label3.Size = new Size(149, 17);
+            label3.Size = new Size(188, 23);
             label3.TabIndex = 4;
             label3.Text = "Pesquisar por descrição";
             // 
@@ -171,7 +171,7 @@
             // 
             flowLayoutPanel4.Controls.Add(textBoxDescriptionFilter);
             flowLayoutPanel4.Controls.Add(buttonDescriptionFilter);
-            flowLayoutPanel4.Location = new Point(3, 156);
+            flowLayoutPanel4.Location = new Point(3, 174);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Size = new Size(249, 45);
             flowLayoutPanel4.TabIndex = 5;
@@ -181,7 +181,7 @@
             textBoxDescriptionFilter.CharacterCasing = CharacterCasing.Upper;
             textBoxDescriptionFilter.Location = new Point(3, 3);
             textBoxDescriptionFilter.Name = "textBoxDescriptionFilter";
-            textBoxDescriptionFilter.Size = new Size(156, 25);
+            textBoxDescriptionFilter.Size = new Size(156, 29);
             textBoxDescriptionFilter.TabIndex = 0;
             // 
             // buttonDescriptionFilter
@@ -197,16 +197,16 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(3, 204);
+            label4.Location = new Point(3, 222);
             label4.Name = "label4";
-            label4.Size = new Size(127, 17);
+            label4.Size = new Size(162, 23);
             label4.TabIndex = 6;
             label4.Text = "Pesquisar por status";
             // 
             // flowLayoutPanel5
             // 
             flowLayoutPanel5.Controls.Add(comboBoxStatusFilter);
-            flowLayoutPanel5.Location = new Point(3, 224);
+            flowLayoutPanel5.Location = new Point(258, 3);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
             flowLayoutPanel5.Size = new Size(249, 45);
             flowLayoutPanel5.TabIndex = 7;
@@ -217,7 +217,7 @@
             comboBoxStatusFilter.Items.AddRange(new object[] { "DISPONIVEL", "EM USO" });
             comboBoxStatusFilter.Location = new Point(3, 3);
             comboBoxStatusFilter.Name = "comboBoxStatusFilter";
-            comboBoxStatusFilter.Size = new Size(156, 25);
+            comboBoxStatusFilter.Size = new Size(156, 29);
             comboBoxStatusFilter.TabIndex = 0;
             comboBoxStatusFilter.Text = "DISPONIVEL";
             comboBoxStatusFilter.SelectedIndexChanged += comboBoxStatusFilter_SelectedIndexChanged;
@@ -283,6 +283,7 @@
             dataGridViewPaintsAvailableAndInUse.MultiSelect = false;
             dataGridViewPaintsAvailableAndInUse.Name = "dataGridViewPaintsAvailableAndInUse";
             dataGridViewPaintsAvailableAndInUse.ReadOnly = true;
+            dataGridViewPaintsAvailableAndInUse.RowHeadersWidth = 51;
             dataGridViewPaintsAvailableAndInUse.RowTemplate.Height = 25;
             dataGridViewPaintsAvailableAndInUse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPaintsAvailableAndInUse.Size = new Size(581, 540);
@@ -292,8 +293,8 @@
             // 
             // PaintProjectsForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(880, 660);
             Controls.Add(dataGridViewPaintsAvailableAndInUse);
             Controls.Add(buttonPaintToLeftover);

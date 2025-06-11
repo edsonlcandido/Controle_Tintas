@@ -54,7 +54,7 @@
             label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(-1, 2);
             label1.Name = "label1";
-            label1.Size = new Size(316, 50);
+            label1.Size = new Size(400, 62);
             label1.TabIndex = 0;
             label1.Text = "Controle de tintas";
             // 
@@ -114,8 +114,8 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1008, 729);
             Controls.Add(flowLayoutPanelMain);
             Controls.Add(panel1);

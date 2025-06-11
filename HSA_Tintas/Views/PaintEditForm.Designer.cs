@@ -61,7 +61,7 @@
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(147, 37);
+            label1.Size = new Size(183, 46);
             label1.TabIndex = 3;
             label1.Text = "Editar tinta";
             // 
@@ -97,91 +97,91 @@
             labelCodeDisplayName.AutoSize = true;
             labelCodeDisplayName.Location = new Point(3, 0);
             labelCodeDisplayName.Name = "labelCodeDisplayName";
-            labelCodeDisplayName.Size = new Size(199, 17);
+            labelCodeDisplayName.Size = new Size(258, 23);
             labelCodeDisplayName.TabIndex = 0;
             labelCodeDisplayName.Text = "{Model.Paint.Code.DisplayName}";
             // 
             // textBoxPaintCode
             // 
             textBoxPaintCode.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintCode.Location = new Point(3, 20);
+            textBoxPaintCode.Location = new Point(3, 26);
             textBoxPaintCode.Name = "textBoxPaintCode";
-            textBoxPaintCode.Size = new Size(156, 25);
+            textBoxPaintCode.Size = new Size(156, 29);
             textBoxPaintCode.TabIndex = 1;
             // 
             // labelProjectDisplayName
             // 
             labelProjectDisplayName.AutoSize = true;
-            labelProjectDisplayName.Location = new Point(3, 48);
+            labelProjectDisplayName.Location = new Point(3, 58);
             labelProjectDisplayName.Name = "labelProjectDisplayName";
-            labelProjectDisplayName.Size = new Size(208, 17);
+            labelProjectDisplayName.Size = new Size(271, 23);
             labelProjectDisplayName.TabIndex = 2;
             labelProjectDisplayName.Text = "{Model.Paint.Project.DisplayName}";
             // 
             // textBoxPaintProject
             // 
             textBoxPaintProject.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintProject.Location = new Point(3, 68);
+            textBoxPaintProject.Location = new Point(3, 84);
             textBoxPaintProject.Name = "textBoxPaintProject";
-            textBoxPaintProject.Size = new Size(156, 25);
+            textBoxPaintProject.Size = new Size(156, 29);
             textBoxPaintProject.TabIndex = 3;
             // 
             // labelDescriptionDisplayName
             // 
             labelDescriptionDisplayName.AutoSize = true;
-            labelDescriptionDisplayName.Location = new Point(3, 96);
+            labelDescriptionDisplayName.Location = new Point(3, 116);
             labelDescriptionDisplayName.Name = "labelDescriptionDisplayName";
-            labelDescriptionDisplayName.Size = new Size(234, 17);
+            labelDescriptionDisplayName.Size = new Size(304, 23);
             labelDescriptionDisplayName.TabIndex = 4;
             labelDescriptionDisplayName.Text = "{Model.Paint.Description.DisplayName}";
             // 
             // textBoxPaintDescription
             // 
             textBoxPaintDescription.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintDescription.Location = new Point(3, 116);
+            textBoxPaintDescription.Location = new Point(3, 142);
             textBoxPaintDescription.Name = "textBoxPaintDescription";
-            textBoxPaintDescription.Size = new Size(468, 25);
+            textBoxPaintDescription.Size = new Size(468, 29);
             textBoxPaintDescription.TabIndex = 5;
             // 
             // labelCanQtyDisplayName
             // 
             labelCanQtyDisplayName.AutoSize = true;
-            labelCanQtyDisplayName.Location = new Point(3, 144);
+            labelCanQtyDisplayName.Location = new Point(3, 174);
             labelCanQtyDisplayName.Name = "labelCanQtyDisplayName";
-            labelCanQtyDisplayName.Size = new Size(210, 17);
+            labelCanQtyDisplayName.Size = new Size(275, 23);
             labelCanQtyDisplayName.TabIndex = 6;
             labelCanQtyDisplayName.Text = "{Model.Paint.CanQty.DisplayName}";
             // 
             // textBoxPaintCanQty
             // 
             textBoxPaintCanQty.Enabled = false;
-            textBoxPaintCanQty.Location = new Point(3, 164);
+            textBoxPaintCanQty.Location = new Point(3, 200);
             textBoxPaintCanQty.Name = "textBoxPaintCanQty";
-            textBoxPaintCanQty.Size = new Size(78, 25);
+            textBoxPaintCanQty.Size = new Size(78, 29);
             textBoxPaintCanQty.TabIndex = 7;
             // 
             // labelLitersDisplayName
             // 
             labelLitersDisplayName.AutoSize = true;
-            labelLitersDisplayName.Location = new Point(3, 192);
+            labelLitersDisplayName.Location = new Point(3, 232);
             labelLitersDisplayName.Name = "labelLitersDisplayName";
-            labelLitersDisplayName.Size = new Size(199, 17);
+            labelLitersDisplayName.Size = new Size(258, 23);
             labelLitersDisplayName.TabIndex = 8;
             labelLitersDisplayName.Text = "{Model.Paint.Liters.DisplayName}";
             // 
             // textBoxPaintLiters
             // 
-            textBoxPaintLiters.Location = new Point(3, 212);
+            textBoxPaintLiters.Location = new Point(3, 258);
             textBoxPaintLiters.Name = "textBoxPaintLiters";
-            textBoxPaintLiters.Size = new Size(78, 25);
+            textBoxPaintLiters.Size = new Size(78, 29);
             textBoxPaintLiters.TabIndex = 9;
             // 
             // labelInsertionDateDisplayName
             // 
             labelInsertionDateDisplayName.AutoSize = true;
-            labelInsertionDateDisplayName.Location = new Point(3, 240);
+            labelInsertionDateDisplayName.Location = new Point(3, 290);
             labelInsertionDateDisplayName.Name = "labelInsertionDateDisplayName";
-            labelInsertionDateDisplayName.Size = new Size(245, 17);
+            labelInsertionDateDisplayName.Size = new Size(321, 23);
             labelInsertionDateDisplayName.TabIndex = 15;
             labelInsertionDateDisplayName.Text = "{Model.Paint.InsertionDate.DisplayName}";
             // 
@@ -189,17 +189,17 @@
             // 
             dateTimePickerPaintInsertionDate.Checked = false;
             dateTimePickerPaintInsertionDate.Format = DateTimePickerFormat.Custom;
-            dateTimePickerPaintInsertionDate.Location = new Point(3, 260);
+            dateTimePickerPaintInsertionDate.Location = new Point(3, 316);
             dateTimePickerPaintInsertionDate.Name = "dateTimePickerPaintInsertionDate";
-            dateTimePickerPaintInsertionDate.Size = new Size(156, 25);
+            dateTimePickerPaintInsertionDate.Size = new Size(156, 29);
             dateTimePickerPaintInsertionDate.TabIndex = 14;
             // 
             // labelExpirationDateDisplayName
             // 
             labelExpirationDateDisplayName.AutoSize = true;
-            labelExpirationDateDisplayName.Location = new Point(3, 288);
+            labelExpirationDateDisplayName.Location = new Point(3, 348);
             labelExpirationDateDisplayName.Name = "labelExpirationDateDisplayName";
-            labelExpirationDateDisplayName.Size = new Size(253, 17);
+            labelExpirationDateDisplayName.Size = new Size(330, 23);
             labelExpirationDateDisplayName.TabIndex = 10;
             labelExpirationDateDisplayName.Text = "{Model.Paint.ExpirationDate.DisplayName}";
             // 
@@ -207,17 +207,17 @@
             // 
             dateTimePickerPaintExpirationDate.Checked = false;
             dateTimePickerPaintExpirationDate.Format = DateTimePickerFormat.Custom;
-            dateTimePickerPaintExpirationDate.Location = new Point(3, 308);
+            dateTimePickerPaintExpirationDate.Location = new Point(3, 374);
             dateTimePickerPaintExpirationDate.Name = "dateTimePickerPaintExpirationDate";
-            dateTimePickerPaintExpirationDate.Size = new Size(156, 25);
+            dateTimePickerPaintExpirationDate.Size = new Size(156, 29);
             dateTimePickerPaintExpirationDate.TabIndex = 12;
             // 
             // labelStatusDisplayName
             // 
             labelStatusDisplayName.AutoSize = true;
-            labelStatusDisplayName.Location = new Point(3, 336);
+            labelStatusDisplayName.Location = new Point(3, 406);
             labelStatusDisplayName.Name = "labelStatusDisplayName";
-            labelStatusDisplayName.Size = new Size(203, 17);
+            labelStatusDisplayName.Size = new Size(264, 23);
             labelStatusDisplayName.TabIndex = 5;
             labelStatusDisplayName.Text = "{Model.Paint.Status.DisplayName}";
             // 
@@ -225,24 +225,24 @@
             // 
             comboBoxPaintStatus.Enabled = false;
             comboBoxPaintStatus.FormattingEnabled = true;
-            comboBoxPaintStatus.Location = new Point(3, 356);
+            comboBoxPaintStatus.Location = new Point(3, 432);
             comboBoxPaintStatus.Name = "comboBoxPaintStatus";
-            comboBoxPaintStatus.Size = new Size(156, 25);
+            comboBoxPaintStatus.Size = new Size(156, 29);
             comboBoxPaintStatus.TabIndex = 16;
             // 
             // labelObsDisplayName
             // 
             labelObsDisplayName.AutoSize = true;
-            labelObsDisplayName.Location = new Point(3, 384);
+            labelObsDisplayName.Location = new Point(3, 463);
             labelObsDisplayName.Name = "labelObsDisplayName";
-            labelObsDisplayName.Size = new Size(192, 17);
+            labelObsDisplayName.Size = new Size(248, 23);
             labelObsDisplayName.TabIndex = 13;
             labelObsDisplayName.Text = "{Model.Paint.Obs.DisplayName}";
             // 
             // textBoxPaintObs
             // 
             textBoxPaintObs.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintObs.Location = new Point(3, 404);
+            textBoxPaintObs.Location = new Point(477, 3);
             textBoxPaintObs.Multiline = true;
             textBoxPaintObs.Name = "textBoxPaintObs";
             textBoxPaintObs.ScrollBars = ScrollBars.Vertical;
@@ -254,7 +254,7 @@
             flowLayoutPanel2.Controls.Add(buttonSave);
             flowLayoutPanel2.Controls.Add(buttonCancel);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 508);
+            flowLayoutPanel2.Location = new Point(477, 107);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
             flowLayoutPanel2.Size = new Size(468, 49);
@@ -282,7 +282,7 @@
             // 
             // PaintEditForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 612);
             Controls.Add(flowLayoutPanel1);
