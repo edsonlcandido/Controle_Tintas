@@ -67,6 +67,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(labelCodeDisplayName);
             flowLayoutPanel1.Controls.Add(textBoxPaintCode);
             flowLayoutPanel1.Controls.Add(labelProjectDisplayName);
@@ -89,7 +90,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(479, 565);
+            flowLayoutPanel1.Size = new Size(513, 692);
             flowLayoutPanel1.TabIndex = 4;
             // 
             // labelCodeDisplayName
@@ -154,7 +155,6 @@
             // 
             // textBoxPaintCanQty
             // 
-            textBoxPaintCanQty.Enabled = false;
             textBoxPaintCanQty.Location = new Point(3, 200);
             textBoxPaintCanQty.Name = "textBoxPaintCanQty";
             textBoxPaintCanQty.Size = new Size(78, 29);
@@ -233,7 +233,7 @@
             // labelObsDisplayName
             // 
             labelObsDisplayName.AutoSize = true;
-            labelObsDisplayName.Location = new Point(3, 463);
+            labelObsDisplayName.Location = new Point(3, 464);
             labelObsDisplayName.Name = "labelObsDisplayName";
             labelObsDisplayName.Size = new Size(248, 23);
             labelObsDisplayName.TabIndex = 13;
@@ -242,7 +242,7 @@
             // textBoxPaintObs
             // 
             textBoxPaintObs.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintObs.Location = new Point(477, 3);
+            textBoxPaintObs.Location = new Point(3, 490);
             textBoxPaintObs.Multiline = true;
             textBoxPaintObs.Name = "textBoxPaintObs";
             textBoxPaintObs.ScrollBars = ScrollBars.Vertical;
@@ -254,17 +254,17 @@
             flowLayoutPanel2.Controls.Add(buttonSave);
             flowLayoutPanel2.Controls.Add(buttonCancel);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(477, 107);
+            flowLayoutPanel2.Location = new Point(3, 594);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
-            flowLayoutPanel2.Size = new Size(468, 49);
+            flowLayoutPanel2.Size = new Size(468, 80);
             flowLayoutPanel2.TabIndex = 15;
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(382, 7);
+            buttonSave.Location = new Point(352, 7);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(75, 34);
+            buttonSave.Size = new Size(105, 66);
             buttonSave.TabIndex = 0;
             buttonSave.Text = "Salvar";
             buttonSave.UseVisualStyleBackColor = true;
@@ -272,9 +272,9 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(301, 7);
+            buttonCancel.Location = new Point(241, 7);
             buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(75, 34);
+            buttonCancel.Size = new Size(105, 66);
             buttonCancel.TabIndex = 1;
             buttonCancel.Text = "Cancelar";
             buttonCancel.UseVisualStyleBackColor = true;
@@ -284,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 612);
+            ClientSize = new Size(800, 753);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);

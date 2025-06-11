@@ -53,12 +53,13 @@
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(187, 37);
+            label1.Size = new Size(233, 46);
             label1.TabIndex = 3;
             label1.Text = "Reutilizar tinta";
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(labelCodeDisplayName);
             flowLayoutPanel1.Controls.Add(textBoxPaintCode);
             flowLayoutPanel1.Controls.Add(labelProjectDisplayName);
@@ -73,7 +74,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(479, 381);
+            flowLayoutPanel1.Size = new Size(479, 539);
             flowLayoutPanel1.TabIndex = 4;
             // 
             // labelCodeDisplayName
@@ -81,7 +82,7 @@
             labelCodeDisplayName.AutoSize = true;
             labelCodeDisplayName.Location = new Point(3, 0);
             labelCodeDisplayName.Name = "labelCodeDisplayName";
-            labelCodeDisplayName.Size = new Size(199, 17);
+            labelCodeDisplayName.Size = new Size(258, 23);
             labelCodeDisplayName.TabIndex = 0;
             labelCodeDisplayName.Text = "{Model.Paint.Code.DisplayName}";
             // 
@@ -89,34 +90,34 @@
             // 
             textBoxPaintCode.CharacterCasing = CharacterCasing.Upper;
             textBoxPaintCode.Enabled = false;
-            textBoxPaintCode.Location = new Point(3, 20);
+            textBoxPaintCode.Location = new Point(3, 26);
             textBoxPaintCode.Name = "textBoxPaintCode";
-            textBoxPaintCode.Size = new Size(156, 25);
+            textBoxPaintCode.Size = new Size(156, 29);
             textBoxPaintCode.TabIndex = 1;
             // 
             // labelProjectDisplayName
             // 
             labelProjectDisplayName.AutoSize = true;
-            labelProjectDisplayName.Location = new Point(3, 48);
+            labelProjectDisplayName.Location = new Point(3, 58);
             labelProjectDisplayName.Name = "labelProjectDisplayName";
-            labelProjectDisplayName.Size = new Size(208, 17);
+            labelProjectDisplayName.Size = new Size(271, 23);
             labelProjectDisplayName.TabIndex = 5;
             labelProjectDisplayName.Text = "{Model.Paint.Project.DisplayName}";
             // 
             // textBoxPaintProject
             // 
             textBoxPaintProject.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintProject.Location = new Point(3, 68);
+            textBoxPaintProject.Location = new Point(3, 84);
             textBoxPaintProject.Name = "textBoxPaintProject";
-            textBoxPaintProject.Size = new Size(156, 25);
+            textBoxPaintProject.Size = new Size(156, 29);
             textBoxPaintProject.TabIndex = 6;
             // 
             // labelDescriptionDisplayName
             // 
             labelDescriptionDisplayName.AutoSize = true;
-            labelDescriptionDisplayName.Location = new Point(3, 96);
+            labelDescriptionDisplayName.Location = new Point(3, 116);
             labelDescriptionDisplayName.Name = "labelDescriptionDisplayName";
-            labelDescriptionDisplayName.Size = new Size(234, 17);
+            labelDescriptionDisplayName.Size = new Size(304, 23);
             labelDescriptionDisplayName.TabIndex = 4;
             labelDescriptionDisplayName.Text = "{Model.Paint.Description.DisplayName}";
             // 
@@ -124,33 +125,33 @@
             // 
             textBoxPaintDescription.CharacterCasing = CharacterCasing.Upper;
             textBoxPaintDescription.Enabled = false;
-            textBoxPaintDescription.Location = new Point(3, 116);
+            textBoxPaintDescription.Location = new Point(3, 142);
             textBoxPaintDescription.Name = "textBoxPaintDescription";
-            textBoxPaintDescription.Size = new Size(468, 25);
+            textBoxPaintDescription.Size = new Size(468, 29);
             textBoxPaintDescription.TabIndex = 5;
             // 
             // labelCanQtyDisplayName
             // 
             labelCanQtyDisplayName.AutoSize = true;
-            labelCanQtyDisplayName.Location = new Point(3, 144);
+            labelCanQtyDisplayName.Location = new Point(3, 174);
             labelCanQtyDisplayName.Name = "labelCanQtyDisplayName";
-            labelCanQtyDisplayName.Size = new Size(210, 17);
+            labelCanQtyDisplayName.Size = new Size(275, 23);
             labelCanQtyDisplayName.TabIndex = 6;
             labelCanQtyDisplayName.Text = "{Model.Paint.CanQty.DisplayName}";
             // 
             // textBoxPaintCanQty
             // 
-            textBoxPaintCanQty.Location = new Point(3, 164);
+            textBoxPaintCanQty.Location = new Point(3, 200);
             textBoxPaintCanQty.Name = "textBoxPaintCanQty";
-            textBoxPaintCanQty.Size = new Size(78, 25);
+            textBoxPaintCanQty.Size = new Size(78, 29);
             textBoxPaintCanQty.TabIndex = 7;
             // 
             // labelObsDisplayName
             // 
             labelObsDisplayName.AutoSize = true;
-            labelObsDisplayName.Location = new Point(3, 192);
+            labelObsDisplayName.Location = new Point(3, 232);
             labelObsDisplayName.Name = "labelObsDisplayName";
-            labelObsDisplayName.Size = new Size(192, 17);
+            labelObsDisplayName.Size = new Size(248, 23);
             labelObsDisplayName.TabIndex = 13;
             labelObsDisplayName.Text = "{Model.Paint.Obs.DisplayName}";
             // 
@@ -158,7 +159,7 @@
             // 
             textBoxPaintObs.CharacterCasing = CharacterCasing.Upper;
             textBoxPaintObs.Enabled = false;
-            textBoxPaintObs.Location = new Point(3, 212);
+            textBoxPaintObs.Location = new Point(3, 258);
             textBoxPaintObs.Multiline = true;
             textBoxPaintObs.Name = "textBoxPaintObs";
             textBoxPaintObs.ScrollBars = ScrollBars.Vertical;
@@ -170,17 +171,17 @@
             flowLayoutPanel2.Controls.Add(buttonSave);
             flowLayoutPanel2.Controls.Add(buttonCancel);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 316);
+            flowLayoutPanel2.Location = new Point(3, 362);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
-            flowLayoutPanel2.Size = new Size(468, 49);
+            flowLayoutPanel2.Size = new Size(468, 80);
             flowLayoutPanel2.TabIndex = 15;
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(382, 7);
+            buttonSave.Location = new Point(352, 7);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(75, 34);
+            buttonSave.Size = new Size(105, 66);
             buttonSave.TabIndex = 0;
             buttonSave.Text = "Salvar";
             buttonSave.UseVisualStyleBackColor = true;
@@ -188,9 +189,9 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(301, 7);
+            buttonCancel.Location = new Point(241, 7);
             buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(75, 34);
+            buttonCancel.Size = new Size(105, 66);
             buttonCancel.TabIndex = 1;
             buttonCancel.Text = "Cancelar";
             buttonCancel.UseVisualStyleBackColor = true;
@@ -198,7 +199,7 @@
             // 
             // PaintReuseLeftoverForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
             Controls.Add(flowLayoutPanel1);
