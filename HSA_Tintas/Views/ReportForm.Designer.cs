@@ -50,12 +50,13 @@
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(183, 37);
+            label1.Size = new Size(230, 46);
             label1.TabIndex = 2;
             label1.Text = "Resumo tintas";
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(labelUserName);
             flowLayoutPanel1.Controls.Add(labelTotalLatasDisponivel);
             flowLayoutPanel1.Controls.Add(labelTotalLitrosDisponivel);
@@ -70,7 +71,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(272, 254);
+            flowLayoutPanel1.Size = new Size(402, 539);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // labelUserName
@@ -79,34 +80,34 @@
             labelUserName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelUserName.Location = new Point(3, 0);
             labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(140, 21);
+            labelUserName.Size = new Size(173, 28);
             labelUserName.TabIndex = 0;
             labelUserName.Text = "Tintas disponivel";
             // 
             // labelTotalLatasDisponivel
             // 
             labelTotalLatasDisponivel.AutoSize = true;
-            labelTotalLatasDisponivel.Location = new Point(3, 21);
+            labelTotalLatasDisponivel.Location = new Point(3, 28);
             labelTotalLatasDisponivel.Name = "labelTotalLatasDisponivel";
-            labelTotalLatasDisponivel.Size = new Size(231, 17);
+            labelTotalLatasDisponivel.Size = new Size(300, 23);
             labelTotalLatasDisponivel.TabIndex = 4;
             labelTotalLatasDisponivel.Text = "Quantidade de latas: {Disponivel.latas}";
             // 
             // labelTotalLitrosDisponivel
             // 
             labelTotalLitrosDisponivel.AutoSize = true;
-            labelTotalLitrosDisponivel.Location = new Point(3, 38);
+            labelTotalLitrosDisponivel.Location = new Point(3, 51);
             labelTotalLitrosDisponivel.Name = "labelTotalLitrosDisponivel";
-            labelTotalLitrosDisponivel.Size = new Size(265, 17);
+            labelTotalLitrosDisponivel.Size = new Size(344, 23);
             labelTotalLitrosDisponivel.TabIndex = 5;
             labelTotalLitrosDisponivel.Text = "Quantidade total de litros: {Disponivel.litros}";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 55);
+            label6.Location = new Point(3, 74);
             label6.Name = "label6";
-            label6.Size = new Size(12, 17);
+            label6.Size = new Size(15, 23);
             label6.TabIndex = 6;
             label6.Text = " ";
             // 
@@ -114,36 +115,36 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(3, 72);
+            label2.Location = new Point(3, 97);
             label2.Name = "label2";
-            label2.Size = new Size(115, 21);
+            label2.Size = new Size(144, 28);
             label2.TabIndex = 1;
             label2.Text = "Tintas em uso";
             // 
             // labelTotalLatasEmUso
             // 
             labelTotalLatasEmUso.AutoSize = true;
-            labelTotalLatasEmUso.Location = new Point(3, 93);
+            labelTotalLatasEmUso.Location = new Point(3, 125);
             labelTotalLatasEmUso.Name = "labelTotalLatasEmUso";
-            labelTotalLatasEmUso.Size = new Size(212, 17);
+            labelTotalLatasEmUso.Size = new Size(275, 23);
             labelTotalLatasEmUso.TabIndex = 5;
             labelTotalLatasEmUso.Text = "Quantidade de latas: {EmUso.latas}";
             // 
             // labelTotalLitrosEmUso
             // 
             labelTotalLitrosEmUso.AutoSize = true;
-            labelTotalLitrosEmUso.Location = new Point(3, 110);
+            labelTotalLitrosEmUso.Location = new Point(3, 148);
             labelTotalLitrosEmUso.Name = "labelTotalLitrosEmUso";
-            labelTotalLitrosEmUso.Size = new Size(246, 17);
+            labelTotalLitrosEmUso.Size = new Size(319, 23);
             labelTotalLitrosEmUso.TabIndex = 10;
             labelTotalLitrosEmUso.Text = "Quantidade total de litros: {EmUso.litros}";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(3, 127);
+            label9.Location = new Point(3, 171);
             label9.Name = "label9";
-            label9.Size = new Size(12, 17);
+            label9.Size = new Size(15, 23);
             label9.TabIndex = 9;
             label9.Text = " ";
             // 
@@ -151,34 +152,34 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(3, 144);
+            label3.Location = new Point(3, 194);
             label3.Name = "label3";
-            label3.Size = new Size(124, 21);
+            label3.Size = new Size(155, 28);
             label3.TabIndex = 2;
             label3.Text = "Sobra de tintas";
             // 
             // labelTotalLatasSobra
             // 
             labelTotalLatasSobra.AutoSize = true;
-            labelTotalLatasSobra.Location = new Point(3, 165);
+            labelTotalLatasSobra.Location = new Point(3, 222);
             labelTotalLatasSobra.Name = "labelTotalLatasSobra";
-            labelTotalLatasSobra.Size = new Size(206, 17);
+            labelTotalLatasSobra.Size = new Size(266, 23);
             labelTotalLatasSobra.TabIndex = 11;
             labelTotalLatasSobra.Text = "Quantidade de latas: {Sobra.latas}";
             // 
             // labelTotalLitrosSobra
             // 
             labelTotalLitrosSobra.AutoSize = true;
-            labelTotalLitrosSobra.Location = new Point(3, 182);
+            labelTotalLitrosSobra.Location = new Point(3, 245);
             labelTotalLitrosSobra.Name = "labelTotalLitrosSobra";
-            labelTotalLitrosSobra.Size = new Size(240, 17);
+            labelTotalLitrosSobra.Size = new Size(310, 23);
             labelTotalLitrosSobra.TabIndex = 12;
             labelTotalLitrosSobra.Text = "Quantidade total de litros: {Sobra.litros}";
             // 
             // ReportForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(800, 600);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);

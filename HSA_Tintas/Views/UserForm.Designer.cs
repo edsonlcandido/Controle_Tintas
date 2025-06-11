@@ -48,12 +48,13 @@
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(7, 4);
             label1.Name = "label1";
-            label1.Size = new Size(235, 37);
+            label1.Size = new Size(295, 46);
             label1.TabIndex = 1;
             label1.Text = "Gerenciar usuários";
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(labelUserName);
             flowLayoutPanel1.Controls.Add(textBoxUserName);
             flowLayoutPanel1.Controls.Add(checkBoxUserIsAdmin);
@@ -61,7 +62,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(7, 44);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(235, 142);
+            flowLayoutPanel1.Size = new Size(235, 548);
             flowLayoutPanel1.TabIndex = 2;
             // 
             // labelUserName
@@ -69,24 +70,24 @@
             labelUserName.AutoSize = true;
             labelUserName.Location = new Point(3, 0);
             labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(206, 17);
+            labelUserName.Size = new Size(214, 46);
             labelUserName.TabIndex = 0;
             labelUserName.Text = "{Model.User.Name.Display Name}";
             // 
             // textBoxUserName
             // 
             textBoxUserName.CharacterCasing = CharacterCasing.Upper;
-            textBoxUserName.Location = new Point(3, 20);
+            textBoxUserName.Location = new Point(3, 49);
             textBoxUserName.Name = "textBoxUserName";
-            textBoxUserName.Size = new Size(221, 25);
+            textBoxUserName.Size = new Size(221, 29);
             textBoxUserName.TabIndex = 1;
             // 
             // checkBoxUserIsAdmin
             // 
             checkBoxUserIsAdmin.AutoSize = true;
-            checkBoxUserIsAdmin.Location = new Point(3, 51);
+            checkBoxUserIsAdmin.Location = new Point(3, 84);
             checkBoxUserIsAdmin.Name = "checkBoxUserIsAdmin";
-            checkBoxUserIsAdmin.Size = new Size(110, 21);
+            checkBoxUserIsAdmin.Size = new Size(140, 27);
             checkBoxUserIsAdmin.TabIndex = 2;
             checkBoxUserIsAdmin.Text = "Administrador";
             checkBoxUserIsAdmin.UseVisualStyleBackColor = true;
@@ -96,7 +97,7 @@
             flowLayoutPanel2.Controls.Add(buttonSave);
             flowLayoutPanel2.Controls.Add(buttonClear);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 78);
+            flowLayoutPanel2.Location = new Point(3, 117);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
             flowLayoutPanel2.Size = new Size(232, 48);
@@ -133,6 +134,7 @@
             dataGridViewUsers.MultiSelect = false;
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
+            dataGridViewUsers.RowHeadersWidth = 51;
             dataGridViewUsers.RowTemplate.Height = 25;
             dataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsers.Size = new Size(543, 548);
@@ -141,7 +143,7 @@
             // 
             // UserForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
             Controls.Add(dataGridViewUsers);

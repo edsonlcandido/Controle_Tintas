@@ -54,7 +54,7 @@
             label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(-1, 2);
             label1.Name = "label1";
-            label1.Size = new Size(316, 50);
+            label1.Size = new Size(400, 62);
             label1.TabIndex = 0;
             label1.Text = "Controle de tintas";
             // 
@@ -76,7 +76,7 @@
             // 
             buttonShowPaintToProjectForm.Location = new Point(9, 9);
             buttonShowPaintToProjectForm.Name = "buttonShowPaintToProjectForm";
-            buttonShowPaintToProjectForm.Size = new Size(176, 35);
+            buttonShowPaintToProjectForm.Size = new Size(176, 66);
             buttonShowPaintToProjectForm.TabIndex = 0;
             buttonShowPaintToProjectForm.Text = "Tintas para projetos";
             buttonShowPaintToProjectForm.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@
             // 
             // buttonShowPaintLeftoverForm
             // 
-            buttonShowPaintLeftoverForm.Location = new Point(9, 50);
+            buttonShowPaintLeftoverForm.Location = new Point(9, 81);
             buttonShowPaintLeftoverForm.Name = "buttonShowPaintLeftoverForm";
-            buttonShowPaintLeftoverForm.Size = new Size(176, 35);
+            buttonShowPaintLeftoverForm.Size = new Size(176, 66);
             buttonShowPaintLeftoverForm.TabIndex = 1;
             buttonShowPaintLeftoverForm.Text = "Sobras de tintas";
             buttonShowPaintLeftoverForm.UseVisualStyleBackColor = false;
@@ -94,9 +94,9 @@
             // 
             // buttonShowUserForm
             // 
-            buttonShowUserForm.Location = new Point(9, 91);
+            buttonShowUserForm.Location = new Point(9, 153);
             buttonShowUserForm.Name = "buttonShowUserForm";
-            buttonShowUserForm.Size = new Size(176, 35);
+            buttonShowUserForm.Size = new Size(176, 66);
             buttonShowUserForm.TabIndex = 2;
             buttonShowUserForm.Text = "Gerenciar usuarios";
             buttonShowUserForm.UseVisualStyleBackColor = false;
@@ -104,9 +104,9 @@
             // 
             // buttonReportForm
             // 
-            buttonReportForm.Location = new Point(9, 132);
+            buttonReportForm.Location = new Point(9, 225);
             buttonReportForm.Name = "buttonReportForm";
-            buttonReportForm.Size = new Size(176, 35);
+            buttonReportForm.Size = new Size(176, 66);
             buttonReportForm.TabIndex = 3;
             buttonReportForm.Text = "Resumo Tintas";
             buttonReportForm.UseVisualStyleBackColor = false;
@@ -114,8 +114,8 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1008, 729);
             Controls.Add(flowLayoutPanelMain);
             Controls.Add(panel1);

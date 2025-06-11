@@ -61,12 +61,13 @@
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(336, 37);
+            label1.Size = new Size(421, 46);
             label1.TabIndex = 3;
             label1.Text = "Adiciona tinta para projeto";
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(labelCodeDisplayName);
             flowLayoutPanel1.Controls.Add(textBoxPaintCode);
             flowLayoutPanel1.Controls.Add(labelProjectDisplayName);
@@ -89,7 +90,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(479, 568);
+            flowLayoutPanel1.Size = new Size(534, 687);
             flowLayoutPanel1.TabIndex = 4;
             // 
             // labelCodeDisplayName
@@ -97,90 +98,90 @@
             labelCodeDisplayName.AutoSize = true;
             labelCodeDisplayName.Location = new Point(3, 0);
             labelCodeDisplayName.Name = "labelCodeDisplayName";
-            labelCodeDisplayName.Size = new Size(199, 17);
+            labelCodeDisplayName.Size = new Size(258, 23);
             labelCodeDisplayName.TabIndex = 0;
             labelCodeDisplayName.Text = "{Model.Paint.Code.DisplayName}";
             // 
             // textBoxPaintCode
             // 
             textBoxPaintCode.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintCode.Location = new Point(3, 20);
+            textBoxPaintCode.Location = new Point(3, 26);
             textBoxPaintCode.Name = "textBoxPaintCode";
-            textBoxPaintCode.Size = new Size(156, 25);
+            textBoxPaintCode.Size = new Size(156, 29);
             textBoxPaintCode.TabIndex = 0;
             // 
             // labelProjectDisplayName
             // 
             labelProjectDisplayName.AutoSize = true;
-            labelProjectDisplayName.Location = new Point(3, 48);
+            labelProjectDisplayName.Location = new Point(3, 58);
             labelProjectDisplayName.Name = "labelProjectDisplayName";
-            labelProjectDisplayName.Size = new Size(208, 17);
+            labelProjectDisplayName.Size = new Size(271, 23);
             labelProjectDisplayName.TabIndex = 2;
             labelProjectDisplayName.Text = "{Model.Paint.Project.DisplayName}";
             // 
             // textBoxPaintProject
             // 
             textBoxPaintProject.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintProject.Location = new Point(3, 68);
+            textBoxPaintProject.Location = new Point(3, 84);
             textBoxPaintProject.Name = "textBoxPaintProject";
-            textBoxPaintProject.Size = new Size(156, 25);
+            textBoxPaintProject.Size = new Size(156, 29);
             textBoxPaintProject.TabIndex = 1;
             // 
             // labelDescriptionDisplayName
             // 
             labelDescriptionDisplayName.AutoSize = true;
-            labelDescriptionDisplayName.Location = new Point(3, 96);
+            labelDescriptionDisplayName.Location = new Point(3, 116);
             labelDescriptionDisplayName.Name = "labelDescriptionDisplayName";
-            labelDescriptionDisplayName.Size = new Size(234, 17);
+            labelDescriptionDisplayName.Size = new Size(304, 23);
             labelDescriptionDisplayName.TabIndex = 4;
             labelDescriptionDisplayName.Text = "{Model.Paint.Description.DisplayName}";
             // 
             // textBoxPaintDescription
             // 
             textBoxPaintDescription.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintDescription.Location = new Point(3, 116);
+            textBoxPaintDescription.Location = new Point(3, 142);
             textBoxPaintDescription.Name = "textBoxPaintDescription";
-            textBoxPaintDescription.Size = new Size(468, 25);
+            textBoxPaintDescription.Size = new Size(468, 29);
             textBoxPaintDescription.TabIndex = 2;
             // 
             // labelCanQtyDisplayName
             // 
             labelCanQtyDisplayName.AutoSize = true;
-            labelCanQtyDisplayName.Location = new Point(3, 144);
+            labelCanQtyDisplayName.Location = new Point(3, 174);
             labelCanQtyDisplayName.Name = "labelCanQtyDisplayName";
-            labelCanQtyDisplayName.Size = new Size(210, 17);
+            labelCanQtyDisplayName.Size = new Size(275, 23);
             labelCanQtyDisplayName.TabIndex = 6;
             labelCanQtyDisplayName.Text = "{Model.Paint.CanQty.DisplayName}";
             // 
             // textBoxPaintCanQty
             // 
-            textBoxPaintCanQty.Location = new Point(3, 164);
+            textBoxPaintCanQty.Location = new Point(3, 200);
             textBoxPaintCanQty.Name = "textBoxPaintCanQty";
-            textBoxPaintCanQty.Size = new Size(78, 25);
+            textBoxPaintCanQty.Size = new Size(78, 29);
             textBoxPaintCanQty.TabIndex = 3;
             // 
             // labelLitersDisplayName
             // 
             labelLitersDisplayName.AutoSize = true;
-            labelLitersDisplayName.Location = new Point(3, 192);
+            labelLitersDisplayName.Location = new Point(3, 232);
             labelLitersDisplayName.Name = "labelLitersDisplayName";
-            labelLitersDisplayName.Size = new Size(199, 17);
+            labelLitersDisplayName.Size = new Size(258, 23);
             labelLitersDisplayName.TabIndex = 8;
             labelLitersDisplayName.Text = "{Model.Paint.Liters.DisplayName}";
             // 
             // textBoxPaintLiters
             // 
-            textBoxPaintLiters.Location = new Point(3, 212);
+            textBoxPaintLiters.Location = new Point(3, 258);
             textBoxPaintLiters.Name = "textBoxPaintLiters";
-            textBoxPaintLiters.Size = new Size(78, 25);
+            textBoxPaintLiters.Size = new Size(78, 29);
             textBoxPaintLiters.TabIndex = 4;
             // 
             // labelInsertionDateDisplayName
             // 
             labelInsertionDateDisplayName.AutoSize = true;
-            labelInsertionDateDisplayName.Location = new Point(3, 240);
+            labelInsertionDateDisplayName.Location = new Point(3, 290);
             labelInsertionDateDisplayName.Name = "labelInsertionDateDisplayName";
-            labelInsertionDateDisplayName.Size = new Size(245, 17);
+            labelInsertionDateDisplayName.Size = new Size(321, 23);
             labelInsertionDateDisplayName.TabIndex = 13;
             labelInsertionDateDisplayName.Text = "{Model.Paint.InsertionDate.DisplayName}";
             // 
@@ -188,17 +189,17 @@
             // 
             dateTimePickerPaintInsertionDate.Checked = false;
             dateTimePickerPaintInsertionDate.Format = DateTimePickerFormat.Custom;
-            dateTimePickerPaintInsertionDate.Location = new Point(3, 260);
+            dateTimePickerPaintInsertionDate.Location = new Point(3, 316);
             dateTimePickerPaintInsertionDate.Name = "dateTimePickerPaintInsertionDate";
-            dateTimePickerPaintInsertionDate.Size = new Size(156, 25);
+            dateTimePickerPaintInsertionDate.Size = new Size(156, 29);
             dateTimePickerPaintInsertionDate.TabIndex = 5;
             // 
             // labelExpirationDateDisplayName
             // 
             labelExpirationDateDisplayName.AutoSize = true;
-            labelExpirationDateDisplayName.Location = new Point(3, 288);
+            labelExpirationDateDisplayName.Location = new Point(3, 348);
             labelExpirationDateDisplayName.Name = "labelExpirationDateDisplayName";
-            labelExpirationDateDisplayName.Size = new Size(253, 17);
+            labelExpirationDateDisplayName.Size = new Size(330, 23);
             labelExpirationDateDisplayName.TabIndex = 10;
             labelExpirationDateDisplayName.Text = "{Model.Paint.ExpirationDate.DisplayName}";
             // 
@@ -206,41 +207,41 @@
             // 
             dateTimePickerPaintExpirationDate.Checked = false;
             dateTimePickerPaintExpirationDate.Format = DateTimePickerFormat.Custom;
-            dateTimePickerPaintExpirationDate.Location = new Point(3, 308);
+            dateTimePickerPaintExpirationDate.Location = new Point(3, 374);
             dateTimePickerPaintExpirationDate.Name = "dateTimePickerPaintExpirationDate";
-            dateTimePickerPaintExpirationDate.Size = new Size(156, 25);
+            dateTimePickerPaintExpirationDate.Size = new Size(156, 29);
             dateTimePickerPaintExpirationDate.TabIndex = 6;
             // 
             // labelStatusDisplayName
             // 
             labelStatusDisplayName.AutoSize = true;
-            labelStatusDisplayName.Location = new Point(3, 336);
+            labelStatusDisplayName.Location = new Point(3, 406);
             labelStatusDisplayName.Name = "labelStatusDisplayName";
-            labelStatusDisplayName.Size = new Size(203, 17);
+            labelStatusDisplayName.Size = new Size(264, 23);
             labelStatusDisplayName.TabIndex = 5;
             labelStatusDisplayName.Text = "{Model.Paint.Status.DisplayName}";
             // 
             // comboBoxPaintStatus
             // 
             comboBoxPaintStatus.FormattingEnabled = true;
-            comboBoxPaintStatus.Location = new Point(3, 356);
+            comboBoxPaintStatus.Location = new Point(3, 432);
             comboBoxPaintStatus.Name = "comboBoxPaintStatus";
-            comboBoxPaintStatus.Size = new Size(156, 25);
+            comboBoxPaintStatus.Size = new Size(156, 29);
             comboBoxPaintStatus.TabIndex = 7;
             // 
             // labelObsDisplayName
             // 
             labelObsDisplayName.AutoSize = true;
-            labelObsDisplayName.Location = new Point(3, 384);
+            labelObsDisplayName.Location = new Point(3, 464);
             labelObsDisplayName.Name = "labelObsDisplayName";
-            labelObsDisplayName.Size = new Size(192, 17);
+            labelObsDisplayName.Size = new Size(248, 23);
             labelObsDisplayName.TabIndex = 13;
             labelObsDisplayName.Text = "{Model.Paint.Obs.DisplayName}";
             // 
             // textBoxPaintObs
             // 
             textBoxPaintObs.CharacterCasing = CharacterCasing.Upper;
-            textBoxPaintObs.Location = new Point(3, 404);
+            textBoxPaintObs.Location = new Point(3, 490);
             textBoxPaintObs.Multiline = true;
             textBoxPaintObs.Name = "textBoxPaintObs";
             textBoxPaintObs.ScrollBars = ScrollBars.Vertical;
@@ -252,17 +253,17 @@
             flowLayoutPanel2.Controls.Add(buttonSave);
             flowLayoutPanel2.Controls.Add(buttonCancel);
             flowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel2.Location = new Point(3, 508);
+            flowLayoutPanel2.Location = new Point(3, 594);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(4);
-            flowLayoutPanel2.Size = new Size(468, 49);
+            flowLayoutPanel2.Size = new Size(468, 80);
             flowLayoutPanel2.TabIndex = 9;
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(382, 7);
+            buttonSave.Location = new Point(352, 7);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(75, 34);
+            buttonSave.Size = new Size(105, 66);
             buttonSave.TabIndex = 0;
             buttonSave.Text = "Salvar";
             buttonSave.UseVisualStyleBackColor = true;
@@ -270,9 +271,9 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(301, 7);
+            buttonCancel.Location = new Point(241, 7);
             buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(75, 34);
+            buttonCancel.Size = new Size(105, 66);
             buttonCancel.TabIndex = 1;
             buttonCancel.Text = "Cancelar";
             buttonCancel.UseVisualStyleBackColor = true;
@@ -280,9 +281,9 @@
             // 
             // PaintAddToProjectForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(846, 622);
+            ClientSize = new Size(867, 740);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
