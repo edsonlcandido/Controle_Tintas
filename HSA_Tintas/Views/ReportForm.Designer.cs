@@ -56,6 +56,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(labelUserName);
             flowLayoutPanel1.Controls.Add(labelTotalLatasDisponivel);
             flowLayoutPanel1.Controls.Add(labelTotalLitrosDisponivel);
@@ -70,7 +71,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(12, 49);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(344, 380);
+            flowLayoutPanel1.Size = new Size(402, 539);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // labelUserName
@@ -97,14 +98,14 @@
             labelTotalLitrosDisponivel.AutoSize = true;
             labelTotalLitrosDisponivel.Location = new Point(3, 51);
             labelTotalLitrosDisponivel.Name = "labelTotalLitrosDisponivel";
-            labelTotalLitrosDisponivel.Size = new Size(215, 46);
+            labelTotalLitrosDisponivel.Size = new Size(344, 23);
             labelTotalLitrosDisponivel.TabIndex = 5;
             labelTotalLitrosDisponivel.Text = "Quantidade total de litros: {Disponivel.litros}";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 97);
+            label6.Location = new Point(3, 74);
             label6.Name = "label6";
             label6.Size = new Size(15, 23);
             label6.TabIndex = 6;
@@ -114,7 +115,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(3, 120);
+            label2.Location = new Point(3, 97);
             label2.Name = "label2";
             label2.Size = new Size(144, 28);
             label2.TabIndex = 1;
@@ -123,7 +124,7 @@
             // labelTotalLatasEmUso
             // 
             labelTotalLatasEmUso.AutoSize = true;
-            labelTotalLatasEmUso.Location = new Point(3, 148);
+            labelTotalLatasEmUso.Location = new Point(3, 125);
             labelTotalLatasEmUso.Name = "labelTotalLatasEmUso";
             labelTotalLatasEmUso.Size = new Size(275, 23);
             labelTotalLatasEmUso.TabIndex = 5;
@@ -132,7 +133,7 @@
             // labelTotalLitrosEmUso
             // 
             labelTotalLitrosEmUso.AutoSize = true;
-            labelTotalLitrosEmUso.Location = new Point(3, 171);
+            labelTotalLitrosEmUso.Location = new Point(3, 148);
             labelTotalLitrosEmUso.Name = "labelTotalLitrosEmUso";
             labelTotalLitrosEmUso.Size = new Size(319, 23);
             labelTotalLitrosEmUso.TabIndex = 10;
@@ -141,7 +142,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(3, 194);
+            label9.Location = new Point(3, 171);
             label9.Name = "label9";
             label9.Size = new Size(15, 23);
             label9.TabIndex = 9;
@@ -151,7 +152,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(3, 217);
+            label3.Location = new Point(3, 194);
             label3.Name = "label3";
             label3.Size = new Size(155, 28);
             label3.TabIndex = 2;
@@ -160,7 +161,7 @@
             // labelTotalLatasSobra
             // 
             labelTotalLatasSobra.AutoSize = true;
-            labelTotalLatasSobra.Location = new Point(3, 245);
+            labelTotalLatasSobra.Location = new Point(3, 222);
             labelTotalLatasSobra.Name = "labelTotalLatasSobra";
             labelTotalLatasSobra.Size = new Size(266, 23);
             labelTotalLatasSobra.TabIndex = 11;
@@ -169,7 +170,7 @@
             // labelTotalLitrosSobra
             // 
             labelTotalLitrosSobra.AutoSize = true;
-            labelTotalLitrosSobra.Location = new Point(3, 268);
+            labelTotalLitrosSobra.Location = new Point(3, 245);
             labelTotalLitrosSobra.Name = "labelTotalLitrosSobra";
             labelTotalLitrosSobra.Size = new Size(310, 23);
             labelTotalLitrosSobra.TabIndex = 12;

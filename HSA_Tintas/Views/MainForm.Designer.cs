@@ -76,7 +76,7 @@
             // 
             buttonShowPaintToProjectForm.Location = new Point(9, 9);
             buttonShowPaintToProjectForm.Name = "buttonShowPaintToProjectForm";
-            buttonShowPaintToProjectForm.Size = new Size(176, 35);
+            buttonShowPaintToProjectForm.Size = new Size(176, 66);
             buttonShowPaintToProjectForm.TabIndex = 0;
             buttonShowPaintToProjectForm.Text = "Tintas para projetos";
             buttonShowPaintToProjectForm.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@
             // 
             // buttonShowPaintLeftoverForm
             // 
-            buttonShowPaintLeftoverForm.Location = new Point(9, 50);
+            buttonShowPaintLeftoverForm.Location = new Point(9, 81);
             buttonShowPaintLeftoverForm.Name = "buttonShowPaintLeftoverForm";
-            buttonShowPaintLeftoverForm.Size = new Size(176, 35);
+            buttonShowPaintLeftoverForm.Size = new Size(176, 66);
             buttonShowPaintLeftoverForm.TabIndex = 1;
             buttonShowPaintLeftoverForm.Text = "Sobras de tintas";
             buttonShowPaintLeftoverForm.UseVisualStyleBackColor = false;
@@ -94,9 +94,9 @@
             // 
             // buttonShowUserForm
             // 
-            buttonShowUserForm.Location = new Point(9, 91);
+            buttonShowUserForm.Location = new Point(9, 153);
             buttonShowUserForm.Name = "buttonShowUserForm";
-            buttonShowUserForm.Size = new Size(176, 35);
+            buttonShowUserForm.Size = new Size(176, 66);
             buttonShowUserForm.TabIndex = 2;
             buttonShowUserForm.Text = "Gerenciar usuarios";
             buttonShowUserForm.UseVisualStyleBackColor = false;
@@ -104,9 +104,9 @@
             // 
             // buttonReportForm
             // 
-            buttonReportForm.Location = new Point(9, 132);
+            buttonReportForm.Location = new Point(9, 225);
             buttonReportForm.Name = "buttonReportForm";
-            buttonReportForm.Size = new Size(176, 35);
+            buttonReportForm.Size = new Size(176, 66);
             buttonReportForm.TabIndex = 3;
             buttonReportForm.Text = "Resumo Tintas";
             buttonReportForm.UseVisualStyleBackColor = false;
