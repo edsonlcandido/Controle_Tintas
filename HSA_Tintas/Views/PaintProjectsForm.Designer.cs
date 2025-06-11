@@ -45,8 +45,9 @@
             label4 = new Label();
             flowLayoutPanel5 = new FlowLayoutPanel();
             comboBoxStatusFilter = new ComboBox();
-            groupBox1 = new GroupBox();
+            panel1 = new Panel();
             buttonClearFilters = new Button();
+            groupBox1 = new GroupBox();
             buttonShowPaintAddToProjectForm = new Button();
             buttonUsePaint = new Button();
             buttonPaintToLeftover = new Button();
@@ -56,6 +57,7 @@
             flowLayoutPanel3.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel5.SuspendLayout();
+            panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPaintsAvailableAndInUse).BeginInit();
             SuspendLayout();
@@ -80,10 +82,11 @@
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(label4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel5);
+            flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(6, 25);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(290, 354);
+            flowLayoutPanel1.Size = new Size(290, 368);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // labelUserName
@@ -222,10 +225,27 @@
             comboBoxStatusFilter.Text = "DISPONIVEL";
             comboBoxStatusFilter.SelectedIndexChanged += comboBoxStatusFilter_SelectedIndexChanged;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(buttonClearFilters);
+            panel1.Location = new Point(3, 299);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(275, 45);
+            panel1.TabIndex = 8;
+            // 
+            // buttonClearFilters
+            // 
+            buttonClearFilters.Location = new Point(94, 8);
+            buttonClearFilters.Name = "buttonClearFilters";
+            buttonClearFilters.Size = new Size(93, 34);
+            buttonClearFilters.TabIndex = 0;
+            buttonClearFilters.Text = "Limpar filtros";
+            buttonClearFilters.UseVisualStyleBackColor = true;
+            buttonClearFilters.Click += buttonClearFilters_Click;
+            // 
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            groupBox1.Controls.Add(buttonClearFilters);
             groupBox1.Controls.Add(flowLayoutPanel1);
             groupBox1.Location = new Point(12, 56);
             groupBox1.Name = "groupBox1";
@@ -233,16 +253,6 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
-            // 
-            // buttonClearFilters
-            // 
-            buttonClearFilters.Location = new Point(104, 385);
-            buttonClearFilters.Name = "buttonClearFilters";
-            buttonClearFilters.Size = new Size(93, 34);
-            buttonClearFilters.TabIndex = 0;
-            buttonClearFilters.Text = "Limpar filtros";
-            buttonClearFilters.UseVisualStyleBackColor = true;
-            buttonClearFilters.Click += buttonClearFilters_Click;
             // 
             // buttonShowPaintAddToProjectForm
             // 
@@ -317,6 +327,7 @@
             flowLayoutPanel4.ResumeLayout(false);
             flowLayoutPanel4.PerformLayout();
             flowLayoutPanel5.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPaintsAvailableAndInUse).EndInit();
             ResumeLayout(false);
@@ -348,5 +359,6 @@
         private Button buttonUsePaint;
         private Button buttonPaintToLeftover;
         private DataGridView dataGridViewPaintsAvailableAndInUse;
+        private Panel panel1;
     }
 }

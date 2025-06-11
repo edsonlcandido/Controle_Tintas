@@ -42,17 +42,19 @@
             flowLayoutPanel4 = new FlowLayoutPanel();
             textBoxDescriptionFilter = new TextBox();
             buttonDescriptionFilter = new Button();
-            groupBox1 = new GroupBox();
             buttonClearFilters = new Button();
+            groupBox1 = new GroupBox();
             buttonShowPaintReuseLeftoverForm = new Button();
             buttonDicardPaint = new Button();
             dataGridViewPaintsLeftover = new DataGridView();
+            panel1 = new Panel();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPaintsLeftover).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -73,10 +75,11 @@
             flowLayoutPanel1.Controls.Add(flowLayoutPanel3);
             flowLayoutPanel1.Controls.Add(label3);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
+            flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(6, 25);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(290, 276);
+            flowLayoutPanel1.Size = new Size(290, 310);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // labelUserName
@@ -187,10 +190,19 @@
             buttonDescriptionFilter.UseVisualStyleBackColor = true;
             buttonDescriptionFilter.Click += buttonDescriptionFilter_Click;
             // 
+            // buttonClearFilters
+            // 
+            buttonClearFilters.Location = new Point(94, 8);
+            buttonClearFilters.Name = "buttonClearFilters";
+            buttonClearFilters.Size = new Size(93, 34);
+            buttonClearFilters.TabIndex = 0;
+            buttonClearFilters.Text = "Limpar filtros";
+            buttonClearFilters.UseVisualStyleBackColor = true;
+            buttonClearFilters.Click += buttonClearFilters_Click;
+            // 
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            groupBox1.Controls.Add(buttonClearFilters);
             groupBox1.Controls.Add(flowLayoutPanel1);
             groupBox1.Location = new Point(12, 56);
             groupBox1.Name = "groupBox1";
@@ -198,16 +210,6 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
-            // 
-            // buttonClearFilters
-            // 
-            buttonClearFilters.Location = new Point(104, 307);
-            buttonClearFilters.Name = "buttonClearFilters";
-            buttonClearFilters.Size = new Size(93, 34);
-            buttonClearFilters.TabIndex = 0;
-            buttonClearFilters.Text = "Limpar filtros";
-            buttonClearFilters.UseVisualStyleBackColor = true;
-            buttonClearFilters.Click += buttonClearFilters_Click;
             // 
             // buttonShowPaintReuseLeftoverForm
             // 
@@ -246,6 +248,14 @@
             dataGridViewPaintsLeftover.TabIndex = 8;
             dataGridViewPaintsLeftover.DataBindingComplete += dataGridViewPaintsLeftover_DataBindingComplete;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(buttonClearFilters);
+            panel1.Location = new Point(3, 225);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(275, 45);
+            panel1.TabIndex = 6;
+            // 
             // PaintLeftoverForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -271,6 +281,7 @@
             flowLayoutPanel4.PerformLayout();
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPaintsLeftover).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -296,5 +307,6 @@
         private DataGridView dataGridViewPaintsLeftover;
         internal Button buttonShowPaintReuseLeftoverForm;
         internal Button buttonDicardPaint;
+        private Panel panel1;
     }
 }
